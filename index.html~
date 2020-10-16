@@ -32,13 +32,12 @@
 
     <main>
         <div class="box1"></div>
-        <div class="box2"></div>
+	    <div class="box2"></div>
+	    <div class="box3"></div>
     </main>
 
 
-    <footer>
-        <p>This is the footer info</p>
-    </footer>
+    <footer></footer>
 
 
 

@@ -21,9 +21,32 @@ header{
 }
 
 main{
+    display: flex;
     width: auto;
-    height: 200px;
-    margin-top: auto;
+    height: 600px;
+    margin-top: 100px;
     margin-bottom: auto;
-    background-color: rgb(5, 73, 73);
+}
+.box1{
+    position: relative;
+    top: 30px;
+    left: 10px;
+    width: 300px;
+    height: 200px;
+    background-color: burlywood;
+}
+.box2{
+    position: relative;
+    top: 30px;
+    left: 40px;
+    background-color: pink;
+    width: 400px;
+    height: 200px;
+}
+footer{
+    text-align: center;
+    width: auto;
+    height: 60px;
+    color:white;
+    font-family: 'Courier New', Courier, monospace;
 }
