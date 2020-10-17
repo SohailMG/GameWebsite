@@ -20,6 +20,12 @@ header{
     background-color: rgb(5, 41, 37);
     border-radius: 20px;
 }
+.selected{
+    width: 800px;
+    padding:10px;
+    background-color:rgba(10, 175, 172, 0.233);
+    border-radius: 20px;
+}
 .signbtns{
     position: relative;
     right: 40px;
@@ -65,9 +71,4 @@ footer{
     color: white;
     font-family: 'Courier New', Courier, monospace;
 }
-.selected{
-    width: 800px;
-    padding:10px;
-    background-color:rgba(10, 175, 172, 0.651);
-    border-radius: 20px;
-}
+
