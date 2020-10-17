@@ -50,3 +50,9 @@ footer{
     color: white;
     font-family: 'Courier New', Courier, monospace;
 }
+.selected{
+    width: 800px;
+    padding:10px;
+    background-color:rgba(10, 175, 172, 0.651);
+    border-radius: 20px;
+}
