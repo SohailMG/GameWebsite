@@ -1,40 +1,37 @@
-<?php
+<!DOCTYPE html>
+<html lang="en">
 
-//Ouputs the header for the page and opening body tag
-function outputHeader($title){
-    echo '<!DOCTYPE html>';
-    echo '<html>';
-    echo '<head>';
-    echo '<title>' . $title . '</title>';
-    echo '<!-- Link to external style sheet -->';
-    echo '<link rel="stylesheet" type="text/css" href="styles.css">';
-    echo '</head>';
-    echo '<body>';
-}
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
 
-/* Ouputs the banner and the navigation bar
-    The selected class is applied to the page that matches the page name variable */
-function outputNavigation($pageName){
-    //Output banner and first part of navigation
-    echo '<div class="navbar">';
-    
-    //Array of pages to link to
-    $linkNames = array("Home", "Game", "HowToPlay" , "SignUp", "SignIn", "Leaderboard", "Contact");
-    $linkAddresses = array("index.php", "game.php", "SignUp.php", "SignIn.php", "Contact.php", "Leaderboard.php", "HowTo.php");
-    
-    //Output navigation
-    for($x = 0; $x < count($linkNames); $x++){
-        echo '<a ';
-        if($linkNames[$x] == $pageName){
-            echo 'class="selected" ';
-        }
-        echo 'href="' . $linkAddresses[$x] . '">' . $linkNames[$x] . '</a>';
-    }
-    echo '</div>';
-}
 
-//Outputs closing body tag and closing HTML tag
-function outputFooter(){
-    echo '</body>';
-    echo '</html>';
-}
+
+
+</head>
+
+
+
+<body>
+
+
+
+    <header></header>
+
+
+    <nav>
+
+        <div class="navbar">
+            <a href="index.html">Home</a>
+            <a href="Game.html">Game</a>
+            <a href="#">How to play</a>
+            <a href="leaderbaord.html">Leadersboard</a>
+            <a href="Contact.html">Contact</a>
+        </div>
+        <div class="signbtns">
+            <a class="selected" href="Sign-in.html">Sign-in</a>
+            <a class="selected" href="Sign-up.html">Sign-up</a>
+        </div>
+    </nav>
