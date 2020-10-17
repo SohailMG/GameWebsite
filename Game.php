@@ -7,9 +7,7 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-        <header>
-            <?php include 'Common.php';?>
-        </header>
+       <?php include 'Common.php';?>
     
 </body>
 </html>
