@@ -27,8 +27,8 @@
             <a href="index.php">Home</a>
             <a href="Game.php">Game</a>
             <a href="#">How to play</a>
-            <a href="leaderbaord.html">Leadersboard</a>
-            <a href="Contact.html">Contact</a>
+            <a href="leaderbaord.php">Leadersboard</a>
+            <a href="Contact.php">Contact</a>
         </div>
         <div class="signbtns">
             <a class="selected" href="Sign-in.html">Sign-in</a>

@@ -1,74 +1,76 @@
-body{
-    width: 100%;
-    background-color: rgb(5, 73, 73);
-
+* {
+  margin: 0;
+  padding: 0;
 }
 
-header{
-    width:auto;
-    height: 40px;
+body {
+  width: 100%;
+  background-color: rgb(5, 73, 73);
+}
+
+header {
+  width: auto;
+  height: 40px;
 }
 
 .navbar a {
-    text-decoration: none;
-    padding: 14px;    
-    color: rgb(230, 230, 230);
-    font-family: Arial, Helvetica, sans-serif;
-    font-size: 13px;
+  text-decoration: none;
+  padding: 14px;
+  color: rgb(230, 230, 230);
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 13px;
 }
-.navbar  a:hover{
-    background-color: rgb(5, 41, 37);
-    border-radius: 20px;
+.navbar a:hover {
+  background-color: rgb(5, 41, 37);
+  border-radius: 20px;
 }
-.selected{
-    width: 800px;
-    padding:10px;
-    background-color:rgba(10, 175, 172, 0.233);
-    border-radius: 20px;
+.selected {
+  width: 800px;
+  padding: 10px;
+  background-color: rgba(10, 175, 172, 0.233);
+  border-radius: 20px;
 }
-.signbtns{
-    position: relative;
-    right: 40px;
-    text-align: right;
+.signbtns {
+  position: relative;
+  right: 40px;
+  text-align: right;
 }
-.signbtns a{
-    text-decoration: none;
-    padding: 14px;
-    color: seashell;
-
+.signbtns a {
+  text-decoration: none;
+  padding: 14px;
+  color: seashell;
 }
-.signbtns a:hover{
-    background-color: rgba(40, 151, 127, 0.692);
-    border-radius: 20px;
+.signbtns a:hover {
+  background-color: rgba(40, 151, 127, 0.692);
+  border-radius: 20px;
 }
-main{
-    display: flex;
-    width: auto;
-    height: 600px;
-    margin-top: 100px;
-    margin-bottom: auto;
+main {
+  display: flex;
+  width: auto;
+  height: 600px;
+  margin-top: 100px;
+  margin-bottom: auto;
 }
-.box1{
-    position: relative;
-    top: 30px;
-    left: 10px;
-    width: 300px;
-    height: 200px;
-    background-color: burlywood;
+.box1 {
+  position: relative;
+  top: 30px;
+  left: 10px;
+  width: 300px;
+  height: 200px;
+  background-color: burlywood;
 }
-.box2{
-    position: relative;
-    top: 30px;
-    left: 40px;
-    background-color: pink;
-    width: 400px;
-    height: 200px;
+.box2 {
+  position: relative;
+  top: 30px;
+  left: 40px;
+  background-color: pink;
+  width: 400px;
+  height: 200px;
 }
-footer{
-    text-align: center;
-    width: auto;
-    height: 60px;
-    color: white;
-    font-family: 'Courier New', Courier, monospace;
+footer {
+  text-align: center;
+  width: auto;
+  height: 60px;
+  color: white;
+  font-family: "Courier New", Courier, monospace;
 }
-

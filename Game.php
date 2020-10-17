@@ -7,7 +7,13 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-       <?php include 'Common.php';?>
-    
+        <header></header>
+        <nav>
+
+
+            <?php
+            include('Common.php');
+            ?>
+        </nav>    
 </body>
 </html>
