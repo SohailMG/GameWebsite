@@ -1,11 +1,10 @@
-<!DOCTYPE html>
 <?php
         include('Common.php');
         outputhtmlTemp("Home Page");
         outputBannerNavigation("Home")
 ?>
         <div class="signbtns">
-            <p>Sign in or register</p>
+            <p>Are you registered?</p>
             <a class="selected" href="Sign-in.php">Sign-in</a>
             <a class="selected" href="Sign-up.php">Sign-up</a>
         </div>        
@@ -13,8 +12,12 @@
 
     <main>
             <div class="box1">
-                <h1>Welcome to Memory Master</h1>            
-                <p>How good is your visual memory? how many numbers can you remember in a short amount of time?. Test your memory strength and become the Memory Master</p>
+                <h1>Welcome to Memory Master</h1> 
+                <div class="questions">           
+                <ul>How good is your visual memory?</ul>
+                <ul>How many numbers can you remember in a short amount of time?</ul>
+                <ul> Test your memory strength and become the Memory Master</ul>
+                </div>
             </div>
             <div class="box2">
                 <img src="Images/Brainlogo.jpg" alt="">
