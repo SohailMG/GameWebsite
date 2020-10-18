@@ -6,7 +6,7 @@ function outputhtmlTemp($title){
     echo '<html>';
     echo '<head>';
     echo '<title>' . $title . '</title>';
-    echo '<link rel="stylesheet" type="text/css" href="style.css">';
+    echo '<link rel="stylesheet" href="style.css">';
     echo '</head>';
     echo '<body>';
 }
@@ -16,6 +16,7 @@ function outputhtmlTemp($title){
 function outputBannerNavigation($pageName){
     //Output banner and first part of navigation
     echo '<header></header>';
+    echo '<nav>';
     echo '<div class="navbar">';
     
     //Array of pages to link to
@@ -28,6 +29,7 @@ function outputBannerNavigation($pageName){
         
     }
     echo '</div>';
+    echo '</nav>';
 }
 
 //Outputs closing body tag and closing HTML tag

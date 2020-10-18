@@ -1,6 +1,9 @@
 <?php
-    include('Common.php');
+        include('Common.php');
+        outputhtmlTemp("Home Page");
+        outputBannerNavigation("Home")
 ?>
-    <h1>This is game page</h1>
-</body>
-</html>
+
+<?php
+    outputfooter();
+?>
