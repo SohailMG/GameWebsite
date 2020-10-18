@@ -1,21 +1,13 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="style.css">
-</head>
-<body>
-        <header></header>
-        <nav>
+<?php
+    include('Common.php');
+    outputhtmlTemp("Game Page");
+    outputBannerNavigation("Game")
+
+?>
 
 
-            <?php
-            include('Common.php');
-            outputNavbar("Game")
-            ?>
+<?php
+    include('Common.php');
+    outputfooter();
 
-        </nav>    
-</body>
-</html>
+?>
