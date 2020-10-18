@@ -1,28 +1,17 @@
 <?php
-    echo '<nav>
+function outputNavbar($pagename){
+    
+    echo '<div class="navbar">';
+    
+    $pagenames = array("Home", "Game", "Signin", "Signup");
+    $pageAddresses = array("index.php", "Game.php", "Sign-in.php", "Sign-up.php");
 
-    <div class="navbar">
-        <a href="index.php">Home</a>
-        <a href="Game.php">Game</a>
-        <a href="#">How to play</a>
-        <a href="leaderbaord.html">Leadersboard</a>
-        <a href="Contact.html">Contact</a>
-    </div>
-    <div class="signbtns">
-        <a class="selected" href="Sign-in.html">Sign-in</a>
-        <a class="selected" href="Sign-up.html">Sign-up</a>
-    </div>
-</nav>
+    for($i = 0; $i < count($pagenames); $i++){
 
-
-<main>
-    <div class="box1"></div>
-    <div class="box2"></div>
-</main>
-
-
-<footer>
-    <p>This is the footer info</p>
-</footer>
-';
+        echo '<a' . 'href="' . $pageAddresses[$i] . '">' . $pagenames[$i] . '</a';
+    }
+    echo '</div>';
+    
+            
+}
 ?>

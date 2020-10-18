@@ -30,10 +30,12 @@
             <a href="leaderbaord.php">Leadersboard</a>
             <a href="Contact.php">Contact</a>
         </div>
+
         <div class="signbtns">
             <a class="selected" href="Sign-in.html">Sign-in</a>
             <a class="selected" href="Sign-up.html">Sign-up</a>
         </div>
+        
     </nav>
 
 
