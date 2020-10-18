@@ -8,7 +8,7 @@ function outputNavbar($pagename){
 
     for($i = 0; $i < count($pagenames); $i++){
 
-        echo '<a' . 'href="' . $pageAddresses[$i] . '">' . $pagenames[$i] . '</a';
+        echo '<a' . 'href="' . $pageAddresses[$i] . '">' . $pagenames[$i] . '</a>';
     }
     echo '</div>';
     

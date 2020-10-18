@@ -55,9 +55,12 @@ main {
   position: relative;
   top: 30px;
   left: 10px;
-  width: 300px;
+  width: 500px;
   height: 200px;
-  background-color: burlywood;
+  background-color: rgba(222, 184, 135, 0.391);
+}
+.box1 h1 {
+  font-size: 10px;
 }
 .box2 {
   position: relative;

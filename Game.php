@@ -13,7 +13,9 @@
 
             <?php
             include('Common.php');
+            outputNavbar("Game")
             ?>
+
         </nav>    
 </body>
 </html>

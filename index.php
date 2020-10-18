@@ -19,18 +19,17 @@
 
 
     <header></header>
+    
 
 
     <nav>
-
         <div class="navbar">
             <a href="index.php">Home</a>
             <a href="Game.php">Game</a>
-            <a href="#">How to play</a>
+            <a href="HowToPlay.php">How to play</a>
             <a href="leaderbaord.php">Leadersboard</a>
             <a href="Contact.php">Contact</a>
         </div>
-
         <div class="signbtns">
             <a class="selected" href="Sign-in.html">Sign-in</a>
             <a class="selected" href="Sign-up.html">Sign-up</a>
@@ -40,8 +39,11 @@
 
 
     <main>
-        <div class="box1"></div>
-        <div class="box2"></div>
+            <div class="box1">
+                <h1>Welcome to Memory Master</h1>            
+                <p>this is game description</p>
+            </div>
+            <div class="box2"></div>
     </main>
 
 
