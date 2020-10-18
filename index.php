@@ -41,7 +41,7 @@
     <main>
             <div class="box1">
                 <h1>Welcome to Memory Master</h1>            
-                <p>this is game description</p>
+                <p>How good is your visual memory? how many numbers can you remember in a short amount of time?. Test your memory strength and become the Memory Master</p>
             </div>
             <div class="box2"></div>
     </main>
