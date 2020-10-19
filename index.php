@@ -20,7 +20,7 @@
                 </div>
             </div>
             <div class="box2">
-                <img src="Images/Brainlogo.jpg" alt="">
+                
             </div>
     </main>
 

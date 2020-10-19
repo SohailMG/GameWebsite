@@ -3,6 +3,7 @@
         outputhtmlTemp("Home Page");
         outputBannerNavigation("Home")
 ?>
+    <!-- Sing in form -->
     <div class="formContainer">
         <div class="SignInform">
             <h1>Sign In</h1>
@@ -12,15 +13,9 @@
                     <li><input type="button" name="Submit" value="Submit"></li>
                     <li>Forget Password?</li>
                 </ul>
-            
-            
-            
-            
-            
-            </div>
-            
-            
+        </div>
     </div>
+
 
 
 <?php
