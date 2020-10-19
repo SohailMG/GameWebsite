@@ -7,6 +7,7 @@ function outputhtmlTemp($title){
     echo '<head>';
     echo '<title>' . $title . '</title>';
     echo '<link rel="stylesheet" href="style.css">';
+    echo '<script src="web.js"></script>';
     echo '</head>';
     echo '<body>';
 }

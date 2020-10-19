@@ -16,27 +16,29 @@ header {
   height: 40px;
 }
 nav {
+  border-radius: 10px;
+  padding: 7px;
+  background-color: rgba(13, 57, 68, 0.589);
+  width: 450px;
+  height: 20px;
   position: relative;
   left: 40px;
 }
 .navbar a {
   text-decoration: none;
   padding: 14px;
-  color: rgb(255, 255, 255);
+  color: rgb(196, 255, 252);
   font-family: Arial, Helvetica, sans-serif;
   font-size: 15px;
   text-shadow: 0 0 14px rgb(84, 219, 243);
 }
 .navbar a:hover {
-  background-color: rgb(97, 71, 90);
-  border-radius: 20px;
+  border: 1px solid aqua;
+  border-top: none;
+  border-right: none;
+  border-left: none;
 }
-.selected {
-  width: 800px;
-  padding: 10px;
-  background-color: rgb(97, 71, 90);
-  border-radius: 20px;
-}
+
 /* 
 *Sign-in and Sign-up buttons style 
 */
@@ -46,20 +48,28 @@ nav {
   text-align: right;
 }
 .signbtns a {
+  font-size: 14px;
+  background-color: rgba(45, 54, 58, 0.487);
+  border-radius: 10px;
+  box-shadow: 0 0 10px 0 aqua;
   text-decoration: none;
   padding: 14px;
-  color: seashell;
+  color: rgb(243, 243, 243);
 }
 .signbtns a:hover {
-  background-color: rgb(222, 176, 255);
-  border-radius: 20px;
+  background-color: none;
+  border: 1px solid aqua;
+  border-top: none;
+  border-right: none;
+  border-left: none;
   text-shadow: 0 0 14px rgb(84, 219, 243);
+
 }
 .signbtns p {
   position: relative;
   right: 180px;
   top: 20px;
-  color: rgb(255, 255, 255);
+  color: rgba(73, 255, 246, 0.493);
   text-shadow: 0 0 14px rgb(84, 219, 243);
   font-family: Arial, Helvetica, sans-serif;
 }
@@ -186,7 +196,6 @@ ul.formlist li input {
   border-radius: 5px;
   padding-top: 10px;
   padding-bottom: 10px;
-  border: none;
   width: 170px;
   text-align: center;
   transition: width 1s;
@@ -198,4 +207,5 @@ ul.formlist li input[type="button"] {
 
 ul.formlist li input:hover {
   width: 250px;
+  border-color: aqua;
 }

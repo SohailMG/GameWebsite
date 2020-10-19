@@ -4,9 +4,9 @@
         outputBannerNavigation("Home")
 ?>
         <div class="signbtns">
-            <p>Are you registered?</p>
-            <a class="selected" href="Sign-in.php">Sign-in</a>
-            <a class="selected" href="Sign-up.php">Sign-up</a>
+            <p><b>Are you registered?</b></p>
+            <a  href="Sign-in.php"><b>Sign-in</b></a>
+            <a  href="Sign-up.php"><b>Sign-up</b></a>
         </div>        
 
 
@@ -20,7 +20,6 @@
                 </div>
             </div>
             <div class="box2">
-                
             </div>
     </main>
 
@@ -28,6 +27,7 @@
     <footer>
         <p>This is the footer info</p>
     </footer>
+
 
 
 <?php
