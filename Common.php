@@ -11,8 +11,7 @@ function outputhtmlTemp($title){
     echo '<body>';
 }
 
-/* Ouputs the banner and the navigation bar
-    The selected class is applied to the page that matches the page name variable */
+/* created fucntion to output the navigation bar and the header */
 function outputBannerNavigation($pageName){
     //Output banner and first part of navigation
     echo '<header></header>';
@@ -20,12 +19,15 @@ function outputBannerNavigation($pageName){
     echo '<div class="navbar">';
     
     //Array of pages to link to
-    $linkNames = array("Home", "Game", "How to play", "Leaderboard", "Contact");
-    $linkAddresses = array("index.php", "Game.php", "HowToPlay.php", "Leaderboard.php", "Contact.php");
+    $pageNames = array("Home", "Game", "How to play", "Leaderboard", "Contact");
+    $pageLinks = array("index.php", "Game.php", "HowToPlay.php", "Leaderboard.php", "Contact.php");
     
-    //Output navigation
-    for($x = 0; $x < count($linkNames); $x++){
-        echo '<a ' . 'href="' . $linkAddresses[$x] . '">' . $linkNames[$x] . '</a>';
+    /* nav bar foor loop
+    * a loop to create <a tags in accordance
+    * to the lenght of pagenames array. 
+    */
+    for($i = 0; $i < count($pageNames); $i++){
+        echo '<a ' . 'href="' . $pageLinks[$i] . '">' . $pageNames[$i] . '</a>';
         
     }
     echo '</div>';
