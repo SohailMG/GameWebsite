@@ -20,7 +20,7 @@ function outputBannerNavigation($pageName){
     echo '<div class="navbar">';
     
     //Array of pages to link to
-    $pageNames = array("Home", "Game", "How to play", "Leaderboard", "Contact");
+    $pageNames = array("Home", "Game", "HowToPlay", "Leaderboard", "Contact");
     $pageLinks = array("index.php", "Game.php", "HowToPlay.php", "Leaderboard.php", "Contact.php");
     
     /* nav bar foor loop
@@ -28,7 +28,11 @@ function outputBannerNavigation($pageName){
     * to the lenght of pagenames array. 
     */
     for($i = 0; $i < count($pageNames); $i++){
-        echo '<a ' . 'href="' . $pageLinks[$i] . '">' . $pageNames[$i] . '</a>';
+        echo '<a ' ;
+        if($pageNames[$i] == $pageName){
+            echo 'class="selected" ';
+        }
+        echo 'href="' . $pageLinks[$i] . '">' . $pageNames[$i] . '</a>';
         
     }
     echo '</div>';

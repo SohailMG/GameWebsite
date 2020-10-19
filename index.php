@@ -5,7 +5,7 @@
 ?>
         <div class="signbtns">
             <p><b>Are you registered?</b></p>
-            <a  href="Sign-in.php"><b>Sign-in</b></a>
+            <a  class="current" href="Sign-in.php"><b>Sign-in</b></a>
             <a  href="Sign-up.php"><b>Sign-up</b></a>
         </div>        
 

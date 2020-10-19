@@ -1,7 +1,7 @@
 <?php
     include('Common.php');
-    outputhtmlTemp("How to play");
-    outputBannerNavigation("Home")
+    outputhtmlTemp("HowToPlay");
+    outputBannerNavigation("HowToPlay")
 
 ?>
 

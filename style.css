@@ -24,6 +24,14 @@ nav {
   position: relative;
   left: 40px;
 }
+.selected{
+  background-color: none;
+  border: 1px solid aqua;
+  border-top: none;
+  border-right: none;
+  border-left: none;
+  height: 10px;
+}
 .navbar a {
   text-decoration: none;
   padding: 14px;
@@ -73,6 +81,7 @@ nav {
   text-shadow: 0 0 14px rgb(84, 219, 243);
   font-family: Arial, Helvetica, sans-serif;
 }
+
 /* Home page main section positioning */
 main {
   align-items: center;
