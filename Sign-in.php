@@ -3,26 +3,26 @@
         outputhtmlTemp("Home Page");
         outputBannerNavigation("Home")
 ?>
+    <div class="formContainer">
+        <div class="SignInform">
+            <h1>Sign In</h1>
+                <ul class="formlist">
+                    <li><input type="text" name="User name" placeholder="User Name"></li>
+                    <li><input type="passwrod" name="Password" placeholder="Password"></li>
+                    <li><input type="button" name="Submit" value="Submit"></li>
+                    <li>Forget Password?</li>
+                </ul>
+            
+            
+            
+            
+            
+            </div>
+            
+            
+    </div>
 
-        <div class="SignInForm"></div>
-            <h1>Sign-In</h1>
-            <form action="Index.php">
-                <div class="inputs">
-                    <label><b>Username</b></label>
-                    <input type="text" placeholder="Enter Username" name="uname" required>
-                    
-                    <label><b>Password</b></label>
-                    <input type="password" placeholder="Enter Password" name="pwd" required>
 
-                    <button type="submit">Sign-In</button>
-                    <input type="checkbox"> checked="checked"> Remember me 
-                </div>
-
-                <div class="container" style="background-color:#f1f1f1">
-                    <button type="button" class="cancelbtn">Cancel</button>
-                    <span class="psw">Forgot<a href="#">password?</a></span>
-                </div>
-            </form>
 <?php
     outputfooter();
 ?>
