@@ -5,10 +5,35 @@
 
 body {
   margin: 0;
-  background-image: url("Images/bluebulb.jpg");
+  background-image: url("Images/whitebulb.jpg");
   background-repeat: no-repeat;
   background-size: cover;
   font-family: Arial, Helvetica, sans-serif;
+}
+section {
+  width: 100%;
+  height: 100vh;
+  background-image: linear-gradient(
+    -45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
+    background-size: 400% 400%;
+    position: relative; 
+    animation: change 10s ease-in-out infinite;   
+}
+
+@keyframes change{
+  0%{
+    background-position: 0 50%;
+
+  }
+  50%{
+    background-position: 100% 50%;
+
+  }
+  100%{
+    background-position: 0 50%;
+
+  }
+  
 }
 
 header {
@@ -18,24 +43,23 @@ header {
 nav {
   border-radius: 10px;
   padding: 7px;
-  background-color: rgba(13, 57, 68, 0.589);
+  background-color: rgba(13, 57, 68, 0);
   width: 450px;
   height: 20px;
   position: relative;
   left: 40px;
 }
-.selected{
-  background-color: none;
+.selected {
+  background-color: rgba(45, 54, 58, 0.487);
   border: 1px solid aqua;
   border-top: none;
   border-right: none;
   border-left: none;
-  height: 10px;
 }
 .navbar a {
   text-decoration: none;
   padding: 14px;
-  color: rgb(196, 255, 252);
+  color: rgb(248, 216, 248);
   font-family: Arial, Helvetica, sans-serif;
   font-size: 15px;
   text-shadow: 0 0 14px rgb(84, 219, 243);
@@ -58,8 +82,7 @@ nav {
 .signbtns a {
   font-size: 14px;
   background-color: rgba(45, 54, 58, 0.487);
-  border-radius: 10px;
-  box-shadow: 0 0 10px 0 aqua;
+
   text-decoration: none;
   padding: 14px;
   color: rgb(243, 243, 243);
@@ -71,7 +94,6 @@ nav {
   border-right: none;
   border-left: none;
   text-shadow: 0 0 14px rgb(84, 219, 243);
-
 }
 .signbtns p {
   position: relative;
@@ -174,7 +196,7 @@ footer {
 .SignInform {
   text-align: center;
   border-radius: 20px;
-  background-color: #1b1b1bd0;
+  background-color: #ffffffd0;
   box-shadow: 0 0 10px 0 rgb(84, 219, 243);
   height: 400px;
 }
@@ -188,7 +210,7 @@ footer {
 
 ul.formlist {
   list-style-type: none;
-  color: white;
+  color: rgb(255, 255, 255);
   text-shadow: 0 0 14px rgb(84, 219, 243);
 }
 ul.formlist li {

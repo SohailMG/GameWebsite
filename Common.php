@@ -15,6 +15,7 @@ function outputhtmlTemp($title){
 /* created fucntion to output the navigation bar and the header */
 function outputBannerNavigation($pageName){
     //Output banner and first part of navigation
+    echo '<section>';
     echo '<header></header>';
     echo '<nav>';
     echo '<div class="navbar">';
@@ -41,6 +42,7 @@ function outputBannerNavigation($pageName){
 
 //Outputs closing body tag and closing HTML tag
 function outputFooter(){
+    echo '</section>';
     echo '</body>';
     echo '</html>';
 }
