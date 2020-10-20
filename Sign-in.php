@@ -10,11 +10,16 @@
                 <ul class="formlist">
                     <li><input type="text" name="User name" placeholder="User Name"></li>
                     <li><input type="passwrod" name="Password" placeholder="Password"></li>
-                    <li><input type="button" name="Submit" value="Submit"></li>
+                    <li><button class="Submitbtn" onclick="myfunction()">Sign In</button></li>
                     <li>Forget Password?</li>
                 </ul>
         </div>
     </div>
+    <script>
+        function myfunction(){
+            document.location.href="index.php";
+        }
+    </script>
 
 
 
