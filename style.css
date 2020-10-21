@@ -36,7 +36,9 @@ header {
   height: 40px;
 }
 nav {
-  border-radius: 10px;
+  border: 1px solid aqua;
+  border-top: none;
+  border-bottom: none;
   padding: 7px;
   background-color: rgba(13, 57, 68, 0);
   width: 450px;
@@ -45,8 +47,10 @@ nav {
   left: 40px;
 }
 .selected {
-  background-color: rgba(45, 54, 58, 0.487);
-  border: 1px solid aqua;
+  background-color: rgba(247, 244, 120, 0.692);
+  box-shadow: 0 0 10px 0 black;
+  border-radius: 10px;
+  border: 2px solid rgb(0, 221, 255);
   border-top: none;
   border-right: none;
   border-left: none;
@@ -58,7 +62,7 @@ nav {
   color: rgb(255, 255, 255);
   font-family: Arial, Helvetica, sans-serif;
   font-size: 15px;
-  text-shadow: 0 0 14px rgb(84, 219, 243);
+  text-shadow: 0 0 10px rgb(0, 0, 0);
 }
 .navbar a:hover {
   border: 1px solid aqua;
@@ -277,4 +281,33 @@ ul.signUpform button:hover {
 ul.signUpform li input:hover {
   width: 250px;
   border-color: rgb(162, 0, 255);
+}
+
+/*
+* How to play page design
+*/
+
+.grid-container > div {
+  background: rgb(99, 99, 99);
+  padding: 1rem;
+}
+.grid-container > div:nth-child(odd) {
+  background: rgb(122, 122, 122);
+}
+.grid-container {
+  grid-auto-rows: minmax(100px, auto);
+  display: grid;
+  grid-template-columns: 60% 30%;
+  grid-template-rows: 300px;
+  grid-gap: 1em;
+  padding: 10rem;
+  justify-items: stretch;
+}
+.grid-item-1 {
+  grid-column: 1/2;
+  grid-row: 1/2;
+  box-shadow: 0 0 10px 0 black;
+}
+.grid-item-2 {
+  box-shadow: 0 0 10px 0 black;
 }
