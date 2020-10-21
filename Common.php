@@ -7,7 +7,6 @@ function outputhtmlTemp($title){
     echo '<head>';
     echo '<title>' . $title . '</title>';
     echo '<link rel="stylesheet" href="style.css">';
-    echo '<script src="web.js"></script>';
     echo '</head>';
     echo '<body>';
 }
@@ -40,8 +39,10 @@ function outputBannerNavigation($pageName){
     echo '</nav>';
 }
 
-//Outputs closing body tag and closing HTML tag
+//Outputs closing body,html,and section tag
+//linking javascript for each file
 function outputFooter(){
+    echo '<script src="web.js"></script>';
     echo '</section>';
     echo '</body>';
     echo '</html>';

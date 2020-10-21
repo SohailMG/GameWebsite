@@ -5,9 +5,9 @@
 ?>
     <!-- Sing in form -->
     <div class="formContainer">
-        <div class="SignInform">
+        <div class="forms">
             <h1>Sign In</h1>
-                <ul class="formlist">
+                <ul class="signInform">
                     <li><input type="text" name="User name" placeholder="User Name"></li>
                     <li><input type="passwrod" name="Password" placeholder="Password"></li>
                     <li><button class="Submitbtn" onclick="myfunction()">Sign In</button></li>
@@ -15,11 +15,6 @@
                 </ul>
         </div>
     </div>
-    <script>
-        function myfunction(){
-            document.location.href="index.php";
-        }
-    </script>
 
 
 
