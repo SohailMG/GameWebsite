@@ -113,6 +113,7 @@ main {
   margin-bottom: auto;
 }
 .box1 {
+  box-shadow: 0 0 10px 0 rgb(0, 0, 0);
   text-align: center;
   padding: 20px;
   position: relative;
