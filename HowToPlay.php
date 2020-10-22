@@ -11,7 +11,6 @@
 
 
 <?php
-    include('Common.php');
     outputfooter();
 
 ?>

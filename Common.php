@@ -42,8 +42,9 @@ function outputBannerNavigation($pageName){
 //Outputs closing body,html,and section tag
 //linking javascript for each file
 function outputFooter(){
-    echo '<script src="web.js"></script>';
     echo '</section>';
+    echo '<footer><p>This is the footer info</p></footer>';
+    echo '<script src="web.js"></script>';
     echo '</body>';
     echo '</html>';
 }

@@ -8,8 +8,6 @@
             <a  class="current" href="Sign-in.php"><b>Sign-in</b></a>
             <a  href="Sign-up.php"><b>Sign-up</b></a>
         </div>        
-
-
     <main>
             <div class="box1">
                 <h1>Welcome to Memory Master</h1> 
@@ -22,14 +20,6 @@
             <div class="box2">
             </div>
     </main>
-
-
-    <footer>
-        <p>This is the footer info</p>
-    </footer>
-
-
-
 <?php
     outputfooter();
 ?>
