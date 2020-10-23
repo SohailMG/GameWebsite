@@ -335,12 +335,19 @@ ul.signUpform li input:hover {
   box-shadow: 0 0 10px 0 rgb(0, 0, 0);
 }
 .highest-score {
-  box-shadow: 0 0 10px 0 black;
+  background-color: rgba(241, 189, 253, 0.603);
+  box-shadow: 0 0 10px 0 rgb(255, 255, 255);
+  text-align: center;
 }
 .user-name {
-  box-shadow: 0 0 10px 0 black;
+  background-color: rgba(241, 189, 253, 0.603);
+  box-shadow: 0 0 10px 0 rgb(255, 255, 255);
+  text-align: center;
+  padding: 30px;
 }
-
+/* 
+* score board design 
+*/
 .table-container {
   border-radius: 10px;
   box-shadow: 0 0 14px 0 rgb(255, 255, 255);
@@ -366,4 +373,19 @@ ul.signUpform li input:hover {
   border-bottom: 1px solid rgba(255, 249, 249, 0.226);
   background-color: rgba(255, 255, 255, 0.521);
   
+}
+.showLevel{
+  color: rgb(252, 252, 252);
+  font-size: 70px;
+  text-shadow: 0 0 10px rgb(0, 0, 0);
+  padding-top: 50%;
+}
+.user-name h1{
+  color: rgb(77, 48, 73);
+  text-shadow: 0 0 10px rgb(255, 172, 251);
+}
+.highest-score h1{
+  color: rgb(77, 48, 73);
+  padding-top: 10px;;
+  text-shadow: 0 0 10px rgb(255, 172, 251);
 }

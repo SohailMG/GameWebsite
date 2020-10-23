@@ -50,8 +50,15 @@
             </tbody>
         </table>
     </div>
-        <div class="grid-item highest-score">highest score</div>
-        <div class="grid-item user-name">user name</div>
+        <div class="grid-item highest-score">
+            <h1>Highest Level</h1>
+            <div class="showLevel">7
+            </div>
+        </div>
+        
+        <div class="grid-item user-name">
+            <h1>User name</h1>
+        </div>
     </div>
 
 
