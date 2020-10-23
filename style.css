@@ -185,13 +185,6 @@ img {
   width: 350px;
   height: 300px;
 }
-/*footer {
-  text-align: center;
-  width: auto;
-  height: 60px;
-  color: white;
-  font-family: "Courier New", Courier, monospace;
-}
 /*
 *sign in form styling
 */
@@ -321,4 +314,56 @@ ul.signUpform li input:hover {
 }
 .grid-item-2 {
   box-shadow: 0 0 10px 0 black;
+}
+
+/*
+* Leaderboard page design
+*/
+.grid-container2 {
+  grid-auto-rows: minmax(100px, auto);
+  display: grid;
+  grid-template-columns:30% 60% 20%;
+  grid-template-rows: 300px;
+  grid-gap: 1em;
+  padding: 10rem;
+  justify-items: stretch;
+}
+.score-table {
+  border-radius: 10px;
+  grid-column: 1/3;
+  grid-row: 1/3;
+  box-shadow: 0 0 10px 0 rgb(0, 0, 0);
+}
+.highest-score {
+  box-shadow: 0 0 10px 0 black;
+}
+.user-name {
+  box-shadow: 0 0 10px 0 black;
+}
+
+.table-container {
+  border-radius: 10px;
+  box-shadow: 0 0 14px 0 rgb(255, 255, 255);
+  text-align: center;
+  border-collapse: collapse;
+  font-size: 0.9em;
+  width: 100%;
+  height: 100%;
+  
+}
+.table-container thead {
+  text-shadow: 0 0 10px rgb(255, 53, 221);
+  font-weight: bodl;
+  background-color: rgba(0, 0, 0, 0.555);
+  color: rgb(241, 241, 241);
+  text-align: center;
+}
+.table-container th,
+.table-container td{
+  padding: 12px 15px;
+}
+.table-container tbody tr{
+  border-bottom: 1px solid rgba(255, 249, 249, 0.226);
+  background-color: rgba(255, 255, 255, 0.521);
+  
 }
