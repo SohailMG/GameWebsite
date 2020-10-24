@@ -1,3 +1,5 @@
+
 function myfunction(){
-    document.location.href="index.php";
+    document.getElementById("logout").style.display = "block;"
 }
+
