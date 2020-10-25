@@ -8,7 +8,13 @@
 <div class="contact-Form">
     <div class="left-side">
         <h1>Get in touch</h1>
-        <p>get in touch by either filling the form on the right or call the number given below</p>
+        <p>Get in touch by either filling the form on the right or visit social media links below</p>
+        <div class="medialinks">
+            <div class="facebook-icon"></div>
+            <div class="twitter-icon"></div>
+            <div class="instagram-icon"></div>
+            <div class="github-icon"></div>
+        </div>
         <div class="phoneNum">
             <h1>+44-0794376512</h1>
         </div>
