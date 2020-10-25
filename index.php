@@ -9,6 +9,7 @@
     <a href="Sign-up.php"><b>Sign-up</b></a>
 </div>
 <main>
+    <!-- left side of home page layout -->
     <div class="box1">
         <h1>Welcome to Memory Master</h1>
         <div class="questions">
@@ -17,8 +18,8 @@
             <ul> Test your memory strength and become the Memory Master</ul>
         </div>
     </div>
+    <!-- right side ,logo of the game -->
     <div class="box2">
-        <!-- <img src="Images/Master.png" alt=""> -->
     </div>
 </main>
 <?php

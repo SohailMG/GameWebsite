@@ -5,14 +5,14 @@
     outputBannerNavigation("Contact")
 
 ?>
-<!-- contact form left side structure -->
 <div class="contact-Form">
+    <!-- contact form left side structure -->
     <div class="left-side">
         <h1>Get in touch</h1>
         <p>Get in touch by either filling the form on the right or visit social media links below</p>
         <!-- social media clickable images -->
 
-        s <div class="medialinks">
+        <div class="medialinks">
             <div class="facebook-icon">
                 <a href="https://www.facebook.com/"><img src="Images/facebook.png" alt=""></a>
             </div>

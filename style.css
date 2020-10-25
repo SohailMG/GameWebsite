@@ -304,13 +304,13 @@ ul.signUpform li input:hover {
   padding: 1rem;
 }
 .grid-container > div:nth-child(odd) {
-  background: rgb(122, 122, 122);
+  background: rgb(40, 7, 53);
 }
 .grid-container {
   grid-auto-rows: minmax(100px, auto);
   display: grid;
   grid-template-columns: 60% 30%;
-  grid-template-rows: 300px;
+  grid-template-rows: 400px;
   grid-gap: 1em;
   padding: 10rem;
   justify-items: stretch;
@@ -320,9 +320,17 @@ ul.signUpform li input:hover {
   grid-row: 1/2;
   box-shadow: 0 0 10px 0 black;
 }
+.grid-item-1 p {
+  color: white;
+  font-size: 20px;
+  text-shadow:0 0 10px  #20002c;
+  padding: 20px;
+}
 .grid-item-2 {
   box-shadow: 0 0 10px 0 black;
 }
+
+
 
 /*
 * Leaderboard page design
@@ -429,6 +437,7 @@ ul.signUpform li input:hover {
   font-size: 18px;
   color: rgb(0, 0, 0);
 }
+/* social media links design */
 
 .medialinks {
   display: flex;
