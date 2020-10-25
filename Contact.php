@@ -5,20 +5,35 @@
     outputBannerNavigation("Contact")
 
 ?>
+<!-- contact form left side structure -->
 <div class="contact-Form">
     <div class="left-side">
         <h1>Get in touch</h1>
         <p>Get in touch by either filling the form on the right or visit social media links below</p>
-        <div class="medialinks">
-            <div class="facebook-icon"></div>
-            <div class="twitter-icon"></div>
-            <div class="instagram-icon"></div>
-            <div class="github-icon"></div>
-        </div>
-        <div class="phoneNum">
-            <h1>+44-0794376512</h1>
+        <!-- social media clickable images -->
+
+        s <div class="medialinks">
+            <div class="facebook-icon">
+                <a href="https://www.facebook.com/"><img src="Images/facebook.png" alt=""></a>
+            </div>
+            <div class="twitter-icon">
+                <a href="https://twitter.com/">
+                    <img src="Images/twitter.png" alt="">
+                </a>
+            </div>
+            <div class="instagram-icon">
+                <a href="https://www.instagram.com/">
+                    <img src="Images/instagram.jpg" alt="">
+                </a>
+            </div>
+            <div class="github-icon">
+                <a href="https://github.com/SohailMG">
+                    <img src="Images/Github.png" alt="">
+                </a>
+            </div>
         </div>
     </div>
+    <!-- right side contact form layout -->
     <div class="right-side">
         <h1>Contact Form</h1>
         <div class="formlist">

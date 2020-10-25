@@ -176,7 +176,9 @@ main {
   animation: box2anim 700ms ease-in;
 }
 /* Home page img styling*/
-img {
+.box2 {
+  background-image: url("Images/Master.png");
+  background-size: cover;
   border-radius: 80px;
   background-position: center;
   background-size: cover;
@@ -415,7 +417,7 @@ ul.signUpform li input:hover {
   box-shadow: 0 0 10px rgb(39, 230, 255);
 }
 .left-side h1:nth-child(1) {
-  background-color: rgba(0, 0, 0, 0.295);
+  background-color: rgba(48, 28, 60, 0.987);
   padding-top: 10px;
   font-size: 30px;
   color: rgb(255, 255, 255);
@@ -427,16 +429,8 @@ ul.signUpform li input:hover {
   font-size: 18px;
   color: rgb(0, 0, 0);
 }
-.phoneNum {
-  text-align: center;
-  color: black;
-  padding-top: 53%;
-}
-.phoneNum h1 {
-  color: black;
-}
 
-.medialinks{
+.medialinks {
   display: flex;
   gap: 15px;
   width: 100%;
@@ -444,27 +438,20 @@ ul.signUpform li input:hover {
   padding-top: 30px;
   justify-content: center;
 }
-.medialinks > div{
+.medialinks > div {
   border-radius: 10px;
   width: 50px;
   height: 50px;
   background-size: cover;
 }
-.facebook-icon{
-  background-image: url(Images/facebook.png);
+.medialinks a img{
+  width: 50px;
+  height: 50px;
+  border-radius: 10px;
+  background-size: cover;
+  box-shadow: 0 0 10px black;
 }
-.instagram-icon{
-  background-image: url(Images/instagram.jpg);
-}
-.twitter-icon{
-  background-image: url(Images/twitter.png);
-}
-.github-icon{
-  background-image: url(Images/GitHub.png);
-}
-
 /* right side design */
-
 .right-side {
   width: 500px;
   height: 400px;
@@ -515,4 +502,3 @@ ul.signUpform li input:hover {
 /*
 !Game page design
 */
-

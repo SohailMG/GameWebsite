@@ -18,7 +18,7 @@
         </div>
     </div>
     <div class="box2">
-        <img src="Images/Master.png" alt="">
+        <!-- <img src="Images/Master.png" alt=""> -->
     </div>
 </main>
 <?php
