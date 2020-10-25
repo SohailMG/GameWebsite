@@ -6,9 +6,8 @@
 ?>
 <div class="grid-container">
     <div class="grid-item grid-item-1">
-        <button onclick="typeWriter()">Clickme</button>
-        <p id="demo"></p>
-        <p id="demo2"></p>
+        <button id="clickmebtn" onclick=" typeWriter()">Click Me</button>
+        <p id="instructions"></p>
     </div>
 
     <div class="grid-item grid-item-2"></div>

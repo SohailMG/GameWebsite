@@ -45,7 +45,7 @@ function outputBannerNavigation($pageName){
 function outputFooter(){
     echo '</section>';
     echo '<footer><p>This is the footer info</p></footer>';
-    echo '<script type="text/javascript" src="web.js"></script>';
+    echo '<script type="text/javascript" src="script.js"></script>';
     echo '</body>';
     echo '</html>';
 }

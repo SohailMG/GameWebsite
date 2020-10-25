@@ -304,7 +304,7 @@ ul.signUpform li input:hover {
   padding: 1rem;
 }
 .grid-container > div:nth-child(odd) {
-  background: rgb(40, 7, 53);
+  background: rgba(111, 111, 111, 0);
 }
 .grid-container {
   grid-auto-rows: minmax(100px, auto);
@@ -316,6 +316,7 @@ ul.signUpform li input:hover {
   justify-items: stretch;
 }
 .grid-item-1 {
+  text-align: center;
   grid-column: 1/2;
   grid-row: 1/2;
   box-shadow: 0 0 10px 0 black;
@@ -323,8 +324,25 @@ ul.signUpform li input:hover {
 .grid-item-1 p {
   color: white;
   font-size: 20px;
-  text-shadow:0 0 10px  #20002c;
+  text-shadow:0 0 10px  rgb(0, 0, 0);
   padding: 20px;
+  line-height: 40px;
+}
+.grid-item-1 button{
+  background-color: #3a1647;
+  font-size: 15px;
+  font-weight: bold;
+  color: rgb(255, 255, 255);
+  text-shadow: 0 0 10px rgb(255, 11, 11);
+  border: 1px solid rgba(0, 0, 0, 0.562);
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  box-shadow: 0 0 10px rgb(255, 255, 255);
+}
+.grid-item-1 button:hover{
+  background-color: rgb(32, 147, 255);
+  color: black;
 }
 .grid-item-2 {
   box-shadow: 0 0 10px 0 black;
