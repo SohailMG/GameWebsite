@@ -1,7 +1,7 @@
 <?php
 
 //Ouputs the html doctype template
-function outputhtmlTemp($title){
+function outputHtml($title){
     echo '<!DOCTYPE html>';
     echo '<html>';
     echo '<head>';

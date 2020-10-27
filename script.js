@@ -17,16 +17,14 @@ function sleeps for 1000ms then continues. color of text also changes each full 
 */
 async function typeWriter() {
   if (i < rules.length) {
-    document.getElementById("instructions").style.color="aqua";
-
+    document.getElementById("instructions").style.color = "aqua";
+    document.getElementById("clickmebtn").style.display = "none";
     document.getElementById("instructions").innerHTML += rules.charAt(i);
-    if (rules.charAt(i) == '.' && i < rules.length ) {
+    if (rules.charAt(i) == ".") {
       await sleep(1000);
     }
     i++;
-    document.getElementById("instructions").style.color="";
+    document.getElementById("instructions").style.color = "";
     setTimeout(typeWriter, speed);
-    
   }
-  
 }

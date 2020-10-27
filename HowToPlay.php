@@ -1,6 +1,6 @@
 <?php
-    include('Common.php');
-    outputhtmlTemp("HowToPlay");
+    include_once('Common.php');
+    outputHtml("HowToPlay");
     outputBannerNavigation("HowToPlay")
 
 ?>

@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <?php
-    include('Common.php');
-    outputhtmlTemp("Contact Page");
+    include_once('Common.php');
+    outputHtml("Contact Page");
     outputBannerNavigation("Contact")
 
 ?>
@@ -50,7 +50,6 @@
 </div>
 
 <?php
-    include('Common.php');
     outputfooter();
 
 ?>

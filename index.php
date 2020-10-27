@@ -1,6 +1,6 @@
 <?php
-        include('Common.php');
-        outputhtmlTemp("Home Page");
+        include_once('Common.php');
+        outputHtml("Home Page");
         outputBannerNavigation("Home")
 ?>
 <div class="signbtns">
