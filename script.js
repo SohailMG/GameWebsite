@@ -1,3 +1,8 @@
+function myfunction() {
+  document.location.href = "index.php";
+  document.getElementById("signN").style.color = "red";
+}
+
 /*
  * typewriter function used in how to play page
  * displying instructions on how the game is played

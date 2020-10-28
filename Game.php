@@ -2,17 +2,16 @@
     include_once('Common.php');
     outputHtml("Game Page");
     outputBannerNavigation("Game")
-
 ?>
+
 <div class="gameCanvas">
     <div class="startScreen">
         <div class="gameTitle">Memory Master</div>
-        <button id="startGame-button"></button>
+        <p>Click Start to start the game</p>
+        <button id="startGame-button" onclick=" startGame()">Start</button>
     </div>
 </div>
 
-
-<?php
-    outputfooter();
-
+<?php 
+outputfooter(); 
 ?>

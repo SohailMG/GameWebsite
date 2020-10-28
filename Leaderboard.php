@@ -4,6 +4,8 @@
     outputBannerNavigation("Leaderboard")
 
 ?>
+<!-- Grid containig ranking table,
+box to show username and another to show highest level  -->
 <div class="grid-container2">
     <div class="grid-item score-table">
         <table class="table-container">
@@ -50,12 +52,13 @@
             </tbody>
         </table>
     </div>
+    <!-- highest score of player displays here -->
     <div class="grid-item highest-score">
         <h1>Highest Level</h1>
         <div class="showLevel">7
         </div>
     </div>
-
+    <!-- current logged in username shows here -->
     <div class="grid-item user-name">
         <h1>User name</h1>
     </div>
