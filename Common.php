@@ -16,6 +16,7 @@ function outputBannerNavigation($pageName){
     //Output banner and first part of navigation
     echo '<section>';
     echo '<header> 
+            <div id="gamelogo"></div>
             </header>';
     echo '<nav>';
     echo '<div class="navbar">';
@@ -35,8 +36,13 @@ function outputBannerNavigation($pageName){
         }
         echo 'href="' . $pageLinks[$i] . '">' . $pageNames[$i] . '</a>';
         
-    }
+    }  
     echo '</div>';
+    echo '<div class="signbtns">
+            <p><b>Are you registered?</b></p>
+            <a id="signN" href="Sign-in.php"><b>Sign-in</b></a>
+            <a id="signP" href=" Sign-up.php"><b>Sign-up</b></a>
+        </div>';
     echo '</nav>';
 }
 

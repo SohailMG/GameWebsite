@@ -5,11 +5,7 @@
         outputBannerNavigation("Home")
 ?>
 <!-- sign in and sign up buttons layout -->
-<div class="signbtns">
-    <p><b>Are you registered?</b></p>
-    <a id="signN" href="Sign-in.php"><b>Sign-in</b></a>
-    <a id="signP" href=" Sign-up.php"><b>Sign-up</b></a>
-</div>
+
 <main>
     <!-- left side of home page layout -->
     <div class="box1">

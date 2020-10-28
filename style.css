@@ -24,7 +24,7 @@ footer {
 section {
   width: 100%;
   height: 100vh;
-  background-image: linear-gradient(90deg, #fd746c, #89253e, #20002c, #734b6d);
+  background-image: linear-gradient(90deg, #fd746c, #D9AFD9, #97D9E1, #734b6d);
   background-size: 400% 400%;
   position: relative;
   animation: color-change 10s ease-in-out infinite;
@@ -44,18 +44,28 @@ section {
 
 header {
   width: auto;
-  height: 40px;
+  background-color: #734b6d;
+}
+header > div{
+  position: relative;
+  left: 40%;
+  top: 1px;
 }
 nav {
-  border: 1px solid aqua;
-  border-top: none;
-  border-bottom: none;
+  display:flex;
+  gap: 10px;
   padding: 7px;
-  background-color: rgba(13, 57, 68, 0);
-  width: 450px;
-  height: 20px;
+  background-color:#734b6d;;
+  height: 70px;
+  width: 100%;
   position: relative;
-  left: 40px;
+}
+#gamelogo{
+  background-image: url("Images/Master.png");
+  background-size: cover;
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
 }
 .selected {
   background-color: rgba(247, 244, 120, 0.692);
@@ -66,13 +76,16 @@ nav {
   border-right: none;
   border-left: none;
 }
+.navbar{
+  padding-top: 30px;
+}
 .navbar a {
   font-weight: bold;
   text-decoration: none;
   padding: 14px;
   color: rgb(255, 255, 255);
   font-family: Arial, Helvetica, sans-serif;
-  font-size: 15px;
+  font-size: 12px;
   text-shadow: 0 0 10px rgb(0, 0, 0);
 }
 .navbar a:hover {
@@ -87,14 +100,15 @@ nav {
 */
 .signbtns {
   position: relative;
-  right: 40px;
   text-align: right;
+  padding-left: 40%;
+  padding-top: 10px;
 }
 .signbtns a {
   font-size: 14px;
   background-color: rgba(45, 54, 58, 0.487);
   text-decoration: none;
-  padding: 14px;
+  padding: 12px;
   color: rgb(243, 243, 243);
 }
 .signbtns a:hover {
@@ -114,7 +128,9 @@ nav {
   font-family: Arial, Helvetica, sans-serif;
 }
 
-/* Home page main section positioning */
+/* 
+* Home page main section positioning 
+*/
 main {
   align-items: center;
   display: flex;
@@ -310,17 +326,17 @@ ul.signUpform li input:hover {
 .grid-container {
   grid-auto-rows: minmax(100px, auto);
   display: grid;
-  grid-template-columns: 60% 30%;
+  grid-template-columns: 40% 20%;
   grid-template-rows: 400px;
   grid-gap: 1em;
-  padding: 10rem;
   justify-items: stretch;
+  padding-top: 5%;
+  padding-left: 10%;
 }
 .grid-item-1 {
   text-align: center;
   grid-column: 1/2;
   grid-row: 1/2;
-  box-shadow: 0 0 10px 0 rgba(247, 244, 120, 0.692);
 }
 .grid-item-1 p {
   color: white;
@@ -352,11 +368,10 @@ ul.signUpform li input:hover {
   box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.692);
 }
 
-
-
 /*
 * Leaderboard page design
 */
+
 .grid-container2 {
   grid-auto-rows: minmax(100px, auto);
   display: grid;
@@ -365,21 +380,23 @@ ul.signUpform li input:hover {
   grid-gap: 1em;
   padding: 10rem;
   justify-items: stretch;
+  padding-left: 10%;
+  padding: 20px;
+  padding-left: 5%;
+  padding-right: 20%;
+  padding-top: 5%;
 }
 .score-table {
   border-radius: 10px;
   grid-column: 1/3;
   grid-row: 1/3;
-  box-shadow: 0 0 10px 0 rgba(247, 244, 120, 0.692);
 }
 .highest-score {
-  background-color: rgba(241, 189, 253, 0.603);
-  box-shadow: 0 0 10px 0 rgba(247, 244, 120, 0.692);
+  background-color: white;
   text-align: center;
 }
 .user-name {
-  background-color: rgba(241, 189, 253, 0.603);
-  box-shadow: 0 0 10px 0 rgba(247, 244, 120, 0.692);
+  background-color: white;
   text-align: center;
   padding: 30px;
 }
@@ -388,7 +405,6 @@ ul.signUpform li input:hover {
 */
 .table-container {
   border-radius: 10px;
-  box-shadow: 0 0 14px 0 rgb(255, 255, 255);
   text-align: center;
   border-collapse: collapse;
   font-size: 0.9em;
@@ -411,9 +427,8 @@ ul.signUpform li input:hover {
   background-color: rgba(255, 255, 255, 0.521);
 }
 .showLevel {
-  color: rgb(252, 252, 252);
+  color: black;
   font-size: 70px;
-  text-shadow: 0 0 10px rgb(0, 0, 0);
   padding-top: 50%;
 }
 .user-name h1 {
@@ -434,7 +449,8 @@ ul.signUpform li input:hover {
   gap: 10px;
   display: flex;
   justify-content: center;
-  padding-top: 10%;
+  padding-top: 5%;
+  padding-bottom: 10%;
 }
 
 /* left side design */
@@ -539,7 +555,7 @@ width: 60%;
 height: 60%;
 color:rgb(0, 0, 0);
 margin-left: 20%;
-margin-top: 10%;
+margin-top: 5%;
 box-shadow: 0 0 50px black;
 justify-content: center;
 text-align: center;
