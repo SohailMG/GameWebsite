@@ -12,6 +12,7 @@
     </div>
 </div>
 
-<?php 
-outputfooter(); 
+<?php
+    include_once('footer.php');
+    outputfooter();
 ?>

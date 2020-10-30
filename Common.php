@@ -45,13 +45,3 @@ function outputBannerNavigation($pageName){
         </div>';
     echo '</nav>';
 }
-
-//Outputs closing body,html,and section tag
-//linking javascript for each file
-function outputFooter(){
-    echo '</section>';
-    echo '<footer><p>This is the footer info</p></footer>';
-    echo '<script type="text/javascript" src="script.js"></script>';
-    echo '</body>';
-    echo '</html>';
-}

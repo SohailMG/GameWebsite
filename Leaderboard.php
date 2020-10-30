@@ -66,6 +66,6 @@ box to show username and another to show highest level  -->
 
 
 <?php
+    include_once('footer.php');
     outputfooter();
-
 ?>

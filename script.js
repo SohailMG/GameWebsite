@@ -1,6 +1,6 @@
 function myfunction() {
+  document.getElementById("signN").style.visibility="hidden"; 
   document.location.href = "index.php";
-  document.getElementById("signN").style.color = "red";
 }
 
 /*
@@ -24,6 +24,8 @@ async function typeWriter() {
   if (i < rules.length) {
     document.getElementById("instructions").style.color = "aqua";
     document.getElementById("clickmebtn").style.display = "none";
+    document.getElementById("rightTxt").style.display = "none";
+    document.getElementById("gotoGame").style.display = "block";
     document.getElementById("instructions").innerHTML += rules.charAt(i);
     if (rules.charAt(i) == ".") {
       await sleep(1000);

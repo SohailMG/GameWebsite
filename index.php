@@ -20,6 +20,9 @@
     <div class="box2">
     </div>
 </main>
+
+
 <?php
+    include_once('footer.php');
     outputfooter();
 ?>
