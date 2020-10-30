@@ -1,5 +1,5 @@
 <?php
-    include_once('Common.php');
+    include_once('CommonPhp/Common.php');
     outputHtml("Leaderboard");
     outputBannerNavigation("Leaderboard")
 
@@ -66,6 +66,6 @@ box to show username and another to show highest level  -->
 
 
 <?php
-    include_once('footer.php');
+    include_once('CommonPhp/footer.php');
     outputfooter();
 ?>

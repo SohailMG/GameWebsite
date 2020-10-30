@@ -1,5 +1,5 @@
 <?php
-        include_once('Common.php');
+        include_once('CommonPhp/Common.php');
         outputHtml("Home Page");
         outputBannerNavigation("Home")
 ?>
@@ -18,6 +18,6 @@
 </div>
 
 <?php
-    include_once('footer.php');
+    include_once('CommonPhp/footer.php');
     outputfooter();
 ?>

@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <?php
-    include_once('Common.php');
+    include_once('CommonPhp/Common.php');
     outputHtml("Contact Page");
     outputBannerNavigation("Contact")
 
@@ -50,6 +50,6 @@
 </div>
 
 <?php
-    include_once('footer.php');
+    include_once('CommonPhp/footer.php');
     outputfooter();
 ?>

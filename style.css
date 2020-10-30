@@ -17,7 +17,7 @@ footer{
   gap: 10%;
   width: 100%;
   height: 200px;
-  background-color: slategray;
+  background-color: mediumpurple;
 }
 footer > div{
   width: 150px;
@@ -33,7 +33,8 @@ footer > div{
 }
 .side1 p{
   text-align: centre;
-  color: grey;
+  padding-top: 10px;
+  color: rgba(255, 255, 255, 0.596);
   font-size: 12px;
 }
 .side2 > a{
@@ -81,7 +82,7 @@ footer > div{
 section {
   width: 100%;
   height: 120vh;
-  background-image: linear-gradient(90deg, #FFDEE9, #B5FFFC, rgba(5,84,94,1), #bbb);
+  background-image: linear-gradient(90deg, #667eea, #764ba2, #6a85b6, #bbb);
   background-size: 400% 400%;
   position: relative;
   animation: color-change 10s ease-in-out infinite;
@@ -101,7 +102,7 @@ section {
 
 header {
   width: auto;
-  background-color: slategray;
+  background-color: mediumpurple;
 }
 header > div{
   position: relative;
@@ -112,7 +113,7 @@ nav {
   display:flex;
   gap: 10px;
   padding: 7px;
-  background-color :slategray;
+  background-color :mediumpurple;
   height: 70px;
   width: 100%;
   position: relative;
@@ -627,9 +628,9 @@ ul.signUpform li input:hover {
 !Game page design
 */
 .gameCanvas{
-background-color: rgb(148, 139, 108);
+background-color: white;
 width: 60%;
-height: 60%;
+height: 50%;
 color:rgb(0, 0, 0);
 margin-left: 20%;
 margin-top: 5%;
