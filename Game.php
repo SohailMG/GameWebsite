@@ -5,10 +5,13 @@
 ?>
 
 <div class="gameCanvas">
-    <div class="startScreen">
+    <div id="startScreen">
         <div class="gameTitle">Memory Master</div>
         <p>Click Start to start the game</p>
         <button id="startGame-button" onclick=" startGame()">Play</button>
+    </div>
+    <div id="mainScreen">
+        <div class="gameTitle">Memory Master</div>
     </div>
 </div>
 

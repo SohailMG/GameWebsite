@@ -2,19 +2,19 @@
 function outputFooter(){
 echo '</section>';
 echo '<footer>
-<div class="side1">
+<div class="section1">
     <h1>Memory Master</h1>
     <p>This game is developed by Sohail, and the purpose of the game is mainly testing the extent to which user can
         remember a series of numbers in a short amount of time.</p>
 </div>
-<div class="side2">
+<div class="section2">
     <a href="index.php">Home</a>
     <a href="Game.php">Game</a>
     <a href="HowTolay.php">How to play</a>
     <a href="Leaderboard.php">Leaderboard</a>
     <a href="Contact.php">Contact</a>
 </div>
-<div class="side3">
+<div class="section3">
     <div class="followOn">Follow On
         <div class="facebook-icon">
             <a href="https://www.facebook.com/"><img src="Images/facebook.png" alt=""></a>
@@ -36,7 +36,7 @@ echo '<footer>
         </div>
     </div>
 </div>
-<div class="side4">
+<div class="section4">
     <h1>Stay Updated</h1>
     <input type="text" name="Email" placeholder="Enter Email ">
     <button id="subbtn">Subscribe</button>

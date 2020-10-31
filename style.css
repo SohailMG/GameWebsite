@@ -11,7 +11,9 @@ body {
   font-family: Arial, Helvetica, sans-serif;
   min-height: 100%;
 }
-
+/* 
+* footer design 
+*/
 footer{
   display:flex;
   gap: 10%;
@@ -25,19 +27,19 @@ footer > div{
   position: relative;
   left: 12%;
 }
-.side1 h1{
+.section1 h1{
   text-align: centre;
   color: white;
   font-size: 20px;
   padding-top: 10px;
 }
-.side1 p{
+.section1 p{
   text-align: centre;
   padding-top: 10px;
   color: rgba(255, 255, 255, 0.596);
   font-size: 12px;
 }
-.side2 > a{
+.section2 > a{
   text-decoration: none;
   font-size: 12px;
   color: white;
@@ -61,17 +63,17 @@ footer > div{
   background-size: cover;
   box-shadow: 0 0 10px black;
 }
-.side4 h1{
+.section4 h1{
   font-size: 16px;
   padding: 10px;
   color: white; 
 }
-.side4 input{
+.section4 input{
   padding: 5px;
   height: 20px;
   border-radius: 5px;
 }
-.side4 button{
+.section4 button{
   padding: 5px;
   background-color: orange;
   border-radius: 10px;
@@ -82,7 +84,7 @@ footer > div{
 section {
   width: 100%;
   height: 120vh;
-  background-image: linear-gradient(90deg, #89766d, #948c7c, #7c6364, #6c4c5c);
+  background-image: linear-gradient(90deg, #89766d, #948c7c, #6c4c5c, #5c3c4c);
   background-size: 400% 400%;
   position: relative;
   animation: color-change 10s ease-in-out infinite;
@@ -570,7 +572,7 @@ ul.signUpform li input:hover {
 .medialinks a img{
   width: 50px;
   height: 50px;
-  border-radius: 10px;
+  border-radius: 50%;
   background-size: cover;
   box-shadow: 0 0 10px black;
 }
@@ -647,10 +649,17 @@ text-align: center;
   background-color: #5c3c4c;
   text-align: center;
 }
-.startScreen  p{
+#startScreen  p{
   color: white;
   text-shadow: 0 0 10px #9c947c;
   font-size: 20px;
+  margin-top: 7%;
+}
+#mainScreen{
+  display:none;
+  color: white;
+  text-shadow: 0 0 10px #9c947c;
+  font-size: 16px;
   margin-top: 7%;
 }
 /* start button puls animation */
