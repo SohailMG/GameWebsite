@@ -1,4 +1,8 @@
 <?php
+
+/* function that outputs the footer layout for each page
+it also outputs the closing tags for each page */
+
 function outputFooter(){
 echo '</section>';
 echo '<footer>
@@ -44,7 +48,9 @@ echo '<footer>
 </div>
 </footer>';
 
-echo '<script type="text/javascript" src="scripts/script.js"></script>';
+echo '<script type="text/javascript" src="scripts/Game.js"></script>';
+echo '<script type="text/javascript" src="scripts/Typewriter.js"></script>';
+echo '<script type="text/javascript" src="scripts/Contact.js"></script>';
 echo '</body>';
 echo '
 

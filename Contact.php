@@ -12,7 +12,6 @@
         <h1>Get in touch</h1>
         <p>Get in touch by either filling the form on the right or visit social media links below</p>
         <!-- social media clickable images -->
-
         <div class="medialinks">
             <div class="facebook-icon">
                 <a href="https://www.facebook.com/"><img src="Images/facebook.png" alt=""></a>
@@ -37,16 +36,17 @@
     <!-- right side contact form layout -->
     <div class="right-side">
         <h1>Contact Form</h1>
-        <div class="formlist">
+        <!-- added onsubmit function to validate form fields -->
+        <form onsubmit=" return validateForm()" class=" formlist" action="mailSent.php">
             <ul>
-                <li><input type="text" name="name" placeholder="Enter Name"></li>
-                <li><input type="text" name="Email" placeholder="Enter Email address"></li>
-                <li><input type="text" name="Subject" placeholder="Enter Subject"></li>
-                <li><textarea name="Message" id="message" cols="30" rows="10" placeholder="Enter message..."></textarea>
+                <li><input id="name" type=" text" name="name" placeholder="Enter Name"></li>
+                <li><input id="email" type=" text" name="Email" placeholder="Enter Email address"></li>
+                <li><input id="subject" type=" text" name="Subject" placeholder="Enter Subject"></li>
+                <li><textarea id="message" name="Message" cols="30" rows="10" placeholder="Enter message..."></textarea>
                 </li>
-                <li><button class="formSubmit" onclick="Submitform()">Submit</button></li>
+                <li><button id="formSubmit" type="submit">Submit</button></li>
             </ul>
-        </div>
+        </form>
     </div>
 </div>
 
