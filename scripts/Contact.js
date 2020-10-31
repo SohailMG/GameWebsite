@@ -6,14 +6,20 @@ function validateForm() {
   var Email = document.getElementById("email");
   var Subject = document.getElementById("subject");
   var Message = document.getElementById("message");
+  // an array of all fields
+  var fields = [Name, Email, Subject, Message];
 
   if (
-    Email.value   == "" ||
-    Name.value    == "" ||
+    Email.value == "" ||
+    Name.value == "" ||
     Subject.value == "" ||
     Message.value == ""
   ) {
     alert("Please fill all fields");
+    fields.forEach((element) => {
+      element.style.border = "1px solid red";
+    });
+
     return false;
   } else {
     return true;
