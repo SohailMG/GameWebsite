@@ -2,5 +2,5 @@
 // the screen changes to the main screen 
 function startGame() {
     document.getElementById("startScreen").style.display = "none";
-    document.getElementById("mainScreen").style.display = "block";
+    document.getElementById("selectionScreen").style.display = "block";
 }

@@ -11,8 +11,16 @@
         <p>Click Start to start the game</p>
         <button id="startGame-button" onclick=" startGame()">Play</button>
     </div>
-    <div id="mainScreen">
+    <div id="selectionScreen">
         <div class="gameTitle">Memory Master</div>
+        <h1>Choose Difficulty</h1>
+        <p><b>Easy:</b> Timer is slower and starts with two digit number<br><b>Hard:</b> Timer is faster and starts with
+            four
+            digit number.
+
+        </p>
+        <button id="Easy">Easy</button>
+        <button id="Hard">Hard</button>
     </div>
 </div>
 

@@ -9,15 +9,24 @@ function validateForm() {
   // an array of all fields
   var fields = [Name, Email, Subject, Message];
 
+  /* checking if each field is empty
+  empty fields will have red border
+  and green for filled ones,
+  function excutes when returns true 
+*/
+
   if (
     Email.value == "" ||
     Name.value == "" ||
     Subject.value == "" ||
     Message.value == ""
   ) {
-    alert("Please fill all fields");
     fields.forEach((element) => {
-      element.style.border = "1px solid red";
+      if (element.value == "") {
+        element.style.border = "1px solid red";
+      } else {
+        element.style.border = "1px solid green";
+      }
     });
 
     return false;
