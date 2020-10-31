@@ -1,6 +1,6 @@
 <!-- php functions to output html template and navbar -->
 <?php
-        include_once('CommonPhp/Common.php');
+        include_once('CommonPhp/HeaderNav.php');
         outputHtml("Home Page");
         outputBannerNavigation("Home")
 ?>

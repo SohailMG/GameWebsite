@@ -15,7 +15,7 @@ function outputHtml($title){
 function outputBannerNavigation($pageName){
     //Output banner and first part of navigation
     echo '<section>';
-    echo '<header> 
+    echo '<header>
             <div id="gamelogo"></div>
             </header>';
     echo '<nav>';

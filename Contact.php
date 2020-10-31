@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <?php
-    include_once('CommonPhp/Common.php');
+    include_once('CommonPhp/HeaderNav.php');
     outputHtml("Contact Page");
     outputBannerNavigation("Contact")
 

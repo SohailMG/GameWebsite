@@ -17,7 +17,7 @@ footer{
   gap: 10%;
   width: 100%;
   height: 200px;
-  background-color: mediumpurple;
+  background-color: #5c3c4c;
 }
 footer > div{
   width: 150px;
@@ -82,7 +82,7 @@ footer > div{
 section {
   width: 100%;
   height: 120vh;
-  background-image: linear-gradient(90deg, #667eea, #764ba2, #6a85b6, #bbb);
+  background-image: linear-gradient(90deg, #89766d, #948c7c, #7c6364, #6c4c5c);
   background-size: 400% 400%;
   position: relative;
   animation: color-change 10s ease-in-out infinite;
@@ -101,8 +101,10 @@ section {
 }
 
 header {
-  width: auto;
-  background-color: mediumpurple;
+  text-align: center;
+  width: 100%;
+  height: 90px;
+  background-color: #5c3c4c;
 }
 header > div{
   position: relative;
@@ -113,20 +115,19 @@ nav {
   display:flex;
   gap: 10px;
   padding: 7px;
-  background-color :mediumpurple;
+  background-color: #5c3c4c;
   height: 70px;
   width: 100%;
   position: relative;
 }
 #gamelogo{
-  background-image: url("Images/Master.png");
+  background-image: url("Images/Wlogo3.png");
   background-size: cover;
-  width: 80px;
-  height: 80px;
-  border-radius: 50%;
+  width: 120px;
+  height: 120px;
 }
 .selected {
-  background-color: rgba(247, 244, 120, 0.692);
+  background-color: #d3d9a5;
   box-shadow: 0 0 10px 0 black;
   border-radius: 10px;
   border: 2px solid rgb(0, 221, 255);
@@ -164,14 +165,12 @@ nav {
 }
 .signbtns a {
   font-size: 14px;
-  background-color: rgba(45, 54, 58, 0.487);
+  background-color: #948c7c98;
   text-decoration: none;
   padding: 12px;
   color: rgb(243, 243, 243);
 }
-.signN{
-  visibility: visible;
-}
+
 .signbtns a:hover {
   background-color: none;
   border: 1px solid aqua;
@@ -184,8 +183,7 @@ nav {
   position: relative;
   right: 180px;
   top: 20px;
-  color: rgba(206, 206, 206, 0.822);
-  text-shadow: 0 0 14px rgb(84, 219, 243);
+  color: #948c7c;
   font-family: Arial, Helvetica, sans-serif;
 }
 
@@ -233,7 +231,7 @@ main {
 */
 .box1 h1 {
   color: aliceblue;
-  text-shadow: 0 0 14px rgb(84, 219, 243);
+  text-shadow: 0 0 14px #948c7c;
   font-size: 30px;
   font-family: Arial, Helvetica, sans-serif;
 }
@@ -255,7 +253,7 @@ main {
 }
 /* Home page img styling*/
 .box2 {
-  background-image: url("Images/Master.png");
+  background-image: url("Images/Wlogo3.png");
   background-size: cover;
   border-radius: 80px;
   background-position: center;
@@ -420,7 +418,7 @@ ul.signUpform li input:hover {
 }
 #rightTxt{
   display: block;
-  color: black;
+  color: #f8f4ec;
   text-align: center;
   font-size: 22px;
   padding-top: 50%;
@@ -470,11 +468,11 @@ ul.signUpform li input:hover {
   grid-row: 1/3;
 }
 .highest-score {
-  background-color: white;
+  background-color: #5c3c4c;
   text-align: center;
 }
 .user-name {
-  background-color: white;
+  background-color: #5c3c4c;
   text-align: center;
   padding: 30px;
 }
@@ -490,10 +488,10 @@ ul.signUpform li input:hover {
   height: 100%;
 }
 .table-container thead {
-  text-shadow: 0 0 10px rgb(255, 53, 221);
+  text-shadow: 0 0 10px rgb(255, 91, 255);
   font-weight: bodl;
-  background-color: rgba(0, 0, 0, 0.555);
-  color: rgb(241, 241, 241);
+  background-color: #5c3c4c;
+  color: #d3d9a5;
   text-align: center;
 }
 .table-container th,
@@ -505,16 +503,16 @@ ul.signUpform li input:hover {
   background-color: rgba(255, 255, 255, 0.521);
 }
 .showLevel {
-  color: black;
+  color: #d3d9a5;
   font-size: 70px;
   padding-top: 50%;
 }
 .user-name h1 {
-  color: rgb(77, 48, 73);
+  color: #d3d9a5;
   text-shadow: 0 0 10px rgb(255, 172, 251);
 }
 .highest-score h1 {
-  color: rgb(77, 48, 73);
+  color: #d3d9a5;
   padding-top: 10px;
   text-shadow: 0 0 10px rgb(255, 172, 251);
 }
@@ -536,16 +534,16 @@ ul.signUpform li input:hover {
 .left-side {
   width: 300px;
   height: 400px;
-  background-color: rgb(255, 255, 255);
+  background-color: #948c7c;
   text-align: center;
-  box-shadow: 0 0 10px rgba(247, 244, 120, 0.692);
+  box-shadow: 0 0 10px #5c3c4c;
 }
 .left-side h1:nth-child(1) {
-  background-color: rgba(48, 28, 60, 0.987);
+  background-color: #948c7c;
   padding-top: 10px;
   font-size: 30px;
-  color: rgb(255, 255, 255);
-  text-shadow: 0 0 10px red;
+  color: white;
+  text-shadow: 0 0 10px #5c3c4c;
   justify-content: center;
 }
 .left-side p {
@@ -580,12 +578,12 @@ ul.signUpform li input:hover {
 .right-side {
   width: 500px;
   height: 400px;
-  background-color: rgba(255, 166, 0, 0.035);
-  box-shadow: 0 0 10px rgba(247, 244, 120, 0.692);
+  background-color: #948c7c;
+  box-shadow: 0 0 10px #5c3c4c;
 }
 .right-side h1 {
   color: white;
-  text-shadow: 0 0 10px red;
+  text-shadow: 0 0 10px #5c3c4c;
   text-align: center;
 }
 .formlist ul {
@@ -628,7 +626,8 @@ ul.signUpform li input:hover {
 !Game page design
 */
 .gameCanvas{
-background-color: white;
+background-color: #9c947c;
+background-repeat: 2fr;
 width: 60%;
 height: 50%;
 color:rgb(0, 0, 0);
@@ -645,29 +644,29 @@ text-align: center;
   width: 100%;
   height: 30px;
   padding-top: 10px;
-  background-color: rgb(45, 30, 58);
+  background-color: #5c3c4c;
   text-align: center;
 }
 .startScreen  p{
   color: white;
-  text-shadow: 0 0 10px red;
+  text-shadow: 0 0 10px #9c947c;
   font-size: 20px;
   margin-top: 7%;
 }
 /* start button puls animation */
 #startGame-button{
   text-align: center;
-  font-size: 15px;
-  color: white;
-  text-shadow: 0 0 10px red;
-  background-color: rgb(44, 35, 61);
+  font-size: 20px;
+  color:white;
+  text-shadow: 0 0 10px #9c947c;
+  background-color: #5c3c4c;
   border:none;
   border-radius: 50%;
-  height: 100px;
   width:100px;
+  height: 100px;
   margin-top: 8%;
 
-  box-shadow: 0 0 10px rgba(0, 0, 0, 1);
+  box-shadow: 0 0 10px #9c947c;
 	transform: scale(1);
 	animation: pulse 2s infinite;
 }
