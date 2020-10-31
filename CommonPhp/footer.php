@@ -10,7 +10,7 @@ echo '<footer>
 <div class="section2">
     <a href="index.php">Home</a>
     <a href="Game.php">Game</a>
-    <a href="HowTolay.php">How to play</a>
+    <a href="HowToPlay.php">HowToPlay</a>
     <a href="Leaderboard.php">Leaderboard</a>
     <a href="Contact.php">Contact</a>
 </div>
@@ -44,7 +44,7 @@ echo '<footer>
 </div>
 </footer>';
 
-echo '<script type="text/javascript" src="script.js"></script>';
+echo '<script type="text/javascript" src="scripts/script.js"></script>';
 echo '</body>';
 echo '
 

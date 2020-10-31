@@ -123,16 +123,13 @@ nav {
   position: relative;
 }
 #gamelogo{
-  background-image: url("Images/Wlogo3.png");
+  background-image: url("../Images/Wlogo3.png");
   background-size: cover;
   width: 120px;
   height: 120px;
 }
 .selected {
-  background-color: #d3d9a5;
-  box-shadow: 0 0 10px 0 black;
-  border-radius: 10px;
-  border: 2px solid rgb(0, 221, 255);
+  border: 1px solid #d3d9a5;
   border-top: none;
   border-right: none;
   border-left: none;
@@ -150,10 +147,7 @@ nav {
   text-shadow: 0 0 10px rgb(0, 0, 0);
 }
 .navbar a:hover {
-  border: 1px solid aqua;
-  border-top: none;
-  border-right: none;
-  border-left: none;
+  background-color: #d3d9a55d;
 }
 
 /* 
@@ -255,7 +249,7 @@ main {
 }
 /* Home page img styling*/
 .box2 {
-  background-image: url("Images/Wlogo3.png");
+  background-image: url("../Images/Wlogo3.png");
   background-size: cover;
   border-radius: 80px;
   background-position: center;
@@ -400,7 +394,7 @@ ul.signUpform li input:hover {
   line-height: 40px;
 }
 .grid-item-1 button{
-  background-image: url("Images/clickmebg.jpg");
+  background-image: url("../Images/clickmebg.jpg");
   background-size: cover;
   border: 1px solid rgba(0, 0, 0, 0.562);
   text-shadow: 0 0 10px rgb(255, 11, 11);

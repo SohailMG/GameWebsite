@@ -15,7 +15,7 @@
     <!-- grid item 2 containes  text and button to go to game page -->
     <div class="grid-item grid-item-2">
         <p id="rightTxt">To view instructions on how the game is played click the button to the left</p>
-        <a id="gotoGame" href="webPages/Game.php">
+        <a id="gotoGame" href="Game.php">
             <h1>Goto Game</h1>
         </a>
     </div>
