@@ -1,7 +1,8 @@
 <?php
-    include_once('CommonPhp/HeaderNav.php');
+    include_once('CommonPhp/MainTags.php');
+    include_once('CommonPhp/HeaderNavigation.php');
     outputHtml("Game Page");
-    outputBannerNavigation("Game")
+    outputHeaderNav("Game")
 ?>
 
 <div class="gameCanvas">

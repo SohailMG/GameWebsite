@@ -1,8 +1,9 @@
 <!DOCTYPE html>
 <?php
-    include_once('CommonPhp/HeaderNav.php');
+    include_once('CommonPhp/MainTags.php');
+    include_once('CommonPhp/HeaderNavigation.php');
     outputHtml("Contact Page");
-    outputBannerNavigation("Contact")
+    outputHeaderNav("Contact")
 
 ?>
 <div class="contact-Form">

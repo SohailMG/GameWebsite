@@ -8,8 +8,8 @@ function startGame(){
 
 
 function myfunction() {
-  document.getElementById("signN").style.visibility="hidden"; 
   document.location.href = "index.php";
+  document.getElementById("signN").style.visibility="hidden"; 
 }
 
 /*

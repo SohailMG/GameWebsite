@@ -1,8 +1,9 @@
 <!-- php functions to output html template and navbar -->
 <?php
-        include_once('CommonPhp/HeaderNav.php');
+        include_once('CommonPhp/MainTags.php');
+        include_once('CommonPhp/HeaderNavigation.php');
         outputHtml("Home Page");
-        outputBannerNavigation("Home")
+        outputHeaderNav("Home")
 ?>
 <!-- sign in and sign up buttons layout -->
 

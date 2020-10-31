@@ -1,7 +1,8 @@
 <?php
-        include_once('CommonPhp/HeaderNav.php');
+        include_once('CommonPhp/MainTags.php');
+        include_once('CommonPhp/HeaderNavigation.php');
         outputHtml("Home Page");
-        outputBannerNavigation("Home")
+        outputHeaderNav("Home")
 ?>
 
 <div class="formContainer">
