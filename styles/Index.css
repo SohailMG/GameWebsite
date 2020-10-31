@@ -1,0 +1,227 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+html {
+  height: 100%;
+}
+
+body {
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+  min-height: 100%;
+}
+/* 
+* footer design 
+*/
+footer{
+  display:flex;
+  gap: 10%;
+  width: 100%;
+  height: 200px;
+  background-color: #5c3c4c;
+}
+footer > div{
+  width: 150px;
+  height: 40px;
+  position: relative;
+  left: 12%;
+}
+.section1 h1{
+  text-align: centre;
+  color: white;
+  font-size: 20px;
+  padding-top: 10px;
+}
+.section1 p{
+  text-align: centre;
+  padding-top: 10px;
+  color: rgba(255, 255, 255, 0.596);
+  font-size: 12px;
+}
+.section2 > a{
+  text-decoration: none;
+  font-size: 12px;
+  color: white;
+  display: block;
+  padding-top: 15px;
+
+  
+}
+.followOn > div {
+  padding-top: 10px;
+  width: 30px;
+  height: 30px;
+  background-size: cover;
+}
+.followOn a img{
+  gap: 20px;
+  display:flex;
+  border-radius: 50%;
+  width: 30px;
+  height: 30px;
+  background-size: cover;
+  box-shadow: 0 0 10px black;
+}
+.section4 h1{
+  font-size: 16px;
+  padding: 10px;
+  color: white; 
+}
+.section4 input{
+  padding: 5px;
+  height: 20px;
+  border-radius: 5px;
+}
+.section4 button{
+  padding: 5px;
+  background-color: orange;
+  border-radius: 10px;
+}
+/*
+  * website animated background section
+*/
+section {
+  width: 100%;
+  height: 120vh;
+  background-image: linear-gradient(90deg, #89766d, #948c7c, #6c4c5c, #5c3c4c);
+  background-size: 400% 400%;
+  position: relative;
+  animation: color-change 10s ease-in-out infinite;
+}
+
+@keyframes color-change {
+  0% {
+    background-position: 0 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0 50%;
+  }
+}
+
+header {
+  text-align: center;
+  width: 100%;
+  height: 90px;
+  background-color: #5c3c4c;
+}
+header > div{
+  position: relative;
+  left: 40%;
+  top: 1px;
+}
+nav {
+  display:flex;
+  gap: 10px;
+  padding: 7px;
+  background-color: #5c3c4c;
+  height: 70px;
+  width: 100%;
+  position: relative;
+}
+#gamelogo{
+  background-image: url("../Images/Wlogo3.png");
+  background-size: cover;
+  width: 120px;
+  height: 120px;
+}
+.selected {
+  border: 1px solid #d3d9a5;
+  border-top: none;
+  border-right: none;
+  border-left: none;
+}
+.navbar{
+  padding-top: 30px;
+}
+.navbar a {
+  font-weight: bold;
+  text-decoration: none;
+  padding: 14px;
+  color: rgb(255, 255, 255);
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 12px;
+  text-shadow: 0 0 10px rgb(0, 0, 0);
+}
+.navbar a:hover {
+  background-color: #d3d9a55d;
+}
+
+/* 
+* Home page main section positioning 
+*/
+main {
+  align-items: center;
+  display: flex;
+  width: auto;
+  height: 600px;
+  margin-bottom: auto;
+}
+.box1 {
+  text-align: center;
+  padding: 20px;
+  position: relative;
+  top: 30px;
+  left: 90px;
+  width: 500px;
+  height: 200px;
+  animation: box1anim 700ms ease-in;
+}
+/* 
+* animation for homepage 
+*/
+@keyframes box1anim {
+  0% {
+    transform: translateX(-100%);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+@keyframes box2anim {
+  0% {
+    transform: translateX(100%);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+/*
+*Home page text area
+*/
+.box1 h1 {
+  color: aliceblue;
+  text-shadow: 0 0 14px #948c7c;
+  font-size: 30px;
+  font-family: Arial, Helvetica, sans-serif;
+}
+.questions ul {
+  padding: 10px;
+  font-size: 16px;
+  color: rgba(255, 255, 255, 0.79);
+  font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
+}
+.box2 {
+  position: relative;
+  border-radius: 60px;
+  top: 30px;
+  left: 200px;
+  bottom: 20px;
+  width: 350px;
+  height: 300px;
+  animation: box2anim 700ms ease-in;
+}
+/* Home page img styling*/
+.box2 {
+  background-image: url("../Images/Wlogo3.png");
+  background-size: cover;
+  border-radius: 80px;
+  background-position: center;
+  background-size: cover;
+  width: 350px;
+  height: 300px;
+  box-shadow: 0 0 10px black;
+}

@@ -1,0 +1,72 @@
+/*
+* How to play page design
+*/
+
+.grid-container {
+    grid-auto-rows: minmax(100px, auto);
+    display: grid;
+    grid-template-columns: 40% 20%;
+    grid-template-rows: 400px;
+    grid-gap: 1em;
+    justify-items: stretch;
+    padding-top: 5%;
+    padding-left: 10%;
+  }
+  .grid-item-1 {
+    text-align: center;
+    grid-column: 1/2;
+    grid-row: 1/2;
+  }
+  .grid-item-1 p {
+    color: white;
+    font-size: 20px;
+    text-shadow:0 0 10px  rgb(0, 0, 0);
+    padding: 20px;
+    line-height: 40px;
+  }
+  .grid-item-1 button{
+    background-image: url("../Images/clickmebg.jpg");
+    background-size: cover;
+    border: 1px solid rgba(0, 0, 0, 0.562);
+    text-shadow: 0 0 10px rgb(255, 11, 11);
+    color: rgb(255, 255, 255);
+    box-shadow: 0 0 10px black;
+    width: 250px;
+    height: 250px;
+    margin-top: 10%;
+    font-size: 40px;
+    font-weight: bold;
+    border:none;
+    border-radius: 50%;
+  }
+  .grid-item-1 button:hover{
+    background-color: aqua;
+    color: black;
+  }
+  #rightTxt{
+    display: block;
+    color: #f8f4ec;
+    text-align: center;
+    font-size: 22px;
+    padding-top: 50%;
+  }
+  #gotoGame{
+    position: relative;
+    top: 40%;
+    left:5%;
+    text-decoration: none;
+    display: none;
+    border-radius: 10px;
+    background-color:rgb(65, 54, 78);
+    color:white;
+    width: 100px;
+    height: 40px;
+    text-align: center;
+    box-shadow: 0 0 10px black;
+  }
+  #gotoGame h1{
+    padding-top:10px;
+    font-size: 12px;
+    text-shadow: 0 0 10px red;
+  }
+  

@@ -1,0 +1,72 @@
+/*
+* Leaderboard page design
+*/
+
+.grid-container2 {
+    grid-auto-rows: minmax(100px, auto);
+    display: grid;
+    grid-template-columns: 30% 60% 20%;
+    grid-template-rows: 300px;
+    grid-gap: 1em;
+    padding: 10rem;
+    justify-items: stretch;
+    padding-left: 10%;
+    padding: 20px;
+    padding-left: 5%;
+    padding-right: 20%;
+    padding-top: 5%;
+  }
+  .score-table {
+    border-radius: 10px;
+    grid-column: 1/3;
+    grid-row: 1/3;
+  }
+  .highest-score {
+    background-color: #5c3c4c;
+    text-align: center;
+  }
+  .user-name {
+    background-color: #5c3c4c;
+    text-align: center;
+    padding: 30px;
+  }
+  /* 
+  * score table design 
+  */
+  .table-container {
+    border-radius: 10px;
+    text-align: center;
+    border-collapse: collapse;
+    font-size: 0.9em;
+    width: 100%;
+    height: 100%;
+  }
+  .table-container thead {
+    text-shadow: 0 0 10px rgb(255, 91, 255);
+    font-weight: bodl;
+    background-color: #5c3c4c;
+    color: #d3d9a5;
+    text-align: center;
+  }
+  .table-container th,
+  .table-container td {
+    padding: 12px 15px;
+  }
+  .table-container tbody tr {
+    border-bottom: 1px solid rgba(255, 249, 249, 0.226);
+    background-color: rgba(255, 255, 255, 0.521);
+  }
+  .showLevel {
+    color: #d3d9a5;
+    font-size: 70px;
+    padding-top: 50%;
+  }
+  .user-name h1 {
+    color: #d3d9a5;
+    text-shadow: 0 0 10px rgb(255, 172, 251);
+  }
+  .highest-score h1 {
+    color: #d3d9a5;
+    padding-top: 10px;
+    text-shadow: 0 0 10px rgb(255, 172, 251);
+  }

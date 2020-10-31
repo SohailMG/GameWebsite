@@ -1,0 +1,106 @@
+
+/*
+* Contact page design
+*/
+
+.contact-Form {
+    gap: 10px;
+    display: flex;
+    justify-content: center;
+    padding-top: 5%;
+    padding-bottom: 10%;
+  }
+  
+  /* left side design */
+  
+  .left-side {
+    width: 300px;
+    height: 400px;
+    background-color: #948c7c;
+    text-align: center;
+    box-shadow: 0 0 10px #5c3c4c;
+  }
+  .left-side h1:nth-child(1) {
+    background-color: #948c7c;
+    padding-top: 10px;
+    font-size: 30px;
+    color: white;
+    text-shadow: 0 0 10px #5c3c4c;
+    justify-content: center;
+  }
+  .left-side p {
+    padding-top: 30%;
+    font-size: 18px;
+    color: rgb(0, 0, 0);
+  }
+  /* social media links design */
+  
+  .medialinks {
+    display: flex;
+    gap: 15px;
+    width: 100%;
+    height: 50px;
+    padding-top: 30px;
+    justify-content: center;
+  }
+  .medialinks > div {
+    border-radius: 10px;
+    width: 50px;
+    height: 50px;
+    background-size: cover;
+  }
+  .medialinks a img{
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background-size: cover;
+    box-shadow: 0 0 10px black;
+  }
+  /* right side design */
+  .right-side {
+    width: 500px;
+    height: 400px;
+    background-color: #948c7c;
+    box-shadow: 0 0 10px #5c3c4c;
+  }
+  .right-side h1 {
+    color: white;
+    text-shadow: 0 0 10px #5c3c4c;
+    text-align: center;
+  }
+  .formlist ul {
+    list-style-type: none;
+    padding: 10px;
+  }
+  .formlist ul li {
+    padding: 10px;
+  }
+  .formlist ul li input {
+    border: none;
+    width: 200px;
+    height: 22px;
+    text-align: left;
+    padding-left: 5px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.384);
+  }
+  .formlist ul li textarea {
+    background-color: none;
+    border: none;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.494);
+  }
+  .formlist ul li button {
+    box-shadow: 0 0 10px black;
+    border-radius: 10px;
+    background-color: rgb(82, 40, 82);
+    color: white;
+    text-shadow: 0 0 10px red;
+    width: 80px;
+    height: 30px;
+    border: none;
+  }
+  .formlist ul li button:hover {
+    background-color: rgb(29, 145, 165);
+  }
+  

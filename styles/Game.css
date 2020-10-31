@@ -1,0 +1,77 @@
+
+/*
+!Game page design
+*/
+.gameCanvas{
+    background-color: #9c947c;
+    background-repeat: 2fr;
+    width: 60%;
+    height: 50%;
+    color:rgb(0, 0, 0);
+    margin-left: 20%;
+    margin-top: 5%;
+    box-shadow: 0 0 50px black;
+    justify-content: center;
+    text-align: center;
+    }
+    .gameTitle{
+      color: rgb(255, 255, 255);
+      text-shadow: 0 0 0 red;
+      font-weight: bold;
+      width: 100%;
+      height: 30px;
+      padding-top: 10px;
+      background-color: #5c3c4c;
+      text-align: center;
+    }
+    #startScreen  p{
+      color: white;
+      text-shadow: 0 0 10px #9c947c;
+      font-size: 20px;
+      margin-top: 7%;
+    }
+    #mainScreen{
+      display:none;
+      color: white;
+      text-shadow: 0 0 10px #9c947c;
+      font-size: 16px;
+      margin-top: 7%;
+    }
+    /* start button puls animation */
+    #startGame-button{
+      text-align: center;
+      font-size: 20px;
+      color:white;
+      text-shadow: 0 0 10px #9c947c;
+      background-color: #5c3c4c;
+      border:none;
+      border-radius: 50%;
+      width:100px;
+      height: 100px;
+      margin-top: 8%;
+    
+      box-shadow: 0 0 10px #9c947c;
+        transform: scale(1);
+        animation: pulse 2s infinite;
+    }
+    
+    @keyframes pulse {
+        0% {
+            transform: scale(0.95);
+            box-shadow: 0 0 0 0 rgba(32, 14, 29, 0.7);
+        }
+    
+        70% {
+            transform: scale(1);
+            box-shadow: 0 0 0 20px rgba(0, 0, 0, 0);
+        }
+    
+        100% {
+            transform: scale(0.95);
+            box-shadow: 0 0 0 0 rgba(0, 0, 0, 0);
+        }
+    }
+    
+    #startGame-button:hover{
+      background-color: rgb(166, 193, 233);
+    }
