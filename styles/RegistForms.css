@@ -1,13 +1,14 @@
 /* 
 *Sign-in and Sign-up buttons style 
 */
-.signbtns {
+#signbtns {
+    display: block;
     position: relative;
     text-align: right;
     padding-left: 40%;
     padding-top: 10px;
   }
-  .signbtns a {
+  #signbtns a {
     font-size: 14px;
     background-color: #948c7c98;
     text-decoration: none;
@@ -15,7 +16,7 @@
     color: rgb(243, 243, 243);
   }
   
-  .signbtns a:hover {
+  #signbtns a:hover {
     background-color: none;
     border: 1px solid aqua;
     border-top: none;
@@ -23,7 +24,7 @@
     border-left: none;
     text-shadow: 0 0 14px rgb(84, 219, 243);
   }
-  .signbtns p {
+  #signbtns p {
     position: relative;
     right: 180px;
     top: 20px;

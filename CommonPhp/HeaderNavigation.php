@@ -27,8 +27,8 @@ function outputHeaderNav($pageName){
         
     }  
     echo '</div>';
-    echo '<div class="signbtns">
-            <p><b>Are you registered?</b></p>
+    echo '<div id="signbtns">
+            <p id="loggedIn"><b></b></p>
             <a id="signN" href="Sign-in.php"><b>Sign-in</b></a>
             <a id="signP" href=" Sign-up.php"><b>Sign-up</b></a>
         </div>';
