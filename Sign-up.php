@@ -13,7 +13,7 @@
             <li><input id="uName" type="text" name="User name" placeholder="Create User Name">UserName</li>
             <li><input id="Psswd" type="passwrod" name="Password" placeholder="Create Password">Password</li>
             <li><input id="ConfPass" type="passwrod" name="Password" placeholder="Retype Password">Confirm Password</li>
-            <li><button id="Submitbtn" type="button">Sign Up</button>
+            <li><button id="SignUp-btn" type="button" onclick="SignUp ()">Sign Up</button>
             </li>
         </ul>
     </form>

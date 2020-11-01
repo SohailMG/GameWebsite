@@ -9,9 +9,9 @@
     <div class="forms">
         <h1>Sign In</h1>
         <ul class="signInform">
-            <li><input type="text" name="User name" placeholder="User Name"></li>
-            <li><input type="passwrod" name="Password" placeholder="Password"></li>
-            <li><button class="Submitbtn" onclick="myfunction()">Sign In</button></li>
+            <li><input id="Uname-inpt" type="text" name="User name" placeholder="User Name"></li>
+            <li><input id="passwrd-inpt" type="passwrod" name="Password" placeholder="Password"></li>
+            <li><button id="SignIn-btn" type="button" onclick="SignIN()">Sign In</button></li>
             <li>Forget Password?</li>
         </ul>
     </div>
