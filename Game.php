@@ -23,6 +23,12 @@
         <button id="Hard" onclick="playHard()">Hard</button>
     </div>
 </div>
+<div class="commentBox">
+    <h1>Write Review</h1>
+    <textarea id="comment" placeholder="Enter comment......"></textarea>
+    <button id="commentbtn" onclick="submitComment()">Submit</button>
+    <div id="comments"></div>
+</div>
 
 <?php
     include_once('CommonPhp/footer.php');

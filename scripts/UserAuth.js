@@ -41,6 +41,7 @@ function SignUp() {
     localStorage.setItem("newUser", JSON.stringify(newUser));
     currentData.push(newUser);
     localStorage.setItem("allUsers", JSON.stringify(currentData));
+    document.location.href="Sign-in.php";
   }
 }
 /* sign in function used to validate user details from localstorage 
@@ -55,6 +56,9 @@ function SignIN() {
   // iterating through arr of objects to check is input = value
   for (i = 0; i < getData.length; i++) {
     if (u_name == getData[i].username && pwd == getData[i].password) {
+      localStorage.setItem('loggedusr',u_name )
+      var loggedusr = localStorage.getItem('loggedusr')
+      document.getElementById("loggedIn").innerHTML=loggedusr;
       document.location.href = "index.php";
       return;
     }

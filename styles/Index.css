@@ -83,7 +83,7 @@ footer > div{
 */
 section {
   width: 100%;
-  height: 120vh;
+  height: 150vh;
   background-image: linear-gradient(90deg, #89766d, #948c7c, #6c4c5c, #5c3c4c);
   background-size: 400% 400%;
   position: relative;

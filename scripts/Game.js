@@ -6,3 +6,12 @@ function startGame() {
     screen_one.style.display = "none";
     screen_two.style.display = "block";
 }
+// game review function to store user comments and display them
+function submitComment(){
+    var comment = document.getElementById("comment").value;
+    var comments = document.getElementById("comments");
+
+    localStorage.setItem('review', comment);
+    showComments = localStorage.getItem('review');
+    comments.innerHTML = showComments;
+}

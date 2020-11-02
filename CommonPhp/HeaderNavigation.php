@@ -25,6 +25,7 @@ function outputHeaderNav($pageName){
         }
         echo 'href="' . $pageLinks[$i] . '">' . $pageNames[$i] . '</a>';
         
+         
     }  
     echo '</div>';
     echo '<div id="signbtns">
