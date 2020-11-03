@@ -7,27 +7,31 @@
     text-align: right;
     padding-left: 40%;
     padding-top: 10px;
+    
   }
   #signbtns a {
+    border-radius: 10px;
     font-size: 14px;
     background-color: #948c7c98;
     text-decoration: none;
     padding: 12px;
     color: rgb(243, 243, 243);
+    color: white;
+    box-shadow: -1px 1px #948c7c, -2px 2px #948c7c, -1px 1px #948c7c;
+    border: 1px solid #948c7c;
   }
   
   #signbtns a:hover {
-    background-color: none;
-    border: 1px solid aqua;
+    background-color: rgba(84, 58, 92, 0.315);
     border-top: none;
     border-right: none;
     border-left: none;
-    text-shadow: 0 0 14px rgb(84, 219, 243);
+    text-shadow: 0 0 14px #5c3c4c;
   }
   #signbtns p {
     position: relative;
-    right: 180px;
-    top: 20px;
+    right: 100px;
+    top: 30px;
     color: #948c7c;
     font-family: Arial, Helvetica, sans-serif;
   }

@@ -103,16 +103,46 @@ section {
 }
 
 header {
-  text-align: center;
+
+  display: flex;
+  text-align: left;
   width: 100%;
   height: 90px;
   background-color: #5c3c4c;
 }
-header > div{
-  position: relative;
-  left: 40%;
-  top: 1px;
+/* wesite slogan design */
+.Title{
+  display: flex;
+  width: 200px;
+  margin-left: 20px;
+  border-top: none;
+  border-left: none;
+  border-right: none;
+
 }
+.Title > div{
+  margin-top: 20px;
+}
+.Memory a{
+  text-decoration: none;
+  color: #d3d9a5;
+  font-weight: bold;
+  font-size: 30px;
+  text-shadow: 0 10px 10px black;
+}
+.Master{
+  padding-top: 15px;
+  color: rgba(0, 0, 0, 0.473);
+}
+
+#gamelogo{
+  background-image: url("../Images/Wlogo3.png");
+  background-size: cover;
+  width: 120px;
+  height: 120px;
+  margin-left: 30%;
+}
+/* navigation bar design */
 nav {
   display:flex;
   gap: 10px;
@@ -122,12 +152,7 @@ nav {
   width: 100%;
   position: relative;
 }
-#gamelogo{
-  background-image: url("../Images/Wlogo3.png");
-  background-size: cover;
-  width: 120px;
-  height: 120px;
-}
+
 .selected {
   border: 1px solid #d3d9a5;
   border-top: none;
@@ -171,7 +196,8 @@ main {
   animation: box1anim 700ms ease-in;
 }
 /* 
-* animation for homepage 
+animation for homepage
+making elements appear from each sides of webpage on pageload 
 */
 @keyframes box1anim {
   0% {

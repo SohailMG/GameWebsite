@@ -27,7 +27,7 @@
     <h1>Write Review</h1>
     <textarea id="comment" placeholder="Enter comment......"></textarea>
     <button id="commentbtn" onclick="submitComment()">Submit</button>
-    <div id="comments"></div>
+    <div id="comments" style="display:none"></div>
 </div>
 
 <?php

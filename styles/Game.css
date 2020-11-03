@@ -105,7 +105,7 @@ replaces startScreen when button is pressed
     border-radius: 5px;
     margin-top: 15%;
     background-color: white;
-    box-shadow: 0 0 10px black;
+    box-shadow: 0 10px 10px black;
 }
 #selectionScreen #Easy{
     color: green;

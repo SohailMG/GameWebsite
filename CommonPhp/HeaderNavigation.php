@@ -5,6 +5,10 @@ function outputHeaderNav($pageName){
     //Output banner and first part of navigation
     echo '<section>
     <header>
+    <div class="Title"> 
+    <div class="Memory"><a href="index.php">Memory</a></div>
+    <div class="Master">Master</div>
+    </div>
     <div id="gamelogo"></div>
     </header>
     <nav>
@@ -32,6 +36,7 @@ function outputHeaderNav($pageName){
             <p id="loggedIn"><b></b></p>
             <a id="signN" href="Sign-in.php"><b>Sign-in</b></a>
             <a id="signP" href=" Sign-up.php"><b>Sign-up</b></a>
+            <a id="signO" href=" index.php" style="display:none" onclick="logOut()"><b>Sign-out</b></a>
         </div>';
     echo '</nav>';
 }

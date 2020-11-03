@@ -1,7 +1,27 @@
+
 /* 
 this script contains sign in and sign up functions 
 used to store user data and authenticate user input
 */
+
+// displaying username of currently logged in user
+window.onload = () => {
+  var show = localStorage.getItem('logged');
+  var loggedusr = localStorage.getItem('loggedusr');
+  if (show === 'true') {
+    // document.getElementById("comments").style.display = "block";
+    // showComments = localStorage.getItem('review');
+    // comments.innerHTML = showComments;
+    document.getElementById("loggedIn").innerHTML = loggedusr;
+    document.getElementById("signN").style.display = "none";
+    document.getElementById("signP").style.display = "none";
+    document.getElementById("signO").style.display = "block";
+  }else{
+    document.getElementById("loggedIn").innerHTML = "";
+
+  }
+}
+
 
 // asigning variables to input fields
 const firstName = document.getElementById("firstname");
@@ -56,8 +76,9 @@ function SignIN() {
   // iterating through arr of objects to check is input = value
   for (i = 0; i < getData.length; i++) {
     if (u_name == getData[i].username && pwd == getData[i].password) {
-      localStorage.setItem('loggedusr',u_name )
-      var loggedusr = localStorage.getItem('loggedusr')
+      localStorage.setItem('loggedusr',u_name );
+      localStorage.setItem('logged','true' );
+      var loggedusr = localStorage.getItem('loggedusr');
       document.getElementById("loggedIn").innerHTML=loggedusr;
       document.location.href = "index.php";
       return;
@@ -66,3 +87,8 @@ function SignIN() {
   console.log("failed");
   alert("Incorrect details");
 }
+
+function logOut(){
+  localStorage.removeItem('logged');
+}
+

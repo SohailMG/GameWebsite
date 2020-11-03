@@ -25,12 +25,12 @@
     line-height: 40px;
   }
   .grid-item-1 button{
-    background-image: url("../Images/clickmebg.jpg");
+    background-image: url("../Images/qm.jpg");
     background-size: cover;
     border: 1px solid rgba(0, 0, 0, 0.562);
     text-shadow: 0 0 10px rgb(255, 11, 11);
     color: rgb(255, 255, 255);
-    box-shadow: 0 0 10px black;
+    box-shadow: 0 10px 10px black;
     width: 250px;
     height: 250px;
     margin-top: 10%;
