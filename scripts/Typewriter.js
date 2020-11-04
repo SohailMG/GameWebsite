@@ -12,22 +12,30 @@ function sleep(ms) {
     return new Promise((resolve) => setTimeout(resolve, ms));
 }
 
-/* second condition checks if there is full stop '.' then
+// conts used in how to play page
+const instructions = document.getElementById("instructions");
+const clickmeBtn = document.getElementById("clickmebtn");
+const rightTxt = document.getElementById("rightTxt");
+const gotoGame = document.getElementById("gotoGame");
+
+/* 
+second condition checks if there is full stop '.' then
 function sleeps for 1000ms then continues. color of text also changes each full stop
 */
 
 async function typeWriter() {
     if (i < rules.length) {
-        document.getElementById("instructions").style.color = "aqua";
-        document.getElementById("clickmebtn").style.display = "none";
-        document.getElementById("rightTxt").style.display = "none";
-        document.getElementById("gotoGame").style.display = "block";
-        document.getElementById("instructions").innerHTML += rules.charAt(i);
+        instructions.style.color = "aqua";
+        clickmeBtn.style.display = "none";
+        rightTxt.style.display = "none";
+        gotoGame.style.display = "block";
+        instructions.innerHTML += rules.charAt(i);
+
         if (rules.charAt(i) == ".") {
             await sleep(1000);
         }
         i++;
-        document.getElementById("instructions").style.color = "";
+        instructions.style.color = "";
         setTimeout(typeWriter, speed);
     }
 }

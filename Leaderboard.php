@@ -61,7 +61,7 @@ box to show username and another to show highest level  -->
     </div>
     <!-- current logged in username shows here -->
     <div class="grid-item user-name">
-        <h1>User name</h1>
+        <h1 id="current-user"></h1>
     </div>
 </div>
 

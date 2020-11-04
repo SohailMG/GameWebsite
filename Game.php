@@ -4,13 +4,14 @@
     outputHtml("Game Page");
     outputHeaderNav("Game")
 ?>
-
+<!-- creating game container with screen,title and start button -->
 <div class="gameCanvas">
     <div id="startScreen">
         <div class="gameTitle">Memory Master</div>
         <p>Click Start to start the game</p>
         <button id="startGame-button" onclick=" startGame()">Play</button>
     </div>
+    
     <!-- difficulty selection screen shows when button on start screen is pressed -->
     <div id="selectionScreen">
         <div class="gameTitle">Memory Master</div>

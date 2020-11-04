@@ -249,5 +249,5 @@ making elements appear from each sides of webpage on pageload
   background-size: cover;
   width: 350px;
   height: 300px;
-  box-shadow: 0 0 10px black;
+  box-shadow: 0 10px 8px 0  black;
 }
