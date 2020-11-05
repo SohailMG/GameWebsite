@@ -1,9 +1,9 @@
 <!DOCTYPE html>
 <?php
-    include_once('CommonPhp/MainTags.php');
-    include_once('CommonPhp/HeaderNavigation.php');
-    outputHtml("Contact Page");
-    outputHeaderNav("Contact")
+include_once('CommonPhp/MainTags.php');
+include_once('CommonPhp/HeaderNavigation.php');
+outputHtml("Contact Page");
+outputHeaderNav("Contact")
 
 ?>
 <div class="contact-Form">
@@ -51,6 +51,6 @@
 </div>
 
 <?php
-    include_once('CommonPhp/footer.php');
-    outputfooter();
+include_once('CommonPhp/footer.php');
+outputfooter();
 ?>

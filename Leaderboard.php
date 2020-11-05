@@ -9,6 +9,7 @@
 box to show username and another to show highest level  -->
 <div class="grid-container2">
     <div class="grid-item score-table">
+        <!--table of all fields used for scoreboard -->
         <table class="table-container">
 
             <thead>
