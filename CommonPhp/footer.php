@@ -51,7 +51,6 @@ echo '<footer>
 </div>
 </footer>';
 
-echo '<script type="text/javascript" src="scripts/Game.js"></script>';
 echo '<script type="text/javascript" src="scripts/Typewriter.js"></script>';
 echo '<script type="text/javascript" src="scripts/Contact.js"></script>';
 echo '<script type="text/javascript" src="scripts/formValidation.js"></script>';

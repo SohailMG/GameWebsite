@@ -3,10 +3,11 @@
 */
 
 .gameCanvas {
-    background-color: #9c947c;
-    background-repeat: 2fr;
-    width: 60%;
+    background-image: url("../Images/bg3.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
     height: 40%;
+    width: 800px;
     color: rgb(0, 0, 0);
     margin-left: 20%;
     margin-top: 5%;
@@ -89,6 +90,12 @@ selcetion screen
 replaces startScreen when button is pressed
  */
 
+.btnsContainer {
+    display: flex;
+    margin-left: 37%;
+    gap: 20px;
+}
+
 #selectionScreen {
     display: none;
     color: white;
@@ -96,45 +103,53 @@ replaces startScreen when button is pressed
     font-size: 16px;
     margin-top: 7%;
 }
-#selectionScreen >  button{
+
+.btnsContainer>button {
     width: 100px;
     height: 50px;
     color: white;
     font-weight: bold;
-    border:none;
+    border: none;
     border-radius: 5px;
     margin-top: 15%;
     background-color: white;
     box-shadow: 0 10px 10px black;
 }
-#selectionScreen #Easy{
+
+#selectionScreen #Easy {
     color: green;
 }
-#selectionScreen #Hard{
+
+#selectionScreen #Hard {
     color: red;
 }
-#selectionScreen button:hover{
-background-color: #5c3c4c;
+
+#selectionScreen button:hover {
+    background-color: #5c3c4c;
 }
-#selectionScreen h1{
+
+#selectionScreen h1 {
     margin-top: 10%;
     color: #5c3c4c;
 }
-#selectionScreen p b{
+
+#selectionScreen p b {
     color: black;
     font-size: 17px;
 }
-.commentBox{
+
+.commentBox {
     margin-left: 20%;
     margin-top: 3%;
     width: 300px;
 }
-.commentBox > h1{
+
+.commentBox>h1 {
     color: white;
     font-size: 17px;
 }
 
-#comment{
+#comment {
     border-radius: 10px;
     border: none;
     box-shadow: 0 0 10px black;
@@ -143,7 +158,7 @@ background-color: #5c3c4c;
     height: 80px;
 }
 
-#commentbtn{
+#commentbtn {
     color: white;
     box-shadow: 0 0 4px black;
     background-color: #5c3c4c;
@@ -153,9 +168,11 @@ background-color: #5c3c4c;
     height: 40px;
     margin-top: 10px;
 }
-#commentbtn:hover{
+
+#commentbtn:hover {
     background-color: #9c947c;
 }
+
 #comments {
     text-align: left;
     height: 20px;
@@ -165,4 +182,184 @@ background-color: #5c3c4c;
     border-top: none;
     border-left: none;
     border-right: none;
+}
+
+
+/* progress bar used as timer */
+
+#num {
+    color: rgb(255, 181, 103);
+    letter-spacing: 10px;
+    position: absolute;
+    margin-left: 41%;
+    margin-top: 24%;
+    text-shadow: 0 10px 10px black;
+    font-size: 55px;
+}
+
+#numInput {
+    position: absolute;
+    background-color: rgba(255, 153, 0, 0.494);
+    display: none;
+    width: 200px;
+    height: 60px;
+    margin-left: 41%;
+    margin-top: 24%;
+    box-shadow: 0 10px 10px brown;
+    border: none;
+    text-align: center;
+}
+
+#checkUsr {
+    position: absolute;
+    margin-left: 20%;
+    margin-top: 20%;
+    width: 50px;
+    height: 50px;
+}
+
+#BarContainer {
+    display: none;
+    position: absolute;
+    margin-left: 41%;
+    margin-top: 24%;
+}
+
+#myProgress {
+    position: absolute;
+    width: 250px;
+    background-color: white;
+    margin-top: auto;
+    margin-bottom: auto;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#myBar {
+    width: 1%;
+    height: 10px;
+    background-color: red;
+}
+
+#Clear {
+    background-image: url("assets/delete.png");
+    background-size: contain;
+    height: 60px;
+    width: 60px;
+    position: absolute;
+    margin-left: 50%;
+    margin-top: 42%;
+    display: none;
+}
+
+#GameOver {
+    text-align: center;
+    display: none;
+    position: absolute;
+    width: 490px;
+    height: 377px;
+    margin-top: 13%;
+    margin-left: 31%;
+    box-shadow: 0 10px 10px black;
+    background-image: url("../assets/Gameover.png");
+    background-size: cover;
+}
+
+#GameOver>div {
+    color: brown;
+    font-size: 30px;
+    padding-top: 40px;
+}
+
+#GameOver>button {
+    width: 105px;
+    height: 43px;
+    color: black;
+    box-shadow: 0 10px 10px black;
+    margin-top: 10px;
+    background-image: url("../assets/Selectbtn.jpg");
+    background-size: cover;
+    font-size: 16px;
+    font-weight: bold;
+}
+
+canvas {
+    margin-top: 5%;
+    margin-left: 20%;
+    /* position: absolute; */
+    box-shadow: 0 10px 10px black;
+}
+
+#footer {
+    position: absolute;
+    display: flex;
+    gap: 10%;
+    width: 100%;
+    height: 200px;
+    background-color: #5c3c4c;
+    margin-top: 68%;
+}
+
+#footer>div {
+    width: 150px;
+    height: 40px;
+    position: relative;
+    left: 12%;
+}
+
+#section1 h1 {
+    text-align: centre;
+    color: white;
+    font-size: 20px;
+    padding-top: 10px;
+}
+
+#section1 p {
+    text-align: centre;
+    padding-top: 10px;
+    color: rgba(255, 255, 255, 0.596);
+    font-size: 12px;
+}
+
+#section2>a {
+    text-decoration: none;
+    font-size: 12px;
+    color: white;
+    display: block;
+    padding-top: 15px;
+}
+
+#followOn>div {
+    padding-top: 10px;
+    width: 30px;
+    height: 30px;
+    background-size: cover;
+}
+
+#followOn a img {
+    gap: 20px;
+    display: flex;
+    border-radius: 50%;
+    width: 30px;
+    height: 30px;
+    background-size: cover;
+    box-shadow: 0 0 10px black;
+}
+
+#section4 h1 {
+    font-size: 16px;
+    padding: 10px;
+    color: white;
+}
+
+#section4 input {
+    padding: 5px;
+    height: 20px;
+    border-radius: 5px;
+}
+
+#section4 button {
+    padding: 5px;
+    background-color: orange;
+    border-radius: 10px;
 }
