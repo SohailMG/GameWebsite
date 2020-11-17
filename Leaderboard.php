@@ -10,7 +10,7 @@ box to show username and another to show highest level  -->
 <div class="grid-container2">
     <div class="grid-item score-table">
         <!--table of all fields used for scoreboard -->
-        <table class="table-container">
+        <table id="table-container">
 
             <thead>
                 <tr>
@@ -20,37 +20,8 @@ box to show username and another to show highest level  -->
                     <th>score</th>
                 </tr>
             </thead>
-            <tbody>
-                <tr>
-                    <th>1</th>
-                    <th></th>
-                    <th></th>
-                    <th></th>
-                </tr>
-                <tr>
-                    <th>2</th>
-                    <th></th>
-                    <th></th>
-                    <th></th>
-                </tr>
-                <tr>
-                    <th>3</th>
-                    <th></th>
-                    <th></th>
-                    <th></th>
-                </tr>
-                <tr>
-                    <th>4</th>
-                    <th></th>
-                    <th></th>
-                    <th></th>
-                </tr>
-                <tr>
-                    <th>5</th>
-                    <th></th>
-                    <th></th>
-                    <th></th>
-                </tr>
+            <tbody id="tableData">
+
             </tbody>
         </table>
     </div>

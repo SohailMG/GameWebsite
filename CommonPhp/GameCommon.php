@@ -18,7 +18,6 @@ function OutputHtmlHead(){
 
 function OutputNav(){
     echo'<body>
-        <div id="wrapper">
         <header>
         <div class="Title">
             <div class="Memory"><a href="index.php">Memory</a></div>
@@ -29,10 +28,10 @@ function OutputNav(){
         <nav>
     <div class="navbar">
     <a href="index.php">Home</a>
+    <a class="selected" href="Game1.php">Game</a>
     <a href="HowToPlay.php">HowToPlay</a>
     <a href="Leaderboard.php">Leaderboard</a>
     <a href="Contact.php">Contact</a>
-    <a class="selected" href="Game1.php">Gamer</a>
     </div><div id="signbtns">
             <p id="loggedIn"></p>
             <a id="signN" href="Sign-in.php"><b>Sign-in</b></a>
@@ -87,8 +86,10 @@ function Outputfooter(){
         <button id="subbtn">Subscribe</button>
     </div>
     
-</div>
 </footer>
+<script type="text/javascript" src="scripts/Typewriter.js"></script>
+<script type="text/javascript" src="scripts/Contact.js"></script>
+<script type="text/javascript" src="scripts/formValidation.js"></script>
 </body>
 </html>';
     

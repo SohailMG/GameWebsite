@@ -32,23 +32,36 @@ class easy extends Phaser.Scene {
 
         // play button game logic #######-----------------
         var playbtn;
+        var Clearbtn;
         var Homebtn;
         var Infotxt;
+        var Infotxt2;
         var retrybtn;
         // var startbtn;
 
+        // game information texts
         Infotxt = this.add.text(250, 50, "When ready press button", {
             font: "25px Comic Sans MS",
             color: "#fff",
         });
-
+        Infotxt2 = this.add.text(230, 20, "Memerise the longest number", {
+            font: "25px Comic Sans MS",
+            color: "#fff",
+        });
+        // button to return back to menue scene
         Homebtn = this.add.image(300, 200, "home");
         Homebtn.setInteractive({ useHandCursor: true });
-        Homebtn.on(
-            "pointerdown",
-            () => this.scene.switch("playGame"),
-            (document.getElementById("numInput").style.display = "none")
-        );
+        Homebtn.on("pointerdown", () => {
+            this.scene.switch("playGame"),
+                (document.getElementById("numInput").style.display = "none");
+        });
+        // button to clear the input field of any values
+        Clearbtn = this.add.image(400, 400, "clear");
+        Clearbtn.setInteractive({ useHandCursor: true });
+        Clearbtn.on("pointerdown", () => {
+            let inputField = document.getElementById("numInput");
+            inputField.value = "";
+        });
 
         // main game function generates all game logic and functions
         playbtn = this.add.image(500, 200, "playbtn");
@@ -64,7 +77,7 @@ class easy extends Phaser.Scene {
             let loses = localStorage.getItem("loses");
             // converting ranges from strange to usable js object
             let existingRanges = JSON.parse(oldRanges);
-            let newLoses = JSON.parse(loses);
+            let oldLoses = JSON.parse(loses);
 
             // retrieving base values for min and max
             // storing current level and score
@@ -72,6 +85,10 @@ class easy extends Phaser.Scene {
             let minVal = existingRanges.min;
             let levels = existingRanges.level;
             let score = existingRanges.scores;
+
+            let user = localStorage.getItem("loggedusr");
+            let ranking = { User: user, Score: score, Level: levels };
+
 
             // generating random numbers between given range
             function RandomNum(min, max) {
@@ -90,15 +107,13 @@ class easy extends Phaser.Scene {
                     // document.getElementById("Number").innerHTML = "";
                 };
             }
-            if (numInpt == "") {
-                console.log("empty");
-            }
+            // checking if input field is empty
 
             if (numInpt.value == num) {
                 numInpt.value = "";
 
                 // updating max and min values each time
-                //
+                // adding to level and score values
                 let newRanges = {
                     min: minVal * 10,
                     max: maxVal * 10,
@@ -110,23 +125,26 @@ class easy extends Phaser.Scene {
                 localStorage.setItem("Range", str_newRanges);
 
                 RandomNum(minVal, maxVal);
-
+                localStorage.setItem("Ranking", JSON.stringify(ranking));
+                // showing the end results when game is over
+                localStorage.setItem("score", score);
                 document.getElementById("levelend").innerHTML =
                     "Level Reached: " + levels;
                 document.getElementById("scoreend").innerHTML =
                     "Highest Score:  " + score + " Numbers";
-
-                // isCorrect = true;
             } else {
-                localStorage.setItem("loses", newLoses + 1);
+                localStorage.setItem("loses", oldLoses + 1);
                 let currentLoses = localStorage.getItem("loses");
 
                 if (currentLoses == "1") {
-                    console.log("game over");
+                    // displaying game over screen
                     document.getElementById("GameOver").style.display = "block";
+                    // resetting values back to original state
                     localStorage.removeItem("Range");
                     localStorage.setItem("Range", str_Ranges);
                     localStorage.setItem("loses", 0);
+
+                    // hiding html elements
                     progress.style.display = "none";
                     numIn.style.display = "none";
                     numInpt.style.display = "none";
@@ -148,6 +166,8 @@ class easy extends Phaser.Scene {
             numInpt.style.display = "none";
         });
 
+        // progress bar used as a visual timer
+
         function visualTimer() {
             var i = 0;
 
@@ -156,7 +176,7 @@ class easy extends Phaser.Scene {
                     i = 1;
 
                     let width = 1;
-                    let id = setInterval(frame, 25);
+                    let Speed = setInterval(frame, 25);
 
                     progress.style.display = "block";
 
@@ -165,7 +185,7 @@ class easy extends Phaser.Scene {
                             progress.style.display = "none";
                             numIn.style.display = "none";
                             numInpt.style.display = "block";
-                            clearInterval(id);
+                            clearInterval(Speed);
                             i = 0;
                         } else {
                             width++;

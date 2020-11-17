@@ -54,6 +54,7 @@ echo '<footer>
 echo '<script type="text/javascript" src="scripts/Typewriter.js"></script>';
 echo '<script type="text/javascript" src="scripts/Contact.js"></script>';
 echo '<script type="text/javascript" src="scripts/formValidation.js"></script>';
+echo '<script type="text/javascript" src="scripts/Leaderboard.js"></script>';
 echo '</body>';
 echo '</body>';
 echo '

@@ -9,6 +9,8 @@ const userName = document.getElementById("uName");
 const passWord = document.getElementById("Psswd");
 const Confirm_pw = document.getElementById("ConfPass");
 
+let Alerts2 = document.getElementById("Alerts2");
+
 /* user registration function used to store user data in array of objects */
 function SignUp() {
     // first statement to check all fields are not empty
@@ -18,25 +20,26 @@ function SignUp() {
         passWord.value == "" ||
         Confirm_pw.value == ""
     ) {
-        alert("fill all fields");
+        Alerts2.innerHTML = "Fill all fields"
         form.username.focus();
         return false;
     }
     // checking if password matches confirmation
     if (passWord.value !== Confirm_pw.value) {
-        alert("Password not matching");
+        Alerts2.innerHTML = "Passwords not matching"
         return false;
     }
     // checking if password has a number
     var hasNum = /[0-9]/;
     if (!hasNum.test(passWord.value)) {
-        alert("password must containt at least one number");
+        Alerts2.innerHTML = "Password must contain atleast one number";
         return false;
     }
     // checking is password has upper case letter
     var hasUpperCase = /[A-Z]/;
     if (!hasUpperCase.test(passWord.value)) {
-        alert("password must containt one upper case");
+        Alerts2.innerHTML = "Password must contain one upper case";
+
         return false;
 
         /* after error checking 
@@ -88,7 +91,7 @@ function SignIN() {
             return;
         }
     }
-    alert("Incorrect details");
+    document.getElementById("Alerts").innerHTML = "Incorrect Details"
 }
 
 // once called logged key is removed from localstorage
@@ -97,9 +100,9 @@ function logOut() {
 }
 
 // declaring variables for sign in, up and out buttons
-const signN_btn = document.getElementById("signN");
-const singP_btn = document.getElementById("signP");
-const singO_btn = document.getElementById("signO");
+let signN_btn = document.getElementById("signN");
+let singP_btn = document.getElementById("signP");
+let singO_btn = document.getElementById("signO");
 
 /* displaying username of currently logged in user
     hiding sing in and up buttons once user is logged in */

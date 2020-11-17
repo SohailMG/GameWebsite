@@ -19,6 +19,9 @@ class Scene2 extends Phaser.Scene {
         var easyTxt;
         var hardTxt;
         var titletxt;
+        // var inputfield;
+
+        document.getElementById("numInput").style.display = "none";
 
 
 

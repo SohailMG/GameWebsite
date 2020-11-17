@@ -12,7 +12,7 @@
             <li><input id="Uname-inpt" type="text" name="User name" placeholder="User Name"></li>
             <li><input id="passwrd-inpt" type="passwrod" name="Password" placeholder="Password"></li>
             <li><button id="SignIn-btn" type="button" onclick="SignIN()">Sign In</button></li>
-            <li>Forget Password?</li>
+            <div id="Alerts"></div>
         </ul>
     </div>
 </div>

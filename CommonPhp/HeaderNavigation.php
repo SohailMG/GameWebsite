@@ -14,8 +14,8 @@ function outputHeaderNav($pageName){
     <div class="navbar">';
     
     //array of page names and page links to point to 
-    $pageNames = array("Home",  "HowToPlay", "Leaderboard", "Contact", "Gamer");
-    $pageLinks = array("index.php", "HowToPlay.php", "Leaderboard.php", "Contact.php", "Game1.php");
+    $pageNames = array("Home", "Game" ,"HowToPlay", "Leaderboard", "Contact");
+    $pageLinks = array("index.php","Game1.php", "HowToPlay.php", "Leaderboard.php", "Contact.php");
     
     /* 
     nav bar foor loop
@@ -33,7 +33,7 @@ function outputHeaderNav($pageName){
     }  
     echo '</div>';
     echo '<div id="signbtns">
-            <p id="loggedIn">Hi  </p>
+            <p id="loggedIn"></p>
             <a id="signN" href="Sign-in.php"><b>Sign-in</b></a>
             <a id="signP" href=" Sign-up.php"><b>Sign-up</b></a>
             <a id="signO" href=" index.php" style="display:none" onclick="logOut()"><b>Sign-out</b></a>
