@@ -7,6 +7,7 @@
 ?>
 <!-- Grid containig ranking table,
 box to show username and another to show highest level  -->
+<button id="showTable">Show</button>
 <div class="grid-container2">
     <div class="grid-item score-table">
         <!--table of all fields used for scoreboard -->

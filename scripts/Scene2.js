@@ -50,6 +50,7 @@ class Scene2 extends Phaser.Scene {
             fill: "red",
         });
         hardTxt.setInteractive({ useHandCursor: true })
-        hardTxt.on('pointerdown', () => this.scene.switch("Scene1"), localStorage.setItem('loses', 0));
+        hardTxt.on('pointerdown', () => this.scene.switch("playHard"),
+            localStorage.setItem('level', 0), localStorage.setItem('loses', 0));
     }
 }
