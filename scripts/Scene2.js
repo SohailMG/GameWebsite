@@ -1,4 +1,4 @@
-class Scene2 extends Phaser.Scene {
+export default class Scene2 extends Phaser.Scene {
     constructor() {
         super("playGame");
     }
@@ -11,11 +11,27 @@ class Scene2 extends Phaser.Scene {
         this.load.image('title', '../assets/title.png');
         this.load.image('select', '../assets/Selectbtn.jpg');
 
+        this.load.audio("music", '../assets/Sounds/Music.mp3')
+
 
     }
 
 
     create() {
+        // configuring background music properties
+        this.music = this.sound.add("music");
+         module.exports.musicConfig = {
+            mute :false,
+            volume :0.02,
+            rate : 1,
+            detune : 0,
+            seek : 0,
+            loop : true,
+            delay :0, 
+        }
+        
+        
+        
         var easyTxt;
         var hardTxt;
         var titletxt;
@@ -23,12 +39,14 @@ class Scene2 extends Phaser.Scene {
 
         document.getElementById("numInput").style.display = "none";
 
-
-
+        
+        
+        
         this.add.image(400, 300, 'bg');
         this.add.image(650, 300, 'select');
         this.add.image(480, 300, 'select');
         this.add.image(550, 100, 'title');
+
         // game title 
         titletxt = this.add.text(490, 80, "Memory Master", {
             font: "17px Comic Sans MS",
@@ -50,7 +68,8 @@ class Scene2 extends Phaser.Scene {
             fill: "red",
         });
         hardTxt.setInteractive({ useHandCursor: true })
-        hardTxt.on('pointerdown', () => this.scene.switch("playHard"),
+        hardTxt.on('pointerdown', () => this.scene.switch("playHard"),this.music.play(musicConfig),
             localStorage.setItem('level', 0), localStorage.setItem('loses', 0));
+            
     }
 }

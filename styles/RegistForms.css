@@ -123,13 +123,38 @@ ul.signInform li input:hover {
 /*
 *Sign up form styling
 */
+#nameFields > input {
+    width: 149px;   
+    height: 39px;
+    border-radius: 5px;
+
+}
+.allfields{
+    margin-top: -24px;
+
+}
+.allfields > input{
+    border: none;
+    display: block;
+    width: 170px;
+    height: 35px;
+    border-radius: 5px;
+    padding-left: 10px;
+    margin-left: 155px;
+    box-shadow: 0 5px 5px black;
+}
+.signUpform > input {
+    width: 149px;   
+    height: 39px;
+    border-radius: 5px;
+    margin-top: 20px;
+
+}
 
 ul.signUpform {
     padding: 10px;
-    text-align: left;
     list-style-type: none;
     color: rgb(255, 255, 255);
-    text-shadow: 0 0 14px rgb(255, 54, 54);
 }
 
 ul.signUpform li {

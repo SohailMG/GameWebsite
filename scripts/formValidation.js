@@ -41,6 +41,7 @@ function SignUp() {
 
 
     }
+
     // checking if email entered is a valid email
     let validEmail = /^[\w-\.]+@([\w]+\.)+([\w-]+)/;
     if (!validEmail.test(usrEmail.value)) {

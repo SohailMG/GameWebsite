@@ -1,4 +1,6 @@
-class hard extends Phaser.Scene {
+
+
+export default class hard extends Phaser.Scene {
     constructor() {
         super("playHard");
     }
@@ -9,9 +11,19 @@ class hard extends Phaser.Scene {
         this.load.image("playbtn", "../assets/play.png");
         this.load.image("home", "../assets/homeicon.png");
         this.load.image("tick", "../assets/tick.png");
+
+        // loading sounds
+        this.load.audio("ticking", "../assets/Sounds/Ticking.mp3")
+        this.load.audio("winner", "../assets/Sounds/Winner.mp3")
+        this.load.audio("loser", "../assets/Sounds/Loser.mp3")
     }
 
     create() {
+
+        let ticking = this.sound.add("ticking")
+        this.winner = this.sound.add("winner")
+        this.loser = this.sound.add("loser")
+
         this.add.image(400, 300, "BG");
         this.add.image(400, 300, "field");
 
@@ -28,7 +40,7 @@ class hard extends Phaser.Scene {
         // generate random range of nums
 
         // play button game logic #######-----------------
-        var playbtn;
+        var playWords;
         var Clearbtn;
         var Homebtn;
         var Infotxt;
@@ -61,13 +73,20 @@ class hard extends Phaser.Scene {
         });
 
         // main game function generates all game logic and functions
-        playbtn = this.add.image(500, 200, "playbtn");
-        playbtn.setInteractive({ useHandCursor: true });
-        playbtn.on("pointerdown", function play() {
+        playWords = this.add.image(500, 200, "playbtn");
+        playWords.setInteractive({ useHandCursor: true });
+        playWords.on("pointerdown", function play() {
+            let bgSound = require('./Scene2.js');
+            bgSound.musicConfig.mute="true";
+            // this.music.play(musicConfig.mute="true")
             visualTimer();
+            ticking.play();
+
             let numInpt = document.getElementById("numInput");
             let num = document.getElementById("num").innerHTML;
             document.getElementById("num").style.marginLeft = "38%";
+
+
 
             // creating max and min values in local storage
 
@@ -77,48 +96,33 @@ class hard extends Phaser.Scene {
 
             let level = JSON.parse(localStorage.getItem("level"));
 
-            function RandomWord() {
-                let threeletters = [
-                    "Cep",
-                    "Fig",
-                    "Hip",
-                    "Pea",
-                    "Yam",
-                    "Nut",
-                    "Haw",
-                ];
-                let fourletters = [
-                    "Corn",
-                    "Lime",
-                    "Mast",
-                    "Mung	",
-                    "Ogen",
-                    "Okra",
-                    "Pear",
-                ];
-                let sixletters = [
-                    "Almond",
-                    "Banana",
-                    "Blewits",
-                    "Carrot",
-                    "Celery",
-                    "Cherry",
-                    "Cooker",
-                ];
+            let wordLevels = [
+                ["Cep", "Yam", "Nut", "Haw"], // level 1
+                ["Corn", "Lime", "Okra", "Pear"], // level 2
+                ["Almond", "Banana", "Blewits", "Cooker"], // level 3
+                ["academy", "Penguin", "History", "Jupiter"], // level 4
+                ["Abdicate", "Squirrel", "Ordinary", "Innocent"], // level 5
+                ["Xylophone ", "Integrity", "Charlotte", "Curiosity"], // level 6
+                ["Antarctica", "Diabolical", "Absolution", "Illuminati"], // level 7
+            ];
 
-                let wordLevels = [threeletters, fourletters, sixletters];
+            function RandomWord() {
+
+                
 
                 var randomItem =
                     wordLevels[level][
                         Math.floor(Math.random() * wordLevels[level].length)
                     ];
+                    console.log(randomItem)
 
                 document.getElementById("num").innerHTML = randomItem;
 
-                // retry function called to restart game from begining
+                // retry function called to restart game from begining when user loses
                 retrybtn = document.getElementById("retry");
                 retrybtn.onclick = () => {
                     document.getElementById("GameOver").style.display = "none";
+                    document.getElementById("GameWon").style.display = "none";
                     // this.scene.restart();
                     document.getElementById("numInput");
                     document.getElementById("num").innerHTML = "";
@@ -126,24 +130,55 @@ class hard extends Phaser.Scene {
                     document.getElementById("scoreend").innerHTML = "";
                     // document.getElementById("Number").innerHTML = "";
                 };
-            }
-            // checking if input field is empty
 
-            if (numInpt.value == num && level < 3) {
+                // retry function called to restart game from begining when user wins
+                var retrybtn2;
+                retrybtn2 = document.getElementById("retry2");
+                retrybtn2.onclick = () => {
+                    document.getElementById("GameWon").style.display = "none";
+                    // this.scene.restart();
+                    document.getElementById("numInput").style.display= "block"
+                    document.getElementById("num").innerHTML = "";
+                    document.getElementById("levelend2").innerHTML = "";
+                    document.getElementById("scoreend2").innerHTML = "";
+                    progress.style.display = "none";
+                    numIn.style.display = "none";
+                    numInpt.style.display = "none";
+                    numInpt.value = "";
+
+                };
+            }
+            
+            // checking if input field is empty
+            let maxScore = 10;
+            let maxLevel = wordLevels.length;
+            let winScreen =document.getElementById("GameWon");
+
+            if (numInpt.value == num ) {
                 numInpt.value = "";
 
                 localStorage.setItem("level", level + 1);
 
                 // updating max and min values each time
                 // adding to level and score values
+                console.log(level)
 
+                if(level == 7){
+                    // displying winner screen
+                    winScreen.style.display="block"
+                    localStorage.setItem('level', 0)
+
+                    document.getElementById("levelend2").innerHTML = level;
+                    document.getElementById("scoreend2").innerHTML = maxScore;
+                    return;
+                }
                 RandomWord();
 
                 // showing the end results when game is over
             } else {
                 localStorage.setItem("loses", oldLoses + 1);
                 localStorage.setItem("level", 0);
-                let currentLoses = localStorage.getItem("loses");
+                let currentLoses = localStorage.getItem("loses");     
 
                 if (currentLoses == "1") {
                     // displaying game over screen

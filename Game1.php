@@ -3,12 +3,12 @@
     OutputHtmlHead();
     OutputNav()
 ?>
-<script src="//cdn.jsdelivr.net/npm/phaser@3.24.1/dist/phaser.js"></script>
-<script src="scripts/Scene1.js"></script>
-<script src="scripts/Scene2.js"></script>
-<script src="scripts/easy.js"></script>
-<script src="scripts/hard.js"></script>
-<script src="scripts/gameConfig.js"></script>
+<script type="module" src=" //cdn.jsdelivr.net/npm/phaser@3.24.1/dist/phaser.js"></script>
+<script type="module" src="scripts/Scene1.js"></script>
+<script type="module" src="scripts/Scene2.js"></script>
+<script type="module" src="scripts/easy.js"></script>
+<script type="module" src="scripts/hard.js"></script>
+<script type="module" src="scripts/gameConfig.js"></script>
 
 
 <button id="Clear"></button>
@@ -29,6 +29,14 @@
     <div id="scoreend" style="color: brown; font-size: 30px;text-shadow: 0 10px 10px black;">Highest Score:
     </div>
     <button id="retry">Try Again</button>
+</div>
+<div id="GameWon">
+    <div id="Overtxt2" style="color: green; font-size: 40px;text-shadow: 0 10px 10px black;"><b>You Win</b></div>
+    <div id="levelend2" style="color: brown; font-size: 30px;text-shadow: 0 10px 10px black;">Level Reached:
+    </div>
+    <div id="scoreend2" style="color: brown; font-size: 30px;text-shadow: 0 10px 10px black;">Highest Score:
+    </div>
+    <button id="retry2">Try Again</button>
 </div>
 <?php
 Outputfooter()

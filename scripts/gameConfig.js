@@ -1,7 +1,13 @@
+
+import bootGame from './Scene1.js';
+import playGame from './Scene2.js';
+import playEasy from './easy.js';
+import PlayHard from './hard.js';
+
+
 var config = {
     width: 800,
     height: 600,
-    backgroundColor: 0x000000,
-    scene: [Scene1, Scene2, easy, hard]
+    scene: [bootGame, playGame, playEasy, PlayHard]
 };
 var game = new Phaser.Game(config);

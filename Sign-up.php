@@ -9,15 +9,18 @@
     <form class="forms">
         <h1>Sign Up</h1>
         <ul class="signUpform">
-            <div id="nameFields">
-                <li><input id="firstname" type="text" name="name" placeholder="Enter first name">First Name</li>
-                <li><input id="lastname" type="text" name="name" placeholder="Enter last name">Last Name</li>
+            <div class="allfields">
+                First Name: <input id="firstname" type="text" name="name" placeholder="Enter first name">
+
+                Last Name:<input id="lastname" type="text" name="name" placeholder="Enter last name">
+
+                Email: <input id="usrEmail" type="text" name="Email" placeholder="Enter Email">
+                Username:<input id="uName" type="text" name="Username" placeholder="Create User Name">
+                Password:<input id="Psswd" type="Password" name="Password" placeholder="Create Password">
+                Confirm Password:<input id="ConfPass" type="Password" name="Password" placeholder="Retype Password">
             </div>
-            <li><input id="usrEmail" type="text" name="Username" placeholder="Enter Email">Email</li>
-            <li><input id="uName" type="text" name="Email" placeholder="Create User Name">UserName</li>
-            <li><input id="Psswd" type="passwrod" name="Password" placeholder="Create Password">Password</li>
-            <li><input id="ConfPass" type="passwrod" name="Password" placeholder="Retype Password">Confirm Password
-            </li>
+
+
             <li><button id="SignUp-btn" type="button" onclick="SignUp ()">Sign Up</button></li>
             <div id="Alerts2"></div>
         </ul>

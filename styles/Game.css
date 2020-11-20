@@ -283,6 +283,37 @@ replaces startScreen when button is pressed
     font-weight: bold;
 }
 
+#GameWon {
+    text-align: center;
+    display: none;
+    position: absolute;
+    width: 490px;
+    height: 377px;
+    margin-top: -34%;
+    margin-left: 31%;
+    box-shadow: 0 10px 10px black;
+    background-image: url("../assets/Gameover.png");
+    background-size: cover;
+}
+
+#GameWon>div {
+    color: brown;
+    font-size: 30px;
+    padding-top: 40px;
+}
+
+#GameWon>button {
+    width: 105px;
+    height: 43px;
+    color: black;
+    box-shadow: 0 10px 10px black;
+    margin-top: 10px;
+    background-image: url("../assets/Selectbtn.jpg");
+    background-size: cover;
+    font-size: 16px;
+    font-weight: bold;
+}
+
 canvas {
     margin-top: 5%;
     margin-left: 20%;
