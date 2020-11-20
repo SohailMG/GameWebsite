@@ -55,33 +55,7 @@
     width: 100px;
     height: 100px;
     margin-top: 8%;
-    box-shadow: 0 0 10px #9c947c;
-    transform: scale(1);
-    animation: pulse 2s infinite;
-}
 
-
-/* 
-  * Button infinit puls animation 
-*/
-
-@keyframes pulse {
-    0% {
-        transform: scale(0.95);
-        box-shadow: 0 0 0 0 rgba(32, 14, 29, 0.7);
-    }
-    70% {
-        transform: scale(1);
-        box-shadow: 0 0 0 20px rgba(0, 0, 0, 0);
-    }
-    100% {
-        transform: scale(0.95);
-        box-shadow: 0 0 0 0 rgba(0, 0, 0, 0);
-    }
-}
-
-#startGame-button:hover {
-    background-color: rgb(166, 193, 233);
 }
 
 
@@ -205,9 +179,33 @@ replaces startScreen when button is pressed
     height: 60px;
     margin-left: 42%;
     margin-top: -23%;
-    box-shadow: 0 10px 10px brown;
+    box-shadow: 0 0 10px #383427;
+    transform: scale(1);
+    animation: pulse 2s infinite;
     border: none;
     text-align: center;
+}
+/* 
+  * Input field infinit puls animation 
+*/
+
+@keyframes pulse {
+    0% {
+        transform: scale(0.95);
+        box-shadow: 0 0 0 0 rgba(32, 14, 29, 0.7);
+    }
+    70% {
+        transform: scale(1);
+        box-shadow: 0 0 0 20px rgba(0, 0, 0, 0);
+    }
+    100% {
+        transform: scale(0.95);
+        box-shadow: 0 0 0 0 rgba(0, 0, 0, 0);
+    }
+}
+
+#startGame-button:hover {
+    background-color: rgb(166, 193, 233);
 }
 
 #checkUsr {

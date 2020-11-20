@@ -1,4 +1,4 @@
-export default class Scene1 extends Phaser.Scene {
+export default class bootGame extends Phaser.Scene {
     constructor() {
         super("bootGame");
     }
@@ -35,7 +35,7 @@ export default class Scene1 extends Phaser.Scene {
             fill: "black",
         });
         Playtxt.setInteractive({ useHandCursor: true })
-        Playtxt.on('pointerdown', () => this.scene.switch("playGame"));
+        Playtxt.on('pointerdown', () => this.scene.switch("Menu"));
 
 
     }

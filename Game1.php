@@ -4,10 +4,10 @@
     OutputNav()
 ?>
 <script type="module" src=" //cdn.jsdelivr.net/npm/phaser@3.24.1/dist/phaser.js"></script>
-<script type="module" src="scripts/Scene1.js"></script>
-<script type="module" src="scripts/Scene2.js"></script>
-<script type="module" src="scripts/easy.js"></script>
-<script type="module" src="scripts/hard.js"></script>
+<script type="module" src="scripts/bootGame.js"></script>
+<script type="module" src="scripts/Menu.js"></script>
+<script type="module" src="scripts/Numbers.js"></script>
+<script type="module" src="scripts/Words.js"></script>
 <script type="module" src="scripts/gameConfig.js"></script>
 
 

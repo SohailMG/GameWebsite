@@ -1,8 +1,6 @@
-
-
-export default class hard extends Phaser.Scene {
+export default class Words extends Phaser.Scene {
     constructor() {
-        super("playHard");
+        super("playWords");
     }
     preload() {
         this.load.image("BG", "../assets/Gamebg.jpg");
@@ -13,16 +11,20 @@ export default class hard extends Phaser.Scene {
         this.load.image("tick", "../assets/tick.png");
 
         // loading sounds
-        this.load.audio("ticking", "../assets/Sounds/Ticking.mp3")
-        this.load.audio("winner", "../assets/Sounds/Winner.mp3")
-        this.load.audio("loser", "../assets/Sounds/Loser.mp3")
+        this.load.audio("ticking", "../assets/Sounds/Ticking.mp3");
+        this.load.audio("winner", "../assets/Sounds/Winner.mp3");
+        this.load.audio("loser", "../assets/Sounds/Loser.mp3");
+        this.load.audio("click", "../assets/Sounds/Click.mp3");
     }
 
     create() {
-
-        let ticking = this.sound.add("ticking")
-        this.winner = this.sound.add("winner")
-        this.loser = this.sound.add("loser")
+        // declaring sound variables
+        let ticking = this.sound.add("ticking");
+        let winner = this.sound.add("winner");
+        let loser = this.sound.add("loser");
+        let click = this.sound.add("click");
+        loser.setVolume(0.2);
+        winner.setVolume(0.2);
 
         this.add.image(400, 300, "BG");
         this.add.image(400, 300, "field");
@@ -61,13 +63,14 @@ export default class hard extends Phaser.Scene {
         Homebtn = this.add.image(300, 200, "home");
         Homebtn.setInteractive({ useHandCursor: true });
         Homebtn.on("pointerdown", () => {
-            this.scene.switch("playGame"),
-                (document.getElementById("numInput").style.display = "none");
+            this.scene.switch("playGame"), click.play();
+            document.getElementById("numInput").style.display = "none";
         });
         // button to clear the input field of any values
         Clearbtn = this.add.image(400, 400, "clear");
         Clearbtn.setInteractive({ useHandCursor: true });
         Clearbtn.on("pointerdown", () => {
+            click.play();
             let inputField = document.getElementById("numInput");
             inputField.value = "";
         });
@@ -76,17 +79,14 @@ export default class hard extends Phaser.Scene {
         playWords = this.add.image(500, 200, "playbtn");
         playWords.setInteractive({ useHandCursor: true });
         playWords.on("pointerdown", function play() {
-            let bgSound = require('./Scene2.js');
-            bgSound.musicConfig.mute="true";
             // this.music.play(musicConfig.mute="true")
+            click.play();
             visualTimer();
             ticking.play();
 
             let numInpt = document.getElementById("numInput");
             let num = document.getElementById("num").innerHTML;
             document.getElementById("num").style.marginLeft = "38%";
-
-
 
             // creating max and min values in local storage
 
@@ -107,14 +107,11 @@ export default class hard extends Phaser.Scene {
             ];
 
             function RandomWord() {
-
-                
-
                 var randomItem =
                     wordLevels[level][
                         Math.floor(Math.random() * wordLevels[level].length)
                     ];
-                    console.log(randomItem)
+                console.log(randomItem);
 
                 document.getElementById("num").innerHTML = randomItem;
 
@@ -137,7 +134,7 @@ export default class hard extends Phaser.Scene {
                 retrybtn2.onclick = () => {
                     document.getElementById("GameWon").style.display = "none";
                     // this.scene.restart();
-                    document.getElementById("numInput").style.display= "block"
+                    document.getElementById("numInput").style.display = "block";
                     document.getElementById("num").innerHTML = "";
                     document.getElementById("levelend2").innerHTML = "";
                     document.getElementById("scoreend2").innerHTML = "";
@@ -145,31 +142,37 @@ export default class hard extends Phaser.Scene {
                     numIn.style.display = "none";
                     numInpt.style.display = "none";
                     numInpt.value = "";
-
                 };
             }
-            
+
             // checking if input field is empty
             let maxScore = 10;
             let maxLevel = wordLevels.length;
-            let winScreen =document.getElementById("GameWon");
+            let winScreen = document.getElementById("GameWon");
 
-            if (numInpt.value == num ) {
+            if (numInpt.value == num) {
                 numInpt.value = "";
 
                 localStorage.setItem("level", level + 1);
 
                 // updating max and min values each time
                 // adding to level and score values
-                console.log(level)
+                console.log(level);
 
-                if(level == 7){
+                if (level == 7) {
                     // displying winner screen
-                    winScreen.style.display="block"
-                    localStorage.setItem('level', 0)
+                    winScreen.style.display = "block";
+                    // playing sounds
+                    winner.play();
+                    ticking.stop();
 
-                    document.getElementById("levelend2").innerHTML = level;
-                    document.getElementById("scoreend2").innerHTML = maxScore;
+                    // resseting level
+                    localStorage.setItem("level", 0);
+
+                    document.getElementById("levelend2").innerHTML =
+                        "Reached Final Level " + level;
+                    document.getElementById("scoreend2").innerHTML =
+                        "Score " + maxScore;
                     return;
                 }
                 RandomWord();
@@ -178,11 +181,13 @@ export default class hard extends Phaser.Scene {
             } else {
                 localStorage.setItem("loses", oldLoses + 1);
                 localStorage.setItem("level", 0);
-                let currentLoses = localStorage.getItem("loses");     
+                let currentLoses = localStorage.getItem("loses");
 
                 if (currentLoses == "1") {
                     // displaying game over screen
                     document.getElementById("GameOver").style.display = "block";
+                    loser.play();
+                    ticking.stop();
 
                     localStorage.setItem("loses", 0);
 
@@ -206,14 +211,14 @@ export default class hard extends Phaser.Scene {
         // progress bar used as a visual timer
 
         function visualTimer() {
-            var i = 0;
+            let i = 0;
 
             {
                 if (i == 0) {
                     i = 1;
 
                     let width = 1;
-                    let Speed = setInterval(frame, 25);
+                    let Speed = setInterval(frame, 20);
 
                     progress.style.display = "block";
 
@@ -222,7 +227,9 @@ export default class hard extends Phaser.Scene {
                             progress.style.display = "none";
                             numIn.style.display = "none";
                             numInpt.style.display = "block";
+
                             clearInterval(Speed);
+                            ticking.stop();
                             i = 0;
                         } else {
                             width++;

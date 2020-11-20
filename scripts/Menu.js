@@ -1,6 +1,7 @@
-export default class Scene2 extends Phaser.Scene {
+
+export default class Menu extends Phaser.Scene {
     constructor() {
-        super("playGame");
+        super("Menu");
     }
 
     preload() {
@@ -20,7 +21,7 @@ export default class Scene2 extends Phaser.Scene {
     create() {
         // configuring background music properties
         this.music = this.sound.add("music");
-         module.exports.musicConfig = {
+          var  musicConfig = {
             mute :false,
             volume :0.02,
             rate : 1,
@@ -29,7 +30,6 @@ export default class Scene2 extends Phaser.Scene {
             loop : true,
             delay :0, 
         }
-        
         
         
         var easyTxt;
@@ -59,7 +59,8 @@ export default class Scene2 extends Phaser.Scene {
         });
         easyTxt.setInteractive({ useHandCursor: true })
         easyTxt.on('pointerdown', () => {
-            this.scene.switch("playEasy")
+            this.scene.switch("playNumbers"),
+            document.getElementById("num").style.letterSpacing = "10px"
 
         });
 
@@ -68,8 +69,12 @@ export default class Scene2 extends Phaser.Scene {
             fill: "red",
         });
         hardTxt.setInteractive({ useHandCursor: true })
-        hardTxt.on('pointerdown', () => this.scene.switch("playHard"),this.music.play(musicConfig),
-            localStorage.setItem('level', 0), localStorage.setItem('loses', 0));
+        hardTxt.on('pointerdown', () => 
+        this.scene.switch("playWords"),
+        this.music.play(musicConfig),
+        localStorage.setItem('level', 0),
+        localStorage.setItem('loses', 0),
+        document.getElementById("num").style.letterSpacing = "0");
             
     }
 }

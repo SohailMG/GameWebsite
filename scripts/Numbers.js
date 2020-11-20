@@ -1,6 +1,6 @@
 export default class easy extends Phaser.Scene {
     constructor() {
-        super("playEasy");
+        super("PlayNumbers");
     }
     preload() {
         this.load.image("BG", "../assets/Gamebg.jpg");
