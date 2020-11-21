@@ -1,8 +1,18 @@
+
+/* 
+                !Words gameplay
+    * an array containig array of words
+    * Random words are generating 
+    * Each time guess is correct, word lengh increases
+    * levels are stored in an array 
+    
+*/
 export default class Words extends Phaser.Scene {
     constructor() {
         super("playWords");
     }
     preload() {
+        // loading images 
         this.load.image("BG", "../assets/Gamebg.jpg");
         this.load.image("field", "../assets/hudd.png");
         this.load.image("clear", "../assets/delete.png");
@@ -63,7 +73,7 @@ export default class Words extends Phaser.Scene {
         Homebtn = this.add.image(300, 200, "home");
         Homebtn.setInteractive({ useHandCursor: true });
         Homebtn.on("pointerdown", () => {
-            this.scene.switch("playGame"), click.play();
+            this.scene.switch("Menu"), click.play();
             document.getElementById("numInput").style.display = "none";
         });
         // button to clear the input field of any values
@@ -81,7 +91,7 @@ export default class Words extends Phaser.Scene {
         playWords.on("pointerdown", function play() {
             // this.music.play(musicConfig.mute="true")
             click.play();
-            visualTimer();
+            vTimer();
             ticking.play();
 
             let numInpt = document.getElementById("numInput");
@@ -210,7 +220,7 @@ export default class Words extends Phaser.Scene {
 
         // progress bar used as a visual timer
 
-        function visualTimer() {
+        function vTimer() {
             let i = 0;
 
             {
@@ -218,7 +228,7 @@ export default class Words extends Phaser.Scene {
                     i = 1;
 
                     let width = 1;
-                    let Speed = setInterval(frame, 20);
+                    let Speed = setInterval(frame, 15);
 
                     progress.style.display = "block";
 

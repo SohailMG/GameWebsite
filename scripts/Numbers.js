@@ -1,3 +1,10 @@
+/* 
+                !Numbers gameplay
+    * Generating random numbers in a given range
+    * Range increases if guess is correct
+    * Progress Bar used as visual timer
+*/
+
 export default class easy extends Phaser.Scene {
     constructor() {
         super("PlayNumbers");
@@ -52,7 +59,7 @@ export default class easy extends Phaser.Scene {
         Homebtn = this.add.image(300, 200, "home");
         Homebtn.setInteractive({ useHandCursor: true });
         Homebtn.on("pointerdown", () => {
-            this.scene.switch("playGame"),
+            this.scene.switch("Menu"),
                 (document.getElementById("numInput").style.display = "none");
         });
         // button to clear the input field of any values
@@ -87,8 +94,8 @@ export default class easy extends Phaser.Scene {
             let score = existingRanges.scores;
 
             let user = localStorage.getItem("loggedusr");
-            let ranking = { User: user, Score: score, Level: levels };
 
+            let ranking = { User: user, Score: score, Level: levels };
 
             // generating random numbers between given range
             function RandomNum(min, max) {
@@ -126,6 +133,25 @@ export default class easy extends Phaser.Scene {
 
                 RandomNum(minVal, maxVal);
                 localStorage.setItem("Ranking", JSON.stringify(ranking));
+
+                // storeData used to update scores for currently logged user
+                storeData();
+                function storeData() {
+                    let GameData = JSON.parse(localStorage.getItem("GameData"));
+                    let Loggeduser = localStorage.getItem("loggedusr");
+                
+                    for (let i = 0; i < GameData.length; i++) {
+                        if (Loggeduser == GameData[i].Username) {
+                            GameData[i].Scores = score;
+                            GameData[i].Levels = levels;
+                            break;
+                        }
+                    }
+                    localStorage.setItem('GameData', JSON.stringify(GameData))
+                }
+            
+                
+
                 // showing the end results when game is over
                 localStorage.setItem("score", score);
                 document.getElementById("levelend").innerHTML =

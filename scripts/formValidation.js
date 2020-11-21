@@ -32,6 +32,7 @@ function SignUp() {
         return false;
     }
     // checking if username already exists
+    if(CurrentData != null){
     for (let i = 0; i < CurrentData.length; i++) {
         if (newUser == CurrentData[i].username) {
             Alerts2.innerHTML = "Username already Exists";
@@ -40,6 +41,7 @@ function SignUp() {
         }
 
 
+    }
     }
 
     // checking if email entered is a valid email
@@ -70,7 +72,11 @@ function SignUp() {
         input fields are stored into an array of objects */
     } else {
         var currentData = JSON.parse(localStorage.getItem("allUsers"));
-        if (currentData == null) currentData = [];
+        var gameData = JSON.parse(localStorage.getItem("GameData"));
+        if (currentData == null && gameData == null) 
+        gameData = [];
+        currentData = [];
+
 
         var store_username = document.getElementById("uName").value;
         var store_password = document.getElementById("Psswd").value;
@@ -85,10 +91,19 @@ function SignUp() {
             username: store_username,
             password: store_password,
         };
+        // setting defualt game data for each user
+        let newGameData = {
+            Username: store_username,
+            Scores: 0,
+            Levels: 0,
+        };
+
         // storing data back into currentData array
         localStorage.setItem("newUser", JSON.stringify(newUser));
         currentData.push(newUser);
+        gameData.push(newGameData);
         localStorage.setItem("allUsers", JSON.stringify(currentData));
+        localStorage.setItem("GameData", JSON.stringify(gameData));
         document.location.href = "Sign-in.php";
     }
 }

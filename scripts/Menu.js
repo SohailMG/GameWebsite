@@ -53,18 +53,18 @@ export default class Menu extends Phaser.Scene {
             fill: "black",
         });
         // clickable text leades to scene 2
-        easyTxt = this.add.text(450, 280, "Easy", {
+        easyTxt = this.add.text(450, 280, "Numbers", {
             font: "25px Comic Sans MS",
             fill: "green",
         });
         easyTxt.setInteractive({ useHandCursor: true })
         easyTxt.on('pointerdown', () => {
-            this.scene.switch("playNumbers"),
+            this.scene.switch("PlayNumbers"),
             document.getElementById("num").style.letterSpacing = "10px"
 
         });
 
-        hardTxt = this.add.text(620, 280, "Hard", {
+        hardTxt = this.add.text(620, 280, "Words", {
             font: "25px Comic Sans MS",
             fill: "red",
         });
