@@ -32,12 +32,15 @@ export default class Menu extends Phaser.Scene {
         }
         
         
-        var easyTxt;
-        var hardTxt;
+        var startWords;
+        var startNumbers;
         var titletxt;
         // var inputfield;
 
         document.getElementById("numInput").style.display = "none";
+
+        let levelProgress =  document.getElementById("progressContainer")
+        let randomElem = document.getElementById("randomElem")
 
         
         
@@ -52,29 +55,54 @@ export default class Menu extends Phaser.Scene {
             font: "17px Comic Sans MS",
             fill: "black",
         });
-        // clickable text leades to scene 2
-        easyTxt = this.add.text(450, 280, "Numbers", {
+        // button to initiate the words gameplay scene
+        startWords = this.add.text(450, 280, "Numbers", {
             font: "25px Comic Sans MS",
             fill: "green",
         });
-        easyTxt.setInteractive({ useHandCursor: true })
-        easyTxt.on('pointerdown', () => {
+        startWords.setInteractive({ useHandCursor: true })
+        startWords.on('pointerdown', () => {
+            levelProgress.style.display="block"
+            
             this.scene.switch("PlayNumbers"),
-            document.getElementById("num").style.letterSpacing = "10px"
+            this.music.play(musicConfig)
+            randomElem.style.letterSpacing = "10px"
 
         });
 
-        hardTxt = this.add.text(620, 280, "Words", {
-            font: "25px Comic Sans MS",
-            fill: "red",
+        // button to initial the numbers gameplay scene
+        startNumbers = this.add.text(620, 280, "Words", {
+                font: "25px Comic Sans MS",
+                fill: "red",
         });
-        hardTxt.setInteractive({ useHandCursor: true })
-        hardTxt.on('pointerdown', () => 
-        this.scene.switch("playWords"),
-        this.music.play(musicConfig),
-        localStorage.setItem('level', 0),
-        localStorage.setItem('loses', 0),
-        document.getElementById("num").style.letterSpacing = "0");
+        startNumbers.setInteractive({ useHandCursor: true })
+        startNumbers.on('pointerdown', () => {
+
+        this.scene.switch("playWords")
+
+
+        levelProgress.style.display="block"
+        randomElem.style.letterSpacing = "0" 
+
+        this.music.play(musicConfig)
+
+        // setting initial values 
+        localStorage.setItem('level', 0)
+        localStorage.setItem('loses', 0)
+
+        });
+
+        // hardTxt = this.add.text(620, 280, "Words", {
+        //     font: "25px Comic Sans MS",
+        //     fill: "red",
+        // });
+        // hardTxt.setInteractive({ useHandCursor: true })
+        // hardTxt.on('pointerdown', () => 
+        // this.scene.switch("playWords"),
+        // this.music.play(musicConfig),
+        // localStorage.setItem('level', 0),
+        // localStorage.setItem('loses', 0),
+        // document.getElementById("randomElem").style.letterSpacing = "0");
             
     }
 }

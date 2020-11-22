@@ -32,16 +32,13 @@ function SignUp() {
         return false;
     }
     // checking if username already exists
-    if(CurrentData != null){
-    for (let i = 0; i < CurrentData.length; i++) {
-        if (newUser == CurrentData[i].username) {
-            Alerts2.innerHTML = "Username already Exists";
-            return;
-
+    if (CurrentData != null) {
+        for (let i = 0; i < CurrentData.length; i++) {
+            if (newUser == CurrentData[i].username) {
+                Alerts2.innerHTML = "Username already Exists";
+                return;
+            }
         }
-
-
-    }
     }
 
     // checking if email entered is a valid email
@@ -73,10 +70,8 @@ function SignUp() {
     } else {
         var currentData = JSON.parse(localStorage.getItem("allUsers"));
         var gameData = JSON.parse(localStorage.getItem("GameData"));
-        if (currentData == null && gameData == null) 
-        gameData = [];
+        if (currentData == null && gameData == null) gameData = [];
         currentData = [];
-
 
         var store_username = document.getElementById("uName").value;
         var store_password = document.getElementById("Psswd").value;

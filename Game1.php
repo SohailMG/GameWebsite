@@ -13,8 +13,20 @@
 
 <button id="Clear"></button>
 <button id="tick"></button>
+<!-- level progress visualiser -->
+<div id="progressContainer">
+    <div id="levelProg">
+        <div id="level1">Level 1</div>
+        <div id="level2">Level 2</div>
+        <div id="level3">Level 3</div>
+        <div id="level4">Level 4</div>
+        <div id="level5">Level 5</div>
+        <div id="level6">Level 6</div>
+        <div id="level7">Level 7</div>
+    </div>
+</div>
 
-<h1 id="num"></h1>
+<h1 id="randomElem"></h1>
 <input id="numInput" type=" text " placeholder="Enter here" />
 <div id="BarContainer">
     <div id="myProgress">

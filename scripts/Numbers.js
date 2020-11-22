@@ -5,7 +5,7 @@
     * Progress Bar used as visual timer
 */
 
-export default class easy extends Phaser.Scene {
+export default class Numbers extends Phaser.Scene {
     constructor() {
         super("PlayNumbers");
     }
@@ -16,14 +16,28 @@ export default class easy extends Phaser.Scene {
         this.load.image("playbtn", "../assets/play.png");
         this.load.image("home", "../assets/homeicon.png");
         this.load.image("tick", "../assets/tick.png");
+
+        // loading sounds
+        this.load.audio("ticking", "../assets/Sounds/Ticking.mp3");
+        this.load.audio("winner", "../assets/Sounds/Winner.mp3");
+        this.load.audio("loser", "../assets/Sounds/Loser.mp3");
+        this.load.audio("click", "../assets/Sounds/Click.mp3");
     }
 
-    create() {
+        create() {
+
         this.add.image(400, 300, "BG");
         this.add.image(400, 300, "field");
 
+        let ticking = this.sound.add("ticking");
+        let winner = this.sound.add("winner");
+        let loser = this.sound.add("loser");
+        let click = this.sound.add("click");
+        loser.setVolume(0.2);
+        winner.setVolume(0.2);
+
         // variables used for visual timer
-        let numIn = document.getElementById("num");
+        let numIn = document.getElementById("randomElem");
         let elem = document.getElementById("myBar");
         let numInpt = document.getElementById("numInput");
         let progress = document.getElementById("BarContainer");
@@ -59,6 +73,7 @@ export default class easy extends Phaser.Scene {
         Homebtn = this.add.image(300, 200, "home");
         Homebtn.setInteractive({ useHandCursor: true });
         Homebtn.on("pointerdown", () => {
+            click.play();
             this.scene.switch("Menu"),
                 (document.getElementById("numInput").style.display = "none");
         });
@@ -66,6 +81,7 @@ export default class easy extends Phaser.Scene {
         Clearbtn = this.add.image(400, 400, "clear");
         Clearbtn.setInteractive({ useHandCursor: true });
         Clearbtn.on("pointerdown", () => {
+            click.play();
             let inputField = document.getElementById("numInput");
             inputField.value = "";
         });
@@ -74,9 +90,16 @@ export default class easy extends Phaser.Scene {
         playbtn = this.add.image(500, 200, "playbtn");
         playbtn.setInteractive({ useHandCursor: true });
         playbtn.on("pointerdown", function playgame() {
+
             visualTimer();
+            click.play();
+            ticking.play();
+
+            
+
+
             let numInpt = document.getElementById("numInput");
-            let num = document.getElementById("num").innerHTML;
+            let randomElem = document.getElementById("randomElem").innerHTML;
 
             // creating max and min values in local storage
 
@@ -93,22 +116,44 @@ export default class easy extends Phaser.Scene {
             let levels = existingRanges.level;
             let score = existingRanges.scores;
 
-            let user = localStorage.getItem("loggedusr");
+            // level progress visuals 
+        let lv1 = document.getElementById("level1");
+        let lv2 = document.getElementById("level2");
+        let lv3 = document.getElementById("level3");
+        let lv4 = document.getElementById("level4");
+        let lv5 = document.getElementById("level5");
+        let lv6 = document.getElementById("level6");
+        let lv7 = document.getElementById("level7");
 
-            let ranking = { User: user, Score: score, Level: levels };
+        let current_level = levels;
+
+        var lvls = [lv1, lv2, lv3, lv4, lv5, lv6, lv7];
+
+        function levelProgress() {
+            // declaring variables for level icons
+
+            // setting color for current level
+            lvls[current_level - 1].style.backgroundColor = "seagreen";
+        }
+
+
 
             // generating random numbers between given range
             function RandomNum(min, max) {
                 var number = Math.floor(Math.random() * max + 1) + min;
-                document.getElementById("num").innerHTML = number;
+                document.getElementById("randomElem").innerHTML = number;
 
                 // retry function called to restart game from begining
                 retrybtn = document.getElementById("retry");
                 retrybtn.onclick = () => {
+                    for (let i = 0; i < lvls.length; i++) {
+                        lvls[i].style.backgroundColor = " rgba(128, 128, 128, 0.432)";
+                        lvls[i].style.boxShadow = " none";
+                    }
                     document.getElementById("GameOver").style.display = "none";
                     // this.scene.restart();
                     document.getElementById("numInput");
-                    document.getElementById("num").innerHTML = "";
+                    document.getElementById("randomElem").innerHTML = "";
                     document.getElementById("levelend").innerHTML = "";
                     document.getElementById("scoreend").innerHTML = "";
                     // document.getElementById("Number").innerHTML = "";
@@ -116,7 +161,7 @@ export default class easy extends Phaser.Scene {
             }
             // checking if input field is empty
 
-            if (numInpt.value == num) {
+            if (numInpt.value == randomElem) {
                 numInpt.value = "";
 
                 // updating max and min values each time
@@ -132,14 +177,14 @@ export default class easy extends Phaser.Scene {
                 localStorage.setItem("Range", str_newRanges);
 
                 RandomNum(minVal, maxVal);
-                localStorage.setItem("Ranking", JSON.stringify(ranking));
+                levelProgress()
 
                 // storeData used to update scores for currently logged user
                 storeData();
                 function storeData() {
                     let GameData = JSON.parse(localStorage.getItem("GameData"));
                     let Loggeduser = localStorage.getItem("loggedusr");
-                
+
                     for (let i = 0; i < GameData.length; i++) {
                         if (Loggeduser == GameData[i].Username) {
                             GameData[i].Scores = score;
@@ -147,10 +192,8 @@ export default class easy extends Phaser.Scene {
                             break;
                         }
                     }
-                    localStorage.setItem('GameData', JSON.stringify(GameData))
+                    localStorage.setItem("GameData", JSON.stringify(GameData));
                 }
-            
-                
 
                 // showing the end results when game is over
                 localStorage.setItem("score", score);
@@ -163,6 +206,7 @@ export default class easy extends Phaser.Scene {
                 let currentLoses = localStorage.getItem("loses");
 
                 if (currentLoses == "1") {
+                    loser.play();
                     // displaying game over screen
                     document.getElementById("GameOver").style.display = "block";
                     // resetting values back to original state
@@ -192,7 +236,11 @@ export default class easy extends Phaser.Scene {
             numInpt.style.display = "none";
         });
 
+        // level progress visuals
+
         // progress bar used as a visual timer
+        
+        
 
         function visualTimer() {
             var i = 0;
@@ -212,6 +260,7 @@ export default class easy extends Phaser.Scene {
                             numIn.style.display = "none";
                             numInpt.style.display = "block";
                             clearInterval(Speed);
+                            ticking.stop();
                             i = 0;
                         } else {
                             width++;
@@ -223,3 +272,4 @@ export default class easy extends Phaser.Scene {
         }
     }
 }
+

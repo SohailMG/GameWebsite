@@ -1,4 +1,3 @@
-
 /* 
                 !Words gameplay
     * an array containig array of words
@@ -12,7 +11,7 @@ export default class Words extends Phaser.Scene {
         super("playWords");
     }
     preload() {
-        // loading images 
+        // loading images
         this.load.image("BG", "../assets/Gamebg.jpg");
         this.load.image("field", "../assets/hudd.png");
         this.load.image("clear", "../assets/delete.png");
@@ -40,7 +39,7 @@ export default class Words extends Phaser.Scene {
         this.add.image(400, 300, "field");
 
         // variables used for visual timer
-        let numIn = document.getElementById("num");
+        let numIn = document.getElementById("randomElem");
         let elem = document.getElementById("myBar");
         let numInpt = document.getElementById("numInput");
         let progress = document.getElementById("BarContainer");
@@ -69,12 +68,15 @@ export default class Words extends Phaser.Scene {
             font: "25px Comic Sans MS",
             color: "#fff",
         });
+
         // button to return back to menue scene
         Homebtn = this.add.image(300, 200, "home");
         Homebtn.setInteractive({ useHandCursor: true });
         Homebtn.on("pointerdown", () => {
+            
             this.scene.switch("Menu"), click.play();
             document.getElementById("numInput").style.display = "none";
+            document.getElementById("progressContainer").style.display = "none";
         });
         // button to clear the input field of any values
         Clearbtn = this.add.image(400, 400, "clear");
@@ -94,15 +96,32 @@ export default class Words extends Phaser.Scene {
             vTimer();
             ticking.play();
 
+            let lv1 = document.getElementById("level1");
+            let lv2 = document.getElementById("level2");
+            let lv3 = document.getElementById("level3");
+            let lv4 = document.getElementById("level4");
+            let lv5 = document.getElementById("level5");
+            let lv6 = document.getElementById("level6");
+            let lv7 = document.getElementById("level7");
+
+            let current_level = JSON.parse(localStorage.getItem("level"));
+
+            var lvls = [lv1, lv2, lv3, lv4, lv5, lv6, lv7];
+
+            function levelProgress() {
+                // declaring variables for level icons
+
+                // setting color for current level
+                lvls[current_level].style.backgroundColor = "seagreen";
+            }
+
             let numInpt = document.getElementById("numInput");
-            let num = document.getElementById("num").innerHTML;
-            document.getElementById("num").style.marginLeft = "38%";
+            let randomElem = document.getElementById("randomElem").innerHTML;
+            document.getElementById("randomElem").style.marginLeft = "38%";
 
             // creating max and min values in local storage
 
-            let loses = localStorage.getItem("loses");
             // converting ranges from strange to usable js object
-            let oldLoses = JSON.parse(loses);
 
             let level = JSON.parse(localStorage.getItem("level"));
 
@@ -116,6 +135,12 @@ export default class Words extends Phaser.Scene {
                 ["Antarctica", "Diabolical", "Absolution", "Illuminati"], // level 7
             ];
 
+            function resetLevelVisual(){
+                for (let i = 0; i < lvls.length; i++) {
+                    lvls[i].style.backgroundColor = " rgba(128, 128, 128, 0.432)";
+                }
+            }
+
             function RandomWord() {
                 var randomItem =
                     wordLevels[level][
@@ -123,16 +148,21 @@ export default class Words extends Phaser.Scene {
                     ];
                 console.log(randomItem);
 
-                document.getElementById("num").innerHTML = randomItem;
+                document.getElementById("randomElem").innerHTML = randomItem;
 
                 // retry function called to restart game from begining when user loses
                 retrybtn = document.getElementById("retry");
                 retrybtn.onclick = () => {
+                    resetLevelVisual()
+
+
+                    // reseting level progress icons back to original state
+                    
                     document.getElementById("GameOver").style.display = "none";
                     document.getElementById("GameWon").style.display = "none";
                     // this.scene.restart();
                     document.getElementById("numInput");
-                    document.getElementById("num").innerHTML = "";
+                    document.getElementById("randomElem").innerHTML = "";
                     document.getElementById("levelend").innerHTML = "";
                     document.getElementById("scoreend").innerHTML = "";
                     // document.getElementById("Number").innerHTML = "";
@@ -142,10 +172,11 @@ export default class Words extends Phaser.Scene {
                 var retrybtn2;
                 retrybtn2 = document.getElementById("retry2");
                 retrybtn2.onclick = () => {
+                    resetLevelVisual()
                     document.getElementById("GameWon").style.display = "none";
                     // this.scene.restart();
                     document.getElementById("numInput").style.display = "block";
-                    document.getElementById("num").innerHTML = "";
+                    document.getElementById("randomElem").innerHTML = "";
                     document.getElementById("levelend2").innerHTML = "";
                     document.getElementById("scoreend2").innerHTML = "";
                     progress.style.display = "none";
@@ -159,8 +190,10 @@ export default class Words extends Phaser.Scene {
             let maxScore = 10;
             let maxLevel = wordLevels.length;
             let winScreen = document.getElementById("GameWon");
+            var userScore = randomElem.length;
+            localStorage.setItem("isOver", false);
 
-            if (numInpt.value == num) {
+            if (numInpt.value == randomElem) {
                 numInpt.value = "";
 
                 localStorage.setItem("level", level + 1);
@@ -186,20 +219,29 @@ export default class Words extends Phaser.Scene {
                     return;
                 }
                 RandomWord();
+                levelProgress();
 
                 // showing the end results when game is over
             } else {
-                localStorage.setItem("loses", oldLoses + 1);
-                localStorage.setItem("level", 0);
-                let currentLoses = localStorage.getItem("loses");
-
-                if (currentLoses == "1") {
+                localStorage.setItem("isOver", true);
+                let isOver = localStorage.getItem('isOver');
+                // localStorage.setItem("loses", oldLoses + 1);
+                
+                // let currentLoses = localStorage.getItem("loses");
+                
+                if (isOver) {
+                    console.log(isOver)
                     // displaying game over screen
-                    document.getElementById("GameOver").style.display = "block";
                     loser.play();
                     ticking.stop();
-
+                    document.getElementById("GameOver").style.display = "block";
+                    document.getElementById("levelend").innerHTML =
+                    "Reached Level " + level;
+                    document.getElementById("scoreend").innerHTML =
+                    "Score " + userScore;
+                    
                     localStorage.setItem("loses", 0);
+                    localStorage.setItem("level", 0);
 
                     // hiding html elements
                     progress.style.display = "none";

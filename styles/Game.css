@@ -161,7 +161,7 @@ replaces startScreen when button is pressed
 
 /* progress bar used as timer */
 
-#num {
+#randomElem {
     color: rgb(255, 181, 103);
     letter-spacing: 10px;
     position: absolute;
@@ -174,12 +174,13 @@ replaces startScreen when button is pressed
 #numInput {
     position: absolute;
     background-color: rgba(255, 153, 0, 0.494);
+    border: 1px solid black;
     display: none;
     width: 200px;
     height: 60px;
     margin-left: 42%;
     margin-top: -23%;
-    box-shadow: 0 0 10px #383427;
+    box-shadow: 0 0 10px #814300;
     transform: scale(1);
     animation: pulse 2s infinite;
     border: none;
@@ -192,11 +193,11 @@ replaces startScreen when button is pressed
 @keyframes pulse {
     0% {
         transform: scale(0.95);
-        box-shadow: 0 0 0 0 rgba(32, 14, 29, 0.7);
+        box-shadow: 0 0 0 0 rgba(141, 92, 0, 0.7);
     }
     70% {
         transform: scale(1);
-        box-shadow: 0 0 0 20px rgba(0, 0, 0, 0);
+        box-shadow: 0 0 0 20px rgba(255, 202, 30, 0);
     }
     100% {
         transform: scale(0.95);
@@ -391,4 +392,28 @@ canvas {
     padding: 5px;
     background-color: orange;
     border-radius: 10px;
+}
+#progressContainer{
+    display: none;
+    position: absolute;
+    margin-left: 29%;
+    margin-top: -10%;
+}
+
+#levelProg{
+    display: flex;
+    text-align: center;
+    box-shadow: 0 10px 10px sandybrown;
+}
+#levelProg > div{
+    background-color: rgba(128, 128, 128, 0.432);
+    width: 79px;
+    height: 18px;
+    font-size: 12px;
+    text-align: center;
+    color: white;
+    /* padding-top: 10px;
+    padding-left: 10px;
+    padding-right: 10px; */
+
 }
