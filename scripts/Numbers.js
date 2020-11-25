@@ -10,6 +10,7 @@ export default class Numbers extends Phaser.Scene {
         super("PlayNumbers");
     }
     preload() {
+        // loading scene images
         this.load.image("BG", "../assets/Gamebg.jpg");
         this.load.image("field", "../assets/hudd.png");
         this.load.image("clear", "../assets/delete.png");
@@ -24,11 +25,11 @@ export default class Numbers extends Phaser.Scene {
         this.load.audio("click", "../assets/Sounds/Click.mp3");
     }
 
-        create() {
-
+    create() {
         this.add.image(400, 300, "BG");
         this.add.image(400, 300, "field");
 
+        // adding sound files to scene
         let ticking = this.sound.add("ticking");
         let winner = this.sound.add("winner");
         let loser = this.sound.add("loser");
@@ -37,9 +38,8 @@ export default class Numbers extends Phaser.Scene {
         winner.setVolume(0.2);
 
         // variables used for visual timer
-        let numIn = document.getElementById("randomElem");
-        let elem = document.getElementById("myBar");
-        let numInpt = document.getElementById("numInput");
+        let randomNum = document.getElementById("randomElem");
+        let userInput = document.getElementById("userInput");
         let progress = document.getElementById("BarContainer");
 
         // setting base min and max values everytime game starts
@@ -75,14 +75,14 @@ export default class Numbers extends Phaser.Scene {
         Homebtn.on("pointerdown", () => {
             click.play();
             this.scene.switch("Menu"),
-                (document.getElementById("numInput").style.display = "none");
+                (document.getElementById("userInput").style.display = "none");
         });
         // button to clear the input field of any values
         Clearbtn = this.add.image(400, 400, "clear");
         Clearbtn.setInteractive({ useHandCursor: true });
         Clearbtn.on("pointerdown", () => {
             click.play();
-            let inputField = document.getElementById("numInput");
+            let inputField = document.getElementById("userInput");
             inputField.value = "";
         });
 
@@ -90,24 +90,18 @@ export default class Numbers extends Phaser.Scene {
         playbtn = this.add.image(500, 200, "playbtn");
         playbtn.setInteractive({ useHandCursor: true });
         playbtn.on("pointerdown", function playgame() {
-
             visualTimer();
             click.play();
             ticking.play();
 
-            
-
-
-            let numInpt = document.getElementById("numInput");
+            let userInput = document.getElementById("userInput");
             let randomElem = document.getElementById("randomElem").innerHTML;
 
             // creating max and min values in local storage
 
             let oldRanges = localStorage.getItem("Range");
-            let loses = localStorage.getItem("loses");
             // converting ranges from strange to usable js object
             let existingRanges = JSON.parse(oldRanges);
-            let oldLoses = JSON.parse(loses);
 
             // retrieving base values for min and max
             // storing current level and score
@@ -116,27 +110,25 @@ export default class Numbers extends Phaser.Scene {
             let levels = existingRanges.level;
             let score = existingRanges.scores;
 
-            // level progress visuals 
-        let lv1 = document.getElementById("level1");
-        let lv2 = document.getElementById("level2");
-        let lv3 = document.getElementById("level3");
-        let lv4 = document.getElementById("level4");
-        let lv5 = document.getElementById("level5");
-        let lv6 = document.getElementById("level6");
-        let lv7 = document.getElementById("level7");
+            // level progress visuals
+            let lv1 = document.getElementById("level1");
+            let lv2 = document.getElementById("level2");
+            let lv3 = document.getElementById("level3");
+            let lv4 = document.getElementById("level4");
+            let lv5 = document.getElementById("level5");
+            let lv6 = document.getElementById("level6");
+            let lv7 = document.getElementById("level7");
 
-        let current_level = levels;
+            let current_level = levels;
 
-        var lvls = [lv1, lv2, lv3, lv4, lv5, lv6, lv7];
+            var lvls = [lv1, lv2, lv3, lv4, lv5, lv6, lv7];
 
-        function levelProgress() {
-            // declaring variables for level icons
+            function levelProgress() {
+                // declaring variables for level icons
 
-            // setting color for current level
-            lvls[current_level - 1].style.backgroundColor = "seagreen";
-        }
-
-
+                // setting color for current level
+                lvls[current_level - 1].style.backgroundColor = "seagreen";
+            }
 
             // generating random numbers between given range
             function RandomNum(min, max) {
@@ -146,23 +138,28 @@ export default class Numbers extends Phaser.Scene {
                 // retry function called to restart game from begining
                 retrybtn = document.getElementById("retry");
                 retrybtn.onclick = () => {
+                    ticking.stop();
+
                     for (let i = 0; i < lvls.length; i++) {
-                        lvls[i].style.backgroundColor = " rgba(128, 128, 128, 0.432)";
+                        lvls[i].style.backgroundColor =
+                            " rgba(128, 128, 128, 0.432)";
                         lvls[i].style.boxShadow = " none";
                     }
                     document.getElementById("GameOver").style.display = "none";
                     // this.scene.restart();
-                    document.getElementById("numInput");
+                    document.getElementById("userInput");
                     document.getElementById("randomElem").innerHTML = "";
                     document.getElementById("levelend").innerHTML = "";
                     document.getElementById("scoreend").innerHTML = "";
                     // document.getElementById("Number").innerHTML = "";
                 };
             }
+
+            localStorage.setItem("isOver", false);
             // checking if input field is empty
 
-            if (numInpt.value == randomElem) {
-                numInpt.value = "";
+            if (userInput.value == randomElem) {
+                userInput.value = "";
 
                 // updating max and min values each time
                 // adding to level and score values
@@ -173,11 +170,12 @@ export default class Numbers extends Phaser.Scene {
                     scores: score + 1,
                 };
 
+                // storing new ranges back into localstorage
                 let str_newRanges = JSON.stringify(newRanges);
                 localStorage.setItem("Range", str_newRanges);
 
                 RandomNum(minVal, maxVal);
-                levelProgress()
+                levelProgress();
 
                 // storeData used to update scores for currently logged user
                 storeData();
@@ -202,69 +200,78 @@ export default class Numbers extends Phaser.Scene {
                 document.getElementById("scoreend").innerHTML =
                     "Highest Score:  " + score + " Numbers";
             } else {
-                localStorage.setItem("loses", oldLoses + 1);
-                let currentLoses = localStorage.getItem("loses");
+                // setting value of isOver to true
+                localStorage.setItem("isOver", true);
+                let isOver = localStorage.getItem("isOver");
 
-                if (currentLoses == "1") {
+                // checking if isOver is true
+                if (isOver) {
+                    // playing gameover sound effect
                     loser.play();
+                    ticking.stop();
                     // displaying game over screen
                     document.getElementById("GameOver").style.display = "block";
                     // resetting values back to original state
                     localStorage.removeItem("Range");
                     localStorage.setItem("Range", str_Ranges);
-                    localStorage.setItem("loses", 0);
 
                     // hiding html elements
                     progress.style.display = "none";
-                    numIn.style.display = "none";
-                    numInpt.style.display = "none";
-                    numInpt.value = "";
+                    randomNum.style.display = "none";
+                    userInput.style.display = "none";
+                    userInput.value = "";
                     return;
                 }
 
-                // removing text from input field and resetting score and level texts
-                numInpt.value = "";
+                // removing text from input field
+                userInput.value = "";
 
                 // restarting from begining
                 localStorage.removeItem("Range");
                 localStorage.setItem("Range", str_Ranges);
+
+                // calling RandomNum function with current values of min and max
                 RandomNum(minVal, maxVal);
             }
 
+            // showing progress bar and current random elm
             progress.style.display = "block";
-            numIn.style.display = "block";
-            numInpt.style.display = "none";
+            randomNum.style.display = "block";
+            userInput.style.display = "none";
         });
 
-        // level progress visuals
-
         // progress bar used as a visual timer
-        
-        
+        let bar = document.getElementById("myBar");
 
         function visualTimer() {
-            var i = 0;
+            let isFilled = true;
 
             {
-                if (i == 0) {
-                    i = 1;
+                if (isFilled == true) {
+                    isFilled = false;
 
+                    // setting init width of progress bar to 1
                     let width = 1;
                     let Speed = setInterval(frame, 25);
 
                     progress.style.display = "block";
 
+                    /*
+                    frame is used to determin if width of progress reached
+                    end then will clear the interval 
+                    else width is increamented 
+                    */
                     function frame() {
                         if (width >= 100) {
                             progress.style.display = "none";
-                            numIn.style.display = "none";
-                            numInpt.style.display = "block";
+                            randomNum.style.display = "none";
+                            userInput.style.display = "block";
                             clearInterval(Speed);
                             ticking.stop();
-                            i = 0;
+                            isFilled = true;
                         } else {
                             width++;
-                            elem.style.width = width + "%";
+                            bar.style.width = width + "%";
                         }
                     }
                 }
@@ -272,4 +279,3 @@ export default class Numbers extends Phaser.Scene {
         }
     }
 }
-

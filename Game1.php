@@ -10,7 +10,7 @@
 <script type="module" src="scripts/Words.js"></script>
 <script type="module" src="scripts/gameConfig.js"></script>
 
-
+<!-- buttons used to clear input field -->
 <button id="Clear"></button>
 <button id="tick"></button>
 <!-- level progress visualiser -->
@@ -26,14 +26,20 @@
     </div>
 </div>
 
+<!-- randomElm displays current random element  -->
 <h1 id="randomElem"></h1>
-<input id="numInput" type=" text " placeholder="Enter here" />
+<!-- input field used to let user input their guess -->
+<input id="userInput" type=" text " placeholder="Enter here" />
+
+<!-- progress bar used as timer -->
 <div id="BarContainer">
     <div id="myProgress">
         <div id="myBar"></div>
     </div>
 
 </div>
+
+<!-- GameOver screen shows when game ends -->
 <div id="GameOver">
     <div id="Overtxt" style="color: red; font-size: 40px;text-shadow: 0 10px 10px black;"><b>Game Over</b></div>
     <div id="levelend" style="color: brown; font-size: 30px;text-shadow: 0 10px 10px black;">Level Reached:
@@ -42,6 +48,8 @@
     </div>
     <button id="retry">Try Again</button>
 </div>
+
+<!-- GameWon shows if user reaches final level -->
 <div id="GameWon">
     <div id="Overtxt2" style="color: green; font-size: 40px;text-shadow: 0 10px 10px black;"><b>You Win</b></div>
     <div id="levelend2" style="color: brown; font-size: 30px;text-shadow: 0 10px 10px black;">Level Reached:
@@ -50,6 +58,8 @@
     </div>
     <button id="retry2">Try Again</button>
 </div>
+
+
 <?php
 Outputfooter()
 ?>

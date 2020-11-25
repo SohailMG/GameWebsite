@@ -1,7 +1,8 @@
 /* 
           this script contains sign in and sign up functions 
           used to store user data and authenticate user input
-     */
+          
+*/
 
 // asigning variables to input fields
 let firstName = document.getElementById("firstname");
@@ -70,8 +71,10 @@ function SignUp() {
     } else {
         var currentData = JSON.parse(localStorage.getItem("allUsers"));
         var gameData = JSON.parse(localStorage.getItem("GameData"));
-        if (currentData == null && gameData == null) gameData = [];
-        currentData = [];
+        // checking if current data and game data is empty
+        if (currentData == null && gameData == null) 
+        currentData = [],gameData = [];
+        
 
         var store_username = document.getElementById("uName").value;
         var store_password = document.getElementById("Psswd").value;
@@ -113,11 +116,28 @@ function SignIN() {
     console.log(getData);
 
     // getting user input values for username and password
-    const u_name = document.getElementById("Uname-inpt").value;
-    const pwd = document.getElementById("passwrd-inpt").value;
+    let u_name = document.getElementById("Uname-inpt").value;
+    let pwd = document.getElementById("passwrd-inpt").value;
 
-    // iterating through arr of objects to check if input equal to  existing password
+    let Alerts = document.getElementById("Alerts")
+
+    // iterating through arr of objects 
     for (i = 0; i < getData.length; i++) {
+
+        // checking for empty fields
+        if (u_name == "" || pwd == "") {
+            Alerts.innerHTML = "Fill all fields";     
+        }
+
+        // 
+        if (u_name == getData[i].username && pwd != getData[i].password) {
+            document.getElementById("Alerts").innerHTML = "Incorrect Password";
+            return;
+        }
+        if (u_name != getData[i].userName) {
+            document.getElementById("Alerts").innerHTML = "Username doesn't exist";
+            return;
+        }
         if (u_name == getData[i].username && pwd == getData[i].password) {
             localStorage.setItem("loggedusr", u_name);
             localStorage.setItem("logged", "true");

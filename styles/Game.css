@@ -171,7 +171,7 @@ replaces startScreen when button is pressed
     font-size: 55px;
 }
 
-#numInput {
+#userInput {
     position: absolute;
     background-color: rgba(255, 153, 0, 0.494);
     border: 1px solid black;
@@ -316,7 +316,6 @@ replaces startScreen when button is pressed
 canvas {
     margin-top: 5%;
     margin-left: 20%;
-    /* position: absolute; */
     box-shadow: 0 10px 10px black;
 }
 

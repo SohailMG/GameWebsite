@@ -37,7 +37,7 @@ export default class Menu extends Phaser.Scene {
         var titletxt;
         // var inputfield;
 
-        document.getElementById("numInput").style.display = "none";
+        document.getElementById("userInput").style.display = "none";
 
         let levelProgress =  document.getElementById("progressContainer")
         let randomElem = document.getElementById("randomElem")
