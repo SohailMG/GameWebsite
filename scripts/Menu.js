@@ -2,6 +2,7 @@
 export default class Menu extends Phaser.Scene {
     constructor() {
         super("Menu");
+        
     }
 
     preload() {
@@ -56,7 +57,7 @@ export default class Menu extends Phaser.Scene {
             fill: "black",
         });
         // button to initiate the words gameplay scene
-        startWords = this.add.text(450, 280, "Numbers", {
+        startWords = this.add.text(430, 280, "Numbers", {
             font: "25px Comic Sans MS",
             fill: "green",
         });

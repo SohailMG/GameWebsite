@@ -88,15 +88,3 @@
     font-weight: bold;
     font-size: 20px;
 }
-
-#showTable {
-    margin-left: 5%;
-    margin-top: 2%;
-    width: 60px;
-    height: 34px;
-    background-color: #d3d9a5;
-    color: black;
-    position: absolute;
-    border-radius: 10px;
-    box-shadow: 0 10px 10px black;
-}

@@ -10,9 +10,8 @@
 <script type="module" src="scripts/Words.js"></script>
 <script type="module" src="scripts/gameConfig.js"></script>
 
-<!-- buttons used to clear input field -->
-<button id="Clear"></button>
-<button id="tick"></button>
+
+<div id="timer"></div>
 <!-- level progress visualiser -->
 <div id="progressContainer">
     <div id="levelProg">

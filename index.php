@@ -6,7 +6,6 @@
         outputHeaderNav("Home")
 ?>
 <!-- sign in and sign up buttons layout -->
-
 <main>
     <!-- left side of home page layout -->
     <div class="box1">
