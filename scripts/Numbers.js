@@ -89,7 +89,6 @@ export default class Numbers extends Phaser.Scene {
                let inputField = document.getElementById("userInput");
                inputField.value = "";
           });
-          countDown();
 
           // main game function generates all game logic and functions
           playbtn = this.add.image(500, 200, "playbtn");
@@ -273,41 +272,6 @@ export default class Numbers extends Phaser.Scene {
                          } else {
                               width++;
                               bar.style.width = width + "%";
-                         }
-                    }
-               }
-          }
-
-          // game countdown timer
-
-          function countDown() {
-               let isover = true;
-
-               var clicked = false;
-
-               document
-                    .getElementById("retry")
-                    .addEventListener("click", () => {
-                         clicked = true;
-                    });
-
-               if (isover == true) {
-                    isover = false;
-
-                    let timeLeft = 30;
-                    let time = setInterval(timer, 1000);
-
-                    function timer() {
-                         if (timeLeft <= 0) {
-                              clearInterval(time);
-                              clearInterval((timeLeft = 0));
-                              // gameOver();
-                              isover = false;
-                         } else {
-                              document.getElementById("timer").innerHTML =
-                                   "Time Left: " + timeLeft;
-                              console.log(timeLeft);
-                              timeLeft -= 1;
                          }
                     }
                }

@@ -11,7 +11,6 @@
 <script type="module" src="scripts/gameConfig.js"></script>
 
 
-<div id="timer"></div>
 <!-- level progress visualiser -->
 <div id="progressContainer">
     <div id="levelProg">
