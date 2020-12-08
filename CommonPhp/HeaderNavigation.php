@@ -15,7 +15,7 @@ function outputHeaderNav($pageName){
     
     //array of page names and page links to point to 
     $pageNames = array("Home", "Game" ,"HowToPlay", "Leaderboard", "Contact");
-    $pageLinks = array("index.php","Game1.php", "HowToPlay.php", "Leaderboard.php", "Contact.php");
+    $pageLinks = array("index.php","Game.php", "HowToPlay.php", "Leaderboard.php", "Contact.php");
     
     /* 
     nav bar foor loop
@@ -40,4 +40,3 @@ function outputHeaderNav($pageName){
         </div>';
     echo '</nav>';
 }
-?>

@@ -1,6 +1,6 @@
 /* 
-          this script contains sign in and sign up functions 
-          used to store user data and authenticate user input
+          * Sign-in, Sign-up and Sign-out functionality
+          * input form validation
           
 */
 
@@ -12,9 +12,14 @@ let Confirm_pw = document.getElementById("ConfPass");
 let lastName = document.getElementById("lastname");
 let usrEmail = document.getElementById("usrEmail");
 
+// message alert for error checking
 let Alerts2 = document.getElementById("Alerts2");
 
-/* user registration function used to store user data in array of objects */
+// ------------------------------- Sign-Up-------------------------------------------
+
+/* 
+user registration function used to store user data in array of objects 
+*/
 function SignUp() {
      let CurrentData = JSON.parse(localStorage.getItem("allUsers"));
      let newUser = document.getElementById("uName").value;
@@ -27,7 +32,7 @@ function SignUp() {
           userName.value == "" ||
           passWord.value == "" ||
           Confirm_pw.value == ""
-     ){
+     ) {
           Alerts2.innerHTML = "Fill all fields";
           form.username.focus();
           return false;
@@ -72,8 +77,10 @@ function SignUp() {
 
           return false;
 
-          /* after error checking 
-        input fields are stored into an array of objects */
+          /* 
+          after error checking 
+          input fields are stored into an array of objects 
+        */
      } else {
           var currentData = JSON.parse(localStorage.getItem("allUsers"));
           var gameData = JSON.parse(localStorage.getItem("GameData"));
@@ -110,6 +117,8 @@ function SignUp() {
           document.location.href = "Sign-in.php";
      }
 }
+
+//  ------------------------------- Sign-In-------------------------------------------
 
 /* 
     sign in function used to validate user details from localstorage 
@@ -158,6 +167,8 @@ function SignIN() {
      document.getElementById("Alerts").innerHTML = "Incorrect Details";
 }
 
+//  ------------------------------- Sign-Out-------------------------------------------
+
 // once called logged key is removed from localstorage
 function logOut() {
      localStorage.removeItem("logged");
@@ -171,16 +182,16 @@ let singO_btn = document.getElementById("signO");
 /* displaying username of currently logged in user
     hiding sing in and up buttons once user is logged in */
 function showUser() {
-        let activeUser = localStorage.getItem("logged");
-        let loggedusr = localStorage.getItem("loggedusr");
-    
-        // checking if there is an active user
-        if (activeUser === "true") {
-                signN_btn.style.display = "none";
-                singP_btn.style.display = "none";
-                singO_btn.style.display = "block";
-                document.getElementById("loggedIn").innerHTML = " > " + loggedusr;
-        } else {
-                document.getElementById("loggedIn").innerHTML = "";
-        }
-    }
+     let activeUser = localStorage.getItem("logged");
+     let loggedusr = localStorage.getItem("loggedusr");
+
+     // checking if there is an active user
+     if (activeUser === "true") {
+          signN_btn.style.display = "none";
+          singP_btn.style.display = "none";
+          singO_btn.style.display = "block";
+          document.getElementById("loggedIn").innerHTML = " > " + loggedusr;
+     } else {
+          document.getElementById("loggedIn").innerHTML = "";
+     }
+}

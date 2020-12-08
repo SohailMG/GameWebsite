@@ -13,32 +13,32 @@ const Message = document.getElementById("message");
 const arrFields = [Name, Email, Subject, Message];
 
 function validateForm() {
-    // an array of all fields
-    var fields = arrFields;
+     // an array of all fields
+     var fields = arrFields;
 
-    /* 
+     /* 
   checking if each field is empty
   empty fields will have red border
   and green for filled ones,
   function excutes when returns true 
 */
 
-    if (
-        Email.value == "" ||
-        Name.value == "" ||
-        Subject.value == "" ||
-        Message.value == ""
-    ) {
-        fields.forEach((element) => {
-            if (element.value == "") {
-                element.style.border = "1px solid red";
-            } else {
-                element.style.border = "1px solid green";
-            }
-        });
+     if (
+          Email.value == "" ||
+          Name.value == "" ||
+          Subject.value == "" ||
+          Message.value == ""
+     ) {
+          fields.forEach((element) => {
+               if (element.value == "") {
+                    element.style.border = "1px solid red";
+               } else {
+                    element.style.border = "1px solid green";
+               }
+          });
 
-        return false;
-    } else {
-        return true;
-    }
+          return false;
+     } else {
+          return true;
+     }
 }

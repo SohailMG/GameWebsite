@@ -38,11 +38,6 @@ export default class Numbers extends Phaser.Scene {
           loser.setVolume(0.2);
           winner.setVolume(0.2);
 
-          // variables used for visual timer
-          let randomNum = document.getElementById("randomElem");
-          let userInput = document.getElementById("userInput");
-          let progress = document.getElementById("BarContainer");
-
           // setting base min and max values everytime game starts
           var Ranges = { min: 10, max: 90, level: 1, scores: 2 };
           let str_Ranges = JSON.stringify(Ranges);
@@ -75,9 +70,11 @@ export default class Numbers extends Phaser.Scene {
           Homebtn.setInteractive({ useHandCursor: true });
           Homebtn.on("pointerdown", () => {
                click.play();
+               // switching scenes
                this.scene.switch("Menu"),
                     (document.getElementById("userInput").style.display =
                          "none");
+               // hiding html elems
                document.getElementById("progressContainer").style.display =
                     "none";
           });
@@ -94,6 +91,7 @@ export default class Numbers extends Phaser.Scene {
           playbtn = this.add.image(500, 200, "playbtn");
           playbtn.setInteractive({ useHandCursor: true });
           playbtn.on("pointerdown", function playgame() {
+               // calling visual timer funtion
                visualTimer();
                click.play();
                ticking.play();
@@ -240,9 +238,13 @@ export default class Numbers extends Phaser.Scene {
                userInput.style.display = "none";
           });
 
-          // progress bar used as a visual timer
+          // variables used for visual timer
           let bar = document.getElementById("myBar");
+          let randomNum = document.getElementById("randomElem");
+          let userInput = document.getElementById("userInput");
+          let progress = document.getElementById("BarContainer");
 
+          // bar width fills accordaning to the speed
           function visualTimer() {
                let isFilled = true;
 
