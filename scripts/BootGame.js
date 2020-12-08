@@ -1,4 +1,6 @@
-
+/*
+    *   BootGame is the first scene which initiates the game 
+*/
 export default class BootGame extends Phaser.Scene {
     constructor() {
         super("BootGame");

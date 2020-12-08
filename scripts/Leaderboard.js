@@ -4,6 +4,12 @@ window.onload = () => {
     fillTable();
     };
 
+
+let user = localStorage.getItem("loggedusr");
+let showBtn = document.getElementById("showTable");
+let userScores = JSON.parse(localStorage.getItem("Ranking"));
+
+let allUsers = JSON.parse(localStorage.getItem("allUsers"));
 function fillTable() {
     // storing url of leader'sboard page
     let lbPath = "http://localhost:8888/Leaderboard.php";
@@ -26,21 +32,5 @@ function fillTable() {
                     tablebody.innerHTML = Datahtml;
             }
 
-    }
-}
-
-// showUser, shows the currently logged user in everypage
-function showUser() {
-    let activeUser = localStorage.getItem("logged");
-    let loggedusr = localStorage.getItem("loggedusr");
-
-    // checking if there is an active user
-    if (activeUser === "true") {
-            signN_btn.style.display = "none";
-            singP_btn.style.display = "none";
-            singO_btn.style.display = "block";
-            document.getElementById("loggedIn").innerHTML = " > " + loggedusr;
-    } else {
-            document.getElementById("loggedIn").innerHTML = "";
     }
 }

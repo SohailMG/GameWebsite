@@ -27,7 +27,7 @@ function SignUp() {
           userName.value == "" ||
           passWord.value == "" ||
           Confirm_pw.value == ""
-     ) {
+     ){
           Alerts2.innerHTML = "Fill all fields";
           form.username.focus();
           return false;
@@ -126,13 +126,9 @@ function SignIN() {
 
      let Alerts = document.getElementById("Alerts");
 
-     // iterating through arr of objects
+     // iterating through array of user objects
      for (i = 0; i < getData.length; i++) {
-          // if (u_name != getData[i].userName) {
-          //     document.getElementById("Alerts").innerHTML = "Username doesn't exist";
-          //     return;
-          // }
-          // checking for empty fields
+          // checking all fields are empty
           if (u_name == "" || pwd == "") {
                Alerts.innerHTML = "Fill all fields";
                return;
@@ -143,7 +139,9 @@ function SignIN() {
                document.getElementById("Alerts").innerHTML =
                     "Incorrect Password";
                return;
-          } else if (
+          }
+          //   checking if username and passwords match a user in localstorage
+          else if (
                u_name == getData[i].username &&
                pwd == getData[i].password
           ) {
@@ -172,11 +170,17 @@ let singO_btn = document.getElementById("signO");
 
 /* displaying username of currently logged in user
     hiding sing in and up buttons once user is logged in */
-
-let user = localStorage.getItem("loggedusr");
-let showBtn = document.getElementById("showTable");
-let userScores = JSON.parse(localStorage.getItem("Ranking"));
-
-let allUsers = JSON.parse(localStorage.getItem("allUsers"));
-
-// filltable used to populate the leadersboard with current user ,score and level
+function showUser() {
+        let activeUser = localStorage.getItem("logged");
+        let loggedusr = localStorage.getItem("loggedusr");
+    
+        // checking if there is an active user
+        if (activeUser === "true") {
+                signN_btn.style.display = "none";
+                singP_btn.style.display = "none";
+                singO_btn.style.display = "block";
+                document.getElementById("loggedIn").innerHTML = " > " + loggedusr;
+        } else {
+                document.getElementById("loggedIn").innerHTML = "";
+        }
+    }
