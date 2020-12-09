@@ -1,11 +1,11 @@
-/*
- *   BootGame is the first scene which initiates the game
+/**
+ *   BootGame class is  initiates the game
  */
 export default class BootGame extends Phaser.Scene {
      constructor() {
           super("BootGame");
      }
-
+     /** loading game assets  into the scene */
      preload() {
           // loading game assets
           this.load.image("btn", "../assets/PlayBtn.png");
@@ -15,6 +15,7 @@ export default class BootGame extends Phaser.Scene {
           this.load.image("select", "../assets/Selectbtn.jpg");
      }
 
+     /** creating start game button and game title */
      create() {
           // variables for start menue
           var Playtxt;

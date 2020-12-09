@@ -1,7 +1,9 @@
-// on window load function to show rankings and logged user
+/**
+ * on window load function to show rankings and logged user
+ * showuser displays the currently logged user in every window
+ * showUser is called from formValidation.js
+ */
 window.onload = () => {
-     // showuser displays the currently logged user in every window
-     // showUser is called from formValidation.js
      showUser();
      fillTable();
 };

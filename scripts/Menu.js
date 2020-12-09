@@ -1,8 +1,12 @@
+/**  
+ * menue class scene used for choosing type of gameplay Numbers or Words 
+ * */
 export default class Menu extends Phaser.Scene {
      constructor() {
           super("Menu");
      }
 
+     // preloading game assets 
      preload() {
           // loading game assets
           this.load.image("btn", "../assets/PlayBtn.png");
@@ -15,6 +19,7 @@ export default class Menu extends Phaser.Scene {
           this.load.audio("music", "../assets/Sounds/Music.mp3");
      }
 
+     // main game logic generated
      create() {
           // configuring background music properties
           this.music = this.sound.add("music");

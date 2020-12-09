@@ -1,7 +1,7 @@
 <?php
-    include_once('CommonPhp/GameCommon.php');
-    OutputHtmlHead();
-    OutputNav()
+include_once('CommonPhp/GameCommon.php');
+OutputHtmlHead();
+OutputNav()
 ?>
 <script type="module" src=" //cdn.jsdelivr.net/npm/phaser@3.24.1/dist/phaser.js"></script>
 <script type="module" src="scripts/bootGame.js"></script>

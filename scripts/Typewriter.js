@@ -1,4 +1,4 @@
-/*
+/**
  * typewriter function used in how to play page
  * displying instructions on how the game is played
  */
@@ -7,7 +7,7 @@ var rules =
 var i = 0;
 var speed = 50;
 
-/* adding a sleep function */
+/** adding a sleep function */
 function sleep(ms) {
      return new Promise((resolve) => setTimeout(resolve, ms));
 }
@@ -18,7 +18,7 @@ const clickmeBtn = document.getElementById("clickmebtn");
 const rightTxt = document.getElementById("rightTxt");
 const gotoGame = document.getElementById("gotoGame");
 
-/* 
+/**
 second condition checks if there is full stop '.' then
 function sleeps for 1000ms then continues. color of text also changes each full stop
 */

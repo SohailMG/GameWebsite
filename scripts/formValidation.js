@@ -1,8 +1,7 @@
-/* 
-          * Sign-in, Sign-up and Sign-out functionality
-          * input form validation
-          
-*/
+/**
+ * Sign-in, Sign-up and Sign-out functionality
+ * user form validation and authentication
+ */
 
 // asigning variables to input fields
 let firstName = document.getElementById("firstname");
@@ -17,7 +16,7 @@ let Alerts2 = document.getElementById("Alerts2");
 
 // ------------------------------- Sign-Up-------------------------------------------
 
-/* 
+/** 
 user registration function used to store user data in array of objects 
 */
 function SignUp() {
@@ -120,7 +119,7 @@ function SignUp() {
 
 //  ------------------------------- Sign-In-------------------------------------------
 
-/* 
+/** 
     sign in function used to validate user details from localstorage 
     if password and username matches any of stored details then user gets redirected.
 */
@@ -169,7 +168,7 @@ function SignIN() {
 
 //  ------------------------------- Sign-Out-------------------------------------------
 
-// once called logged key is removed from localstorage
+/**  once called logged key is removed from localstorage */
 function logOut() {
      localStorage.removeItem("logged");
 }
@@ -179,8 +178,8 @@ let signN_btn = document.getElementById("signN");
 let singP_btn = document.getElementById("signP");
 let singO_btn = document.getElementById("signO");
 
-/* displaying username of currently logged in user
-    hiding sing in and up buttons once user is logged in */
+/**  displaying username of currently logged in user
+    hiding sign in and up buttons once user is logged in */
 function showUser() {
      let activeUser = localStorage.getItem("logged");
      let loggedusr = localStorage.getItem("loggedusr");

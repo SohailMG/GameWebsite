@@ -1,7 +1,7 @@
-/* 
+/**
                 !Numbers gameplay
-    * Generating random numbers in a given range
-    * Range increases if guess is correct
+    * Generating random numbers in a given range.
+    * Range increases if guess is correct.
     * Progress Bar used as visual timer
 */
 
@@ -10,6 +10,9 @@ export default class Numbers extends Phaser.Scene {
           super("PlayNumbers");
      }
 
+     /**
+      * loading game assets and sound files into the scene
+      */
      preload() {
           // loading scene images
           this.load.image("BG", "../assets/Gamebg.jpg");
@@ -25,7 +28,10 @@ export default class Numbers extends Phaser.Scene {
           this.load.audio("loser", "../assets/Sounds/Loser.mp3");
           this.load.audio("click", "../assets/Sounds/Click.mp3");
      }
-
+     /**
+      * adding images and sound files into the scene.
+      * creating an array of arrays of words used as levels.
+      */
      create() {
           this.add.image(400, 300, "BG");
           this.add.image(400, 300, "field");
@@ -87,7 +93,9 @@ export default class Numbers extends Phaser.Scene {
                inputField.value = "";
           });
 
-          // main game function generates all game logic and functions
+          /**
+           * main game function generates all game logic and functions
+           */
           playbtn = this.add.image(500, 200, "playbtn");
           playbtn.setInteractive({ useHandCursor: true });
           playbtn.on("pointerdown", function playgame() {
@@ -125,23 +133,29 @@ export default class Numbers extends Phaser.Scene {
 
                var lvls = [lv1, lv2, lv3, lv4, lv5, lv6, lv7];
 
+               /**
+                * adding background color to level progress bar of the current level
+                */
                function levelProgress() {
-                    // declaring variables for level icons
-
                     // setting color for current level
                     lvls[current_level - 1].style.backgroundColor = "seagreen";
                }
 
-               // generating random numbers between given range
+               /**
+                * generates a random number in a given range
+                * @param {number} min
+                * @param {number} max
+                */
                function RandomNum(min, max) {
                     var number = Math.floor(Math.random() * max + 1) + min;
                     document.getElementById("randomElem").innerHTML = number;
 
-                    // retry function called to restart game from begining
+                    /**
+                     * retry function called to restart game from begining
+                     * */
                     retrybtn = document.getElementById("retry");
                     retrybtn.onclick = () => {
                          ticking.stop();
-                         //   countDown();
 
                          for (let i = 0; i < lvls.length; i++) {
                               lvls[i].style.backgroundColor =
@@ -159,14 +173,17 @@ export default class Numbers extends Phaser.Scene {
                     };
                }
 
+               // setting initial game status booleon
                localStorage.setItem("isOver", false);
-               // checking if input field is empty
 
+               // checking if input field is empty
                if (userInput.value == randomElem) {
                     userInput.value = "";
 
-                    // updating max and min values each time
-                    // adding to level and score values
+                    /** 
+                     updating max and min values each time and 
+                     adding to level and score values 
+                    */
                     let newRanges = {
                          min: minVal * 10,
                          max: maxVal * 10,
@@ -181,8 +198,10 @@ export default class Numbers extends Phaser.Scene {
                     RandomNum(minVal, maxVal);
                     levelProgress();
 
-                    // storeData used to update scores for currently logged user
                     storeData();
+                    /**
+                     * storeData used to update scores for currently logged user
+                     */
                     function storeData() {
                          let GameData = JSON.parse(
                               localStorage.getItem("GameData")
@@ -217,7 +236,7 @@ export default class Numbers extends Phaser.Scene {
 
                     // checking if isOver is true
                     if (isOver) {
-                         // playing gameover sound effect
+                         /* gameOver game called to display end game screen and play sound */
                          gameOver();
                          return;
                     }
@@ -244,7 +263,11 @@ export default class Numbers extends Phaser.Scene {
           let userInput = document.getElementById("userInput");
           let progress = document.getElementById("BarContainer");
 
-          // bar width fills accordaning to the speed
+          /**
+           * progress bar used as a visual timer
+           * visualTimer increases the width of progress bar in acordance to the speed
+           * once bar fills all the way number is hidden for the player
+           */
           function visualTimer() {
                let isFilled = true;
 
@@ -279,7 +302,11 @@ export default class Numbers extends Phaser.Scene {
                }
           }
 
-          //  gameOver function
+          /**
+           * gameOver function resets random range from localstorage
+           * displays gameover screen with game stats
+           * play sounds
+           */
           function gameOver() {
                loser.play();
                ticking.stop();

@@ -1,4 +1,7 @@
-// importing all scenes
+/** 
+ * game configuration files  
+ * importing all scenes  
+ */
 import BootGame from "./BootGame.js";
 import Menu from "./Menu.js";
 import PlayNumbers from "./Numbers.js";

@@ -1,9 +1,9 @@
-/* 
-                !Words gameplay
-    * an array containig array of words
-    * Random words are generating 
-    * Each time guess is correct, word lengh increases
-    * levels are stored in an array 
+/**
+           !Words gameplay class
+    * has an array containig array of words.
+    * Random words are generating .
+    * Each time guess is correct, word lengh increases.
+    * levels are stored in an array .
     
 */
 
@@ -11,6 +11,7 @@ export default class Words extends Phaser.Scene {
      constructor() {
           super("playWords");
      }
+     /** loading game assets and sound files */
      preload() {
           // loading images
           this.load.image("BG", "../assets/Gamebg.jpg");
@@ -27,6 +28,12 @@ export default class Words extends Phaser.Scene {
           this.load.audio("click", "../assets/Sounds/Click.mp3");
      }
 
+     /**
+      * adding sound files and images into the scene
+      * adding Play,Clear and Home buttons
+      * creating input filed and visual timer
+      * Playbutton generates main game logic
+      */
      create() {
           // declaring sound variables
           let ticking = this.sound.add("ticking");
@@ -52,9 +59,8 @@ export default class Words extends Phaser.Scene {
           var retrybtn;
 
           // in-game information text
-          var Infotxt;
-          var Infotxt2;
-          // var startbtn;
+          let Infotxt;
+          let Infotxt2;
 
           // game information texts
           Infotxt = this.add.text(250, 50, "When ready press button", {
@@ -144,7 +150,9 @@ export default class Words extends Phaser.Scene {
                     }
                }
 
-               // RandomWord generates a random word from the wordLevels
+               /**
+                * RandomWord generates a random word from an array of word arrays
+                */
                function RandomWord() {
                     var randomItem =
                          wordLevels[level][
@@ -180,12 +188,15 @@ export default class Words extends Phaser.Scene {
                     var retrybtn2;
                     retrybtn2 = document.getElementById("retry2");
                     retrybtn2.onclick = () => {
+                         /** calling resetLevelVisual to reset level when retry button is clicked */
                          resetLevelVisual();
+
                          document.getElementById("GameWon").style.display =
                               "none";
-                         // this.scene.restart();
+
                          document.getElementById("userInput").style.display =
                               "block";
+                         // clearing end game stats
                          document.getElementById("randomElem").innerHTML = "";
                          document.getElementById("levelend2").innerHTML = "";
                          document.getElementById("scoreend2").innerHTML = "";
@@ -197,7 +208,6 @@ export default class Words extends Phaser.Scene {
                }
 
                // declaring vars for game data
-
                var userScore = randomElem.length;
 
                // setting a bool value to determin end of game
@@ -218,6 +228,7 @@ export default class Words extends Phaser.Scene {
 
                          return;
                     }
+                    /* recursivly calling RandomWord and levelprogress */
                     RandomWord();
                     levelProgress();
                } else {
@@ -259,12 +270,15 @@ export default class Words extends Phaser.Scene {
                isOver = false;
           });
 
-          //   variables for ending stats
+          /*  variables for ending stats */
           let maxScore = 10;
           let winScreen = document.getElementById("GameWon");
           var maxLevel = 7;
 
-          // winner called when user reaches final level
+          /**
+          winner called when user reaches final level, displays
+          winScreen with user stats
+          */
           function Winner() {
                // displying winner screen
                winScreen.style.display = "block";
@@ -281,7 +295,9 @@ export default class Words extends Phaser.Scene {
                localStorage.setItem("level", 0);
           }
 
-          // progress bar used as a visual timer
+          /**
+           * vTimer: generates progress bar used as a visual timer
+           */
           function vTimer() {
                let i = 0;
 

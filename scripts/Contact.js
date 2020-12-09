@@ -12,16 +12,15 @@ const Message = document.getElementById("message");
 
 const arrFields = [Name, Email, Subject, Message];
 
+/** 
+  checking if each field is empty.
+  empty fields will have red border
+  and green for filled ones.
+  function excutes when returns true 
+*/
 function validateForm() {
      // an array of all fields
      var fields = arrFields;
-
-     /* 
-  checking if each field is empty
-  empty fields will have red border
-  and green for filled ones,
-  function excutes when returns true 
-*/
 
      if (
           Email.value == "" ||
