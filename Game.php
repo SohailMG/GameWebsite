@@ -4,11 +4,11 @@ OutputHtmlHead();
 OutputNav()
 ?>
 <script type="module" src=" //cdn.jsdelivr.net/npm/phaser@3.24.1/dist/phaser.js"></script>
-<script type="module" src="scripts/bootGame.js"></script>
-<script type="module" src="scripts/Menu.js"></script>
-<script type="module" src="scripts/Numbers.js"></script>
-<script type="module" src="scripts/Words.js"></script>
-<script type="module" src="scripts/gameConfig.js"></script>
+<script type="module" src="src/bootGame.js"></script>
+<script type="module" src="src/Menu.js"></script>
+<script type="module" src="src/Numbers.js"></script>
+<script type="module" src="src/Words.js"></script>
+<script type="module" src="src/gameConfig.js"></script>
 
 
 <!-- level progress visualiser -->

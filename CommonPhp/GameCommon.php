@@ -87,11 +87,10 @@ function Outputfooter(){
     </div>
     
 </footer>
-<script type="text/javascript" src="scripts/Typewriter.js"></script>
-<script type="text/javascript" src="scripts/Contact.js"></script>
-<script type="text/javascript" src="scripts/formValidation.js"></script>
+<script type="text/javascript" src="src/Typewriter.js"></script>
+<script type="text/javascript" src="src/Contact.js"></script>
+<script type="text/javascript" src="src/formValidation.js"></script>
 </body>
 </html>';
     
-} 
-?>
+}
