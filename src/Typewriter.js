@@ -1,3 +1,4 @@
+/* website window resolution is 1422.22 x 520 */
 /**
  * typewriter function used in how to play page
  * displying instructions on how the game is played

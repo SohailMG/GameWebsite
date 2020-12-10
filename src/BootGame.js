@@ -1,3 +1,4 @@
+/* website window resolution is 1422.22 x 520 */
 /**
  *   BootGame class is  initiates the game
  */

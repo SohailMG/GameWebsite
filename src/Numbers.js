@@ -1,3 +1,4 @@
+/* website window resolution is 1422.22 x 520 */
 /**
                 !Numbers gameplay
     * Generating random numbers in a given range.

@@ -1,3 +1,4 @@
+/* website window resolution is 1422.22 x 520 */
 /**
  * on window load function to show rankings and logged user
  * showuser displays the currently logged user in every window

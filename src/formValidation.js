@@ -1,3 +1,4 @@
+/* website window resolution is 1422.22 x 520 */
 /**
  * Sign-in, Sign-up and Sign-out functionality
  * user form validation and authentication

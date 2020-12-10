@@ -1,6 +1,7 @@
-/** 
- * game configuration files  
- * importing all scenes  
+/* website window resolution is 1422.22 x 520 */
+/**
+ * game configuration files
+ * importing all scenes
  */
 import BootGame from "./BootGame.js";
 import Menu from "./Menu.js";

@@ -1,3 +1,4 @@
+/* website window resolution is 1422.22 x 520 */
 /*  
 form validation
 checks if input fields are empty

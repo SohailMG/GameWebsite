@@ -1,3 +1,4 @@
+/* website window resolution is 1422.22 x 520 */
 /**  
  * menue class scene used for choosing type of gameplay Numbers or Words 
  * */
