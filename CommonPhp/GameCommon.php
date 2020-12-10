@@ -1,6 +1,7 @@
 <?php
-function OutputHtmlHead(){
-    echo'<!DOCTYPE html>
+function OutputHtmlHead()
+{
+    echo '<!DOCTYPE html>
         <html lang="en">
     
         <head>
@@ -16,8 +17,9 @@ function OutputHtmlHead(){
 }
 
 
-function OutputNav(){
-    echo'<body>
+function OutputNav()
+{
+    echo '<body>
         <header>
         <div class="Title">
             <div class="Memory"><a href="index.php">Memory</a></div>
@@ -40,8 +42,9 @@ function OutputNav(){
         </div></nav>';
 }
 
-function Outputfooter(){
-    echo'<footer id="footer">
+function Outputfooter()
+{
+    echo '<footer id="footer">
     <!--footer devided into 4 sections-->
     <div id="section1">
         <h1>Memory Master</h1>
@@ -90,7 +93,7 @@ function Outputfooter(){
 <script type="text/javascript" src="src/Typewriter.js"></script>
 <script type="text/javascript" src="src/Contact.js"></script>
 <script type="text/javascript" src="src/formValidation.js"></script>
+<script type="text/javascript" src="src/leaderboard.js"></script>
 </body>
 </html>';
-    
 }

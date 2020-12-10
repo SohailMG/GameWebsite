@@ -14,7 +14,7 @@ export default class Numbers extends Phaser.Scene {
       * loading game assets and sound files into the scene
       */
      preload() {
-          // loading scene images
+          // loading scene assets
           this.load.image("BG", "../assets/Gamebg.jpg");
           this.load.image("field", "../assets/hudd.png");
           this.load.image("clear", "../assets/delete.png");
@@ -30,7 +30,7 @@ export default class Numbers extends Phaser.Scene {
      }
      /**
       * adding images and sound files into the scene.
-      * creating an array of arrays of words used as levels.
+      * creating an array of  words arrays used as levels.
       */
      create() {
           this.add.image(400, 300, "BG");
@@ -49,18 +49,15 @@ export default class Numbers extends Phaser.Scene {
           let str_Ranges = JSON.stringify(Ranges);
           localStorage.setItem("Range", str_Ranges);
 
-          // variable will hold currently generated random number
-
-          // generate random range of nums
-
-          // play button game logic #######-----------------
+          // game buttons
           var playbtn;
           var Clearbtn;
           var Homebtn;
+          var retrybtn;
+
+          // game text
           var Infotxt;
           var Infotxt2;
-          var retrybtn;
-          // var startbtn;
 
           // game information texts
           Infotxt = this.add.text(250, 50, "When ready press button", {
@@ -174,7 +171,7 @@ export default class Numbers extends Phaser.Scene {
                }
 
                // setting initial game status booleon
-               localStorage.setItem("isOver", false);
+               let isOver = false;
 
                // checking if input field is empty
                if (userInput.value == randomElem) {
@@ -231,10 +228,8 @@ export default class Numbers extends Phaser.Scene {
                          "Highest Score:  " + score + " Numbers";
                } else {
                     // setting value of isOver to true
-                    localStorage.setItem("isOver", true);
-                    let isOver = localStorage.getItem("isOver");
+                    isOver = true;
 
-                    // checking if isOver is true
                     if (isOver) {
                          /* gameOver game called to display end game screen and play sound */
                          gameOver();

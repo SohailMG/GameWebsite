@@ -31,6 +31,7 @@ function validateForm() {
           fields.forEach((element) => {
                if (element.value == "") {
                     element.style.border = "1px solid red";
+                    console.log("yesssss");
                } else {
                     element.style.border = "1px solid green";
                }

@@ -3,9 +3,10 @@
 /* function that outputs the footer layout for each page
 it also outputs the closing tags for each page */
 
-function outputFooter(){
-echo '</section>';
-echo '<footer>
+function outputFooter()
+{
+    echo '</section>';
+    echo '<footer>
 <!--footer devided into 4 sections-->
 <div class="section1">
     <h1>Memory Master</h1>
@@ -51,13 +52,13 @@ echo '<footer>
 </div>
 </footer>';
 
-echo '<script type="text/javascript" src="scripts/formValidation.js"></script>';
-echo '<script type="text/javascript" src="scripts/Typewriter.js"></script>';
-echo '<script type="text/javascript" src="scripts/Contact.js"></script>';
-echo '<script type="text/javascript" src="scripts/Leaderboard.js"></script>';
-echo '</body>';
-echo '</body>';
-echo '
+    echo '<script type="text/javascript" src="src/formValidation.js"></script>';
+    echo '<script type="text/javascript" src="src/Typewriter.js"></script>';
+    echo '<script type="text/javascript" src="src/Contact.js"></script>';
+    echo '<script type="text/javascript" src="src/Leaderboard.js"></script>';
+    echo '</body>';
+    echo '</body>';
+    echo '
 
 </html>';
 }

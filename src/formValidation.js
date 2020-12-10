@@ -171,6 +171,7 @@ function SignIN() {
 /**  once called logged key is removed from localstorage */
 function logOut() {
      localStorage.removeItem("logged");
+     localStorage.removeItem("loggedusr");
 }
 
 // declaring variables for sign in, up and out buttons
