@@ -7,7 +7,7 @@ website includes the following features:
 3- Sign-Out functionality
 User data is stored using LocalStorage.
 
-#Game:
+# Game:
 This is a Memory Game where the player is shown a number for a short amount of time.
 The player must memerise the number and type it after timer ends.
 if player types the correct number, then the number becomes bigger.
