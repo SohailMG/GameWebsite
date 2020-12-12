@@ -2,7 +2,7 @@
 Creating a website using HTML,CSS,PHP and JavaScript.
 website includes the following features:
 
-1- Sign-up functionality
+1- Sign-up functionality\n
 2- Sign-In functionality
 3- Sign-Out functionality
 User data is stored using LocalStorage.
